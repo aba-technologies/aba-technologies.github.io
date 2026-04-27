@@ -3,24 +3,101 @@
 <head>
   <title>ABA Technologies Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
   <style>
-    body { font-family: Arial; margin: 0; background: #f4f6f9; }
-    header { background: #0a2540; color: white; padding: 20px; text-align: center; }
-    nav { background: #1f3c88; padding: 10px; text-align: center; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    section { padding: 40px; }
-    .container { max-width: 1000px; margin: auto; }
-    .card { background: white; padding: 20px; margin: 15px 0; border-radius: 10px; }
-    footer { background: #0a2540; color: white; text-align: center; padding: 15px; }
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #0f172a;
+      color: white;
+    }
+
+    nav {
+      position: fixed;
+      width: 100%;
+      background: rgba(0,0,0,0.7);
+      padding: 15px;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+
+    header {
+      background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c');
+      background-size: cover;
+      background-position: center;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 48px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    header p {
+      font-size: 20px;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+      color: #38bdf8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: black;
+    }
   </style>
 </head>
 
 <body>
-
-<header>
-  <h1>ABA Technologies Pvt Ltd</h1>
-  <p>Microsoft 365 | Cloud Migration | Copilot Solutions</p>
-</header>
 
 <nav>
   <a href="#home">Home</a>
@@ -29,64 +106,67 @@
   <a href="#contact">Contact</a>
 </nav>
 
-<section id="home">
-  <div class="container">
-    <h2>Welcome</h2>
-    <p>We help businesses transform with Microsoft 365, AI-powered Copilot solutions, and secure cloud migration services.</p>
+<header id="home">
+  <div>
+    <h1>ABA Technologies Services</h1>
+    <p>Microsoft 365 | Cloud Migration | Copilot Solutions</p>
   </div>
-</section>
+</header>
 
 <section id="services">
-  <div class="container">
-    <h2>Our Services</h2>
+  <h2 data-aos="fade-up">Our Services</h2>
+  <div class="services">
 
-    <div class="card">
-      <h3>Microsoft 365 Setup & Consulting</h3>
-      <p>End-to-end Microsoft 365 deployment, configuration, and optimization.</p>
+    <div class="card" data-aos="fade-up">
+      <div class="icon">☁️</div>
+      <h3>M365 Consulting</h3>
+      <p>End-to-end Microsoft 365 setup and optimization.</p>
     </div>
 
-    <div class="card">
-      <h3>Cloud Migration Services</h3>
-      <p>Seamless migration from Google Workspace, IMAP, and other platforms to Microsoft 365 with zero data loss.</p>
+    <div class="card" data-aos="fade-up" data-aos-delay="100">
+      <div class="icon">🔄</div>
+      <h3>Cloud Migration</h3>
+      <p>Seamless migration from Google Workspace & legacy systems.</p>
     </div>
 
-    <div class="card">
-      <h3>Microsoft 365 Copilot Solutions</h3>
-      <p>Copilot readiness assessment, implementation, and use-case design to enhance productivity.</p>
+    <div class="card" data-aos="fade-up" data-aos-delay="200">
+      <div class="icon">🤖</div>
+      <h3>Copilot Solutions</h3>
+      <p>AI-powered productivity with Microsoft Copilot.</p>
     </div>
 
-    <div class="card">
-      <h3>Security & Identity Management</h3>
-      <p>Implementation of Entra ID, MFA, Conditional Access, and endpoint security with Intune.</p>
-    </div>
-
-    <div class="card">
-      <h3>Intune & Device Management</h3>
-      <p>Device enrollment, MDM policies, BitLocker, and secure endpoint configuration.</p>
+    <div class="card" data-aos="fade-up" data-aos-delay="300">
+      <div class="icon">🔐</div>
+      <h3>Security & Intune</h3>
+      <p>Endpoint security, identity & device management.</p>
     </div>
 
   </div>
 </section>
 
-<section id="about">
-  <div class="container">
-    <h2>About Us</h2>
-    <p>ABA Technologies Services is led by a Abdulla Bin Aqueel with 5.5+ years of experience in Microsoft 365, migrations, security, and AI-driven productivity solutions. We specialize in delivering scalable and secure cloud environments tailored to business needs.</p>
-  </div>
+<section id="about" data-aos="fade-right">
+  <h2>About Us</h2>
+  <p>
+    ABA Technologies Services specializes in Microsoft 365, cloud migration, 
+    and AI-powered Copilot solutions, helping businesses modernize and secure 
+    their digital workplace.
+  </p>
 </section>
 
-<section id="contact">
-  <div class="container">
-    <h2>Contact Us</h2>
-    <p>Email: support@abatech.co.in</p>
-    <p>Phone: +91 809010012</p>
-    <p>LinkedIn: linkedin.com/in/yourprofile</p>
-  </div>
+<section id="contact" data-aos="fade-left">
+  <h2>Contact</h2>
+  <p>Email: your@email.com</p>
 </section>
 
 <footer>
   <p>© 2026 ABA Technologies Services</p>
 </footer>
+
+<!-- AOS Script -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 </body>
 </html>
