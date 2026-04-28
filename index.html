@@ -1,174 +1,103 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>ABA Technologies Pvt Ltd</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+import React from "react";
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+export default function ABATechnologiesSite() {
+  return (
+    <div className="min-h-screen w-full bg-[#0b1120] text-white font-[Poppins]">
+      {/* NAVBAR */}
+      <nav className="fixed top-0 left-0 w-full z-50 bg-black/60 backdrop-blur-md flex justify-between items-center px-6 py-3">
+        logo.png
+        <div className="flex gap-6">
+          <a href="#services" className="hover:text-cyan-300 transition">Services</a>
+          <a href="#team" className="hover:text-cyan-300 transition">Team</a>
+          <a href="#contact" className="hover:text-cyan-300 transition">Contact</a>
+        </div>
+      </nav>
 
-<style>
-body {
-  margin:0;
-  font-family:'Poppins',sans-serif;
-  background:#0b1120;
-  color:white;
+      {/* HERO SECTION */}
+      <header
+        className="h-screen flex flex-col justify-center items-center text-center px-4 bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1531297484001-80022131f5a1')",
+        }}
+      >
+        <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+          Transform Your Business with Cloud & AI
+        </h1>
+        <p className="mt-4 text-lg md:text-xl text-gray-300">
+          Microsoft 365 | Migration | Copilot | Security
+        </p>
+      </header>
+
+      {/* SERVICES */}
+      <section id="services" className="max-w-5xl mx-auto px-5 py-20 scroll-mt-24">
+        <h2 className="text-3xl font-semibold mb-10 text-center">Our Services</h2>
+
+        <div className="space-y-6">
+          {/* CARD */}
+          <div className="bg-white/5 p-6 rounded-2xl shadow-lg">
+            <h3 className="text-xl font-semibold mb-3 text-cyan-300">Microsoft 365 Consulting</h3>
+            <ul className="list-disc ml-6 space-y-1 text-gray-300">
+              <li>Tenant setup & configuration</li>
+              <li>Teams, SharePoint, OneDrive</li>
+              <li>Licensing optimization</li>
+              <li>Governance & compliance</li>
+            </ul>
+          </div>
+
+          <div className="bg-white/5 p-6 rounded-2xl shadow-lg">
+            <h3 className="text-xl font-semibold mb-3 text-cyan-300">Cloud Migration</h3>
+            <ul className="list-disc ml-6 space-y-1 text-gray-300">
+              <li>Google → Microsoft 365</li>
+              <li>Zoho → Microsoft 365</li>
+              <li>Microsoft → Google</li>
+              <li>Any Source → Any Destination</li>
+            </ul>
+            <p className="mt-3 font-semibold text-purple-300">
+              Zero data loss. Zero downtime. 100% integrity.
+            </p>
+          </div>
+
+          <div className="bg-white/5 p-6 rounded-2xl shadow-lg">
+            <h3 className="text-xl font-semibold mb-3 text-cyan-300">Copilot AI Solutions</h3>
+            <ul className="list-disc ml-6 space-y-1 text-gray-300">
+              <li>Copilot deployment</li>
+              <li>AI automation</li>
+              <li>Use-case design</li>
+            </ul>
+          </div>
+
+          <div className="bg-white/5 p-6 rounded-2xl shadow-lg">
+            <h3 className="text-xl font-semibold mb-3 text-cyan-300">Security & Intune</h3>
+            <ul className="list-disc ml-6 space-y-1 text-gray-300">
+              <li>Entra ID</li>
+              <li>MFA & Conditional Access</li>
+              <li>Device management</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* TEAM */}
+      <section id="team" className="max-w-5xl mx-auto px-5 py-20 text-center scroll-mt-24">
+        <h2 className="text-3xl font-semibold mb-10">Core Team</h2>
+
+        <div className="flex flex-col items-center">
+          <img
+            src="profile.jpg"
+            alt="Profile"
+            className="w-40 h-40 rounded-full object-cover shadow-xl border-2 border-cyan-400 mb-4"
+          />
+          <h3 className="text-2xl font-semibold">Abdulla Nawab</h3>
+          <p className="text-cyan-300">Co-Founder & Director</p>
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section id="contact" className="max-w-4xl mx-auto px-5 py-20 scroll-mt-24 text-center">
+        <h2 className="text-3xl font-semibold mb-6">Contact</h2>
+        <p className="text-gray-300">Email: your@email.com</p>
+      </section>
+    </div>
+  );
 }
-
-/* NAV */
-nav {
-  position:fixed;
-  width:100%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:10px 30px;
-  background:rgba(0,0,0,0.6);
-  backdrop-filter:blur(10px);
-  z-index:1000;
-}
-nav img {height:40px;}
-nav a {color:white;text-decoration:none;margin:0 10px;}
-
-/* HERO */
-header {
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
-  url('https://images.unsplash.com/photo-1531297484001-80022131f5a1');
-  background-size:cover;
-}
-
-h1 {
-  font-size:50px;
-  background:linear-gradient(90deg,#38bdf8,#a855f7);
-  -webkit-background-clip:text;
-  color:transparent;
-}
-
-section {
-  padding:80px 20px;
-  max-width:1100px;
-  margin:auto;
-}
-
-/* CARD */
-.card {
-  background:rgba(255,255,255,0.05);
-  padding:25px;
-  border-radius:12px;
-  margin-bottom:20px;
-}
-
-/* TEAM */
-.team {
-  text-align:center;
-}
-.team img {
-  width:160px;
-  height:160px;
-  border-radius:50%;
-  object-fit:cover;
-  margin-bottom:10px;
-}
-.designation {
-  color:#38bdf8;
-}
-
-/* CTA */
-.cta {
-  background:linear-gradient(90deg,#38bdf8,#a855f7);
-  padding:12px;
-  border-radius:8px;
-  text-align:center;
-  margin-top:20px;
-}
-</style>
-</head>
-
-<body>
-
-<!-- NAV -->
-<nav>
-  <img src="logo.png">
-  <div>
-    <a href="#services">Services</a>
-    <a href="#team">Team</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-
-<!-- HERO -->
-<header>
-  <h1>Transform Your Business with Cloud & AI</h1>
-  <p>Microsoft 365 | Migration | Copilot | Security</p>
-</header>
-
-<!-- SERVICES -->
-<section id="services">
-<h2>Our Services</h2>
-
-<div class="card">
-<h3>Microsoft 365 Consulting</h3>
-<ul>
-<li>Tenant setup & configuration</li>
-<li>Teams, SharePoint, OneDrive</li>
-<li>Licensing optimization</li>
-<li>Governance & compliance</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Cloud Migration</h3>
-<ul>
-<li>Google → Microsoft 365</li>
-<li>Zoho → Microsoft 365</li>
-<li>Microsoft → Google</li>
-<li>Any Source → Any Destination</li>
-</ul>
-<p><b>Zero data loss. Zero downtime. 100% integrity.</b></p>
-</div>
-
-<div class="card">
-<h3>Copilot AI Solutions</h3>
-<ul>
-<li>Copilot deployment</li>
-<li>AI automation</li>
-<li>Use-case design</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Security & Intune</h3>
-<ul>
-<li>Entra ID</li>
-<li>MFA & Conditional Access</li>
-<li>Device management</li>
-</ul>
-</div>
-
-</section>
-
-<!-- TEAM -->
-<section id="team">
-<h2>Core Team</h2>
-
-<div class="team">
-<img src="profile.jpg">
-<h3>Abdulla Bin Aqueel</h3>
-<p class="designation">Founder, Director & CTO</p>
-</div>
-
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-<h2>Contact</h2>
-<p>Email: your@email.com</p>
-</section>
-
-</body>
-</html>
