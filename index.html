@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ABA Technologies Pvt Ltd</title>
+  <title>ABA Technologies Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-  <!-- AOS -->
+  <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <style>
@@ -21,16 +21,24 @@
     nav {
       position: fixed;
       width: 100%;
-      padding: 15px;
-      text-align: center;
       background: rgba(255,255,255,0.05);
       backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 10px;
+      z-index: 1000;
+    }
+
+    nav img {
+      height: 40px;
     }
 
     nav a {
-      margin: 0 15px;
       color: white;
       text-decoration: none;
+      margin: 0 10px;
     }
 
     header {
@@ -43,7 +51,7 @@
     }
 
     header h1 {
-      font-size: 55px;
+      font-size: 50px;
       background: linear-gradient(90deg, #38bdf8, #a855f7);
       -webkit-background-clip: text;
       color: transparent;
@@ -54,9 +62,9 @@
       margin: 10px;
       border-radius: 30px;
       border: none;
-      cursor: pointer;
       background: linear-gradient(90deg, #38bdf8, #a855f7);
       color: white;
+      cursor: pointer;
     }
 
     section {
@@ -89,8 +97,11 @@
     }
 
     .team-card img {
-      width: 100%;
-      border-radius: 12px;
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
     }
 
     .designation {
@@ -102,12 +113,17 @@
       padding: 30px;
       background: rgba(0,0,0,0.5);
     }
+
+    .service-title {
+      cursor: pointer;
+    }
   </style>
 </head>
 
 <body>
 
 <nav>
+  <img src="logo.png">
   <a href="#">Home</a>
   <a href="#services">Services</a>
   <a href="#about">About</a>
@@ -125,31 +141,76 @@
 </header>
 
 <section id="services">
-  <h2 data-aos="fade-up">Our Services</h2>
+  <h2>Our Services</h2>
+
   <div class="grid">
-    <div class="card" data-aos="fade-up">Microsoft 365 Consulting</div>
-    <div class="card" data-aos="fade-up">Cloud Migration</div>
-    <div class="card" data-aos="fade-up">Copilot AI Solutions</div>
-    <div class="card" data-aos="fade-up">Security & Intune</div>
-    <div class="card" data-aos="fade-up">Application Development</div>
+
+    <div class="card">
+      <h3 class="service-title" onclick="toggle('m365')">Microsoft 365 Consulting ⬇️</h3>
+      <div id="m365" style="display:none;">
+        <p>
+        Tenant Setup & Deployment <br>
+        Exchange Online, Teams, SharePoint <br>
+        Licensing Optimization <br>
+        Copilot Readiness & Enablement
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 class="service-title" onclick="toggle('migration')">Cloud Migration ⬇️</h3>
+      <div id="migration" style="display:none;">
+        <p>
+        Google Workspace → Microsoft 365 <br>
+        Zoho → Microsoft 365 <br>
+        Microsoft 365 → Google Workspace <br>
+        Any Source → Any Destination
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 class="service-title" onclick="toggle('copilot')">Microsoft 365 Copilot ⬇️</h3>
+      <div id="copilot" style="display:none;">
+        <p>
+        Copilot Readiness Assessment <br>
+        Business Use Cases <br>
+        Prompt Engineering <br>
+        Adoption & Training
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 class="service-title" onclick="toggle('security')">Security & Intune ⬇️</h3>
+      <div id="security" style="display:none;">
+        <p>
+        Entra ID (Azure AD) <br>
+        MFA & Conditional Access <br>
+        Intune Device Management <br>
+        Endpoint Security
+        </p>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <section id="about">
   <h2>About Us</h2>
   <p style="text-align:center;">
-    ABA Technologies Pvt Ltd delivers enterprise-grade Microsoft 365 and AI solutions 
-    helping organizations modernize securely.
+    ABA Technologies Services delivers enterprise-grade Microsoft 365, 
+    cloud migration, and AI-driven Copilot solutions to modernize businesses.
   </p>
 </section>
 
 <section id="team">
   <h2>Core Team</h2>
   <div class="grid">
-    <div class="card team-card">
+    <div class="card team-card" style="text-align:center;">
       <img src="profile.jpg">
-      <h3>Abdulla Bin Aqueel</h3>
-      <p class="designation">Founder & Director & CTO</p>
+      <h3>Abdulla Nawab</h3>
+      <p class="designation">Co-Founder & Director</p>
     </div>
   </div>
 </section>
@@ -165,8 +226,19 @@
 </section>
 
 <footer>
-  <p>© 2026 ABA Technologies Pvt Ltd</p>
+  <p>© 2026 ABA Technologies Services</p>
 </footer>
+
+<script>
+function toggle(id) {
+  var x = document.getElementById(id);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
