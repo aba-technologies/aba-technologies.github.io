@@ -1,292 +1,228 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ABA Technologies Pvt Ltd</title>
+<title>ABA Technologies Pvt Ltd</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-  <!-- AOS -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+<style>
+body {
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#0b1120;
+  color:white;
+}
 
-  <style>
-    :root{
-      --bg:#0b1120;
-      --glass: rgba(255,255,255,0.08);
-      --primary:#38bdf8;
-      --secondary:#a855f7;
-      --text:#e5e7eb;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:'Poppins',sans-serif;
-      color:var(--text);
-      background: radial-gradient(1200px 600px at 80% -10%, rgba(56,189,248,.15), transparent 60%),
-                  radial-gradient(900px 500px at -10% 20%, rgba(168,85,247,.15), transparent 60%),
-                  var(--bg);
-      scroll-behavior:smooth;
-    }
+/* NAV */
+nav {
+  position:fixed;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 30px;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+nav img {height:35px;}
+nav a {color:white;text-decoration:none;margin:0 10px;}
 
-    /* NAV */
-    nav{
-      position:fixed; top:0; left:0; right:0;
-      display:flex; align-items:center; justify-content:space-between;
-      padding:10px 20px;
-      background:rgba(10,15,30,.6);
-      backdrop-filter: blur(12px);
-      z-index:999;
-      border-bottom:1px solid rgba(255,255,255,.06);
-    }
-    .nav-left{display:flex; align-items:center; gap:12px}
-    nav img{height:36px}
-    .nav-links a{
-      color:#fff; text-decoration:none; margin:0 10px; font-weight:500;
-      opacity:.9;
-    }
-    .nav-links a:hover{opacity:1}
+/* HERO VIDEO */
+.hero {
+  position:relative;
+  height:100vh;
+  overflow:hidden;
+}
+.hero video {
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.hero-content {
+  position:relative;
+  z-index:2;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:rgba(0,0,0,0.6);
+}
+.hero h1 {
+  font-size:55px;
+  background:linear-gradient(90deg,#38bdf8,#a855f7);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+.btn {
+  padding:12px 25px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(90deg,#38bdf8,#a855f7);
+  color:white;
+  margin:10px;
+}
 
-    .btn{
-      border:0; border-radius:999px; padding:10px 18px; cursor:pointer;
-      color:#fff; font-weight:600;
-      background: linear-gradient(90deg,var(--primary),var(--secondary));
-      box-shadow: 0 10px 25px rgba(56,189,248,.25);
-    }
+/* SECTION */
+section {
+  padding:80px 20px;
+  max-width:1100px;
+  margin:auto;
+}
 
-    /* HERO */
-    header{
-      min-height:100vh;
-      display:grid; place-items:center;
-      text-align:center;
-      padding:120px 20px 60px;
-      background:
-        linear-gradient(rgba(5,8,20,.6), rgba(5,8,20,.85)),
-        url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&auto=format&fit=crop');
-      background-size:cover; background-position:center;
-    }
-    h1{
-      font-size: clamp(34px, 6vw, 64px);
-      line-height:1.1;
-      margin:0 0 10px;
-      background: linear-gradient(90deg,var(--primary),var(--secondary));
-      -webkit-background-clip:text; color:transparent;
-    }
-    .sub{opacity:.9; margin-bottom:18px}
+/* GRID */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
 
-    section{
-      padding:80px 20px;
-      max-width:1150px; margin:auto;
-    }
-    h2{
-      text-align:center; margin:0 0 30px;
-      font-size:28px;
-    }
+/* CARD */
+.card {
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  padding:20px;
+  border-radius:12px;
+  transition:0.3s;
+}
+.card:hover {transform:translateY(-8px);}
 
-    /* GRID + CARD */
-    .grid{
-      display:grid; gap:20px;
-      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    }
-    .card{
-      background:var(--glass);
-      backdrop-filter: blur(14px);
-      border:1px solid rgba(255,255,255,.08);
-      padding:22px;
-      border-radius:16px;
-      transition:.25s ease;
-    }
-    .card:hover{
-      transform: translateY(-8px);
-      border-color: rgba(56,189,248,.5);
-      box-shadow: 0 20px 40px rgba(0,0,0,.35);
-    }
+/* TEAM */
+.team img {
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  object-fit:cover;
+}
 
-    /* SERVICES (accordion) */
-    .service-title{cursor:pointer; font-weight:600}
-    .service-body{display:none; opacity:.9; margin-top:8px; line-height:1.7}
-
-    /* TEAM */
-    .team{display:flex; justify-content:center}
-    .team img{
-      width:170px; height:170px; object-fit:cover;
-      border-radius:50%;
-      border:3px solid rgba(255,255,255,.15);
-      margin-bottom:10px;
-    }
-    .designation{color:var(--primary); font-weight:600}
-
-    /* TRUSTED */
-    .logos{
-      display:flex; flex-wrap:wrap; gap:18px; justify-content:center;
-    }
-    .logo-pill{
-      padding:10px 14px; border-radius:999px;
-      background:var(--glass);
-      border:1px solid rgba(255,255,255,.08);
-      font-size:14px;
-    }
-
-    /* LOCATIONS */
-    .flag{font-size:22px; margin-right:8px}
-
-    /* CONTACT */
-    .form{
-      max-width:520px; margin:0 auto;
-      display:grid; gap:12px;
-    }
-    input, textarea{
-      width:100%; padding:12px;
-      border-radius:10px; border:1px solid rgba(255,255,255,.1);
-      background:rgba(255,255,255,.06);
-      color:#fff;
-    }
-
-    /* FOOTER */
-    footer{
-      text-align:center; padding:30px 20px;
-      border-top:1px solid rgba(255,255,255,.08);
-      background:#060a18;
-    }
-
-    /* WHATSAPP */
-    .wa{
-      position:fixed; right:18px; bottom:18px;
-      width:56px; height:56px; border-radius:50%;
-      display:grid; place-items:center;
-      background:#25D366; color:#000; font-weight:700;
-      box-shadow:0 12px 30px rgba(0,0,0,.4);
-      text-decoration:none;
-    }
-  </style>
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:30px;
+  background:black;
+}
+</style>
 </head>
 
 <body>
 
 <nav>
-  <div class="nav-left">
-    <img src="logo.png" alt="ABA"/>
-    <strong>ABA Technologies</strong>
-  </div>
-  <div class="nav-links">
+  <img src="logo.png">
+  <div>
     <a href="#services">Services</a>
     <a href="#about">About</a>
     <a href="#team">Team</a>
     <a href="#locations">Locations</a>
-    <a href="#contact">Contact</a>
   </div>
 </nav>
 
-<header>
-  <div data-aos="fade-up">
-    <h1>Modern Workplace. Cloud & AI.</h1>
-    <p class="sub">Microsoft 365 • Copilot • Secure Migrations</p>
-    <button class="btn" onclick="scrollToSection('services')">Explore Services</button>
+<!-- HERO -->
+<div class="hero">
+  <video autoplay muted loop>
+    <source src="https://cdn.coverr.co/videos/coverr-working-on-code-5174/1080p.mp4" type="video/mp4">
+  </video>
+  <div class="hero-content">
+    <h1>Cloud. AI. Transformation.</h1>
+    <p>Microsoft 365 • Copilot • Secure Migration</p>
+    <button class="btn">Explore Services</button>
   </div>
-</header>
+</div>
 
-<section id="trusted">
-  <h2>Trusted By</h2>
-  <div class="logos">
-    <div class="logo-pill">SMBs & Startups</div>
-    <div class="logo-pill">Enterprise IT Teams</div>
-    <div class="logo-pill">Global Clients</div>
-    <div class="logo-pill">Microsoft Ecosystem</div>
-  </div>
-</section>
-
+<!-- SERVICES -->
 <section id="services">
-  <h2>Our Services</h2>
-  <div class="grid">
+<h2 style="text-align:center;">Our Services</h2>
 
-    <div class="card">
-      <div class="service-title" onclick="toggle('m365')">Microsoft 365 Consulting ⬇</div>
-      <div id="m365" class="service-body">
-        Tenant setup, Exchange/Teams/SharePoint, licensing optimization, governance, Copilot readiness.
-      </div>
-    </div>
+<div class="grid">
 
-    <div class="card">
-      <div class="service-title" onclick="toggle('migration')">Cloud Migration ⬇</div>
-      <div id="migration" class="service-body">
-        Google → M365, Zoho → M365, M365 ↔ Google, any source → any destination. Email, drive, permissions.
-      </div>
-    </div>
+<div class="card">
+<h3 onclick="toggle('m365')">Microsoft 365 Consulting ⬇️</h3>
+<div id="m365" style="display:none;">
+Tenant Setup <br>
+Exchange, Teams, SharePoint <br>
+Licensing Optimization <br>
+Copilot Enablement
+</div>
+</div>
 
-    <div class="card">
-      <div class="service-title" onclick="toggle('copilot')">Microsoft 365 Copilot ⬇</div>
-      <div id="copilot" class="service-body">
-        Readiness assessment, use-cases, prompt engineering, rollout, adoption & training.
-      </div>
-    </div>
+<div class="card">
+<h3 onclick="toggle('migration')">Cloud Migration ⬇️</h3>
+<div id="migration" style="display:none;">
+Google → M365 <br>
+Zoho → M365 <br>
+M365 → Google <br>
+Any Source → Any Destination
+</div>
+</div>
 
-    <div class="card">
-      <div class="service-title" onclick="toggle('security')">Security & Intune ⬇</div>
-      <div id="security" class="service-body">
-        Entra ID, MFA, Conditional Access, Intune device management, endpoint security & compliance.
-      </div>
-    </div>
+<div class="card">
+<h3 onclick="toggle('copilot')">Copilot AI ⬇️</h3>
+<div id="copilot" style="display:none;">
+Copilot Readiness <br>
+Use Cases <br>
+Prompt Engineering <br>
+Adoption Training
+</div>
+</div>
 
-  </div>
+<div class="card">
+<h3 onclick="toggle('security')">Security & Intune ⬇️</h3>
+<div id="security" style="display:none;">
+Entra ID <br>
+MFA <br>
+Conditional Access <br>
+Endpoint Security
+</div>
+</div>
+
+</div>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
-  <h2>About</h2>
-  <p style="text-align:center; max-width:700px; margin:auto">
-    We design, migrate, and secure Microsoft 365 environments, enabling AI-powered productivity with Copilot while maintaining enterprise-grade security.
-  </p>
+<h2 style="text-align:center;">About Us</h2>
+<p style="text-align:center;">
+ABA Technologies Pvt Ltd helps businesses transform with Microsoft 365, 
+Cloud Migration, and AI-powered Copilot solutions, Google Workspace.
+</p>
 </section>
 
+<!-- TEAM -->
 <section id="team">
-  <h2>Core Team</h2>
-  <div class="team">
-    <div class="card" style="text-align:center">
-      <img src="profile.jpg" alt="Founder"/>
-      <h3>Abdulla Bin Aqueel</h3>
-      <div class="designation">Founder & Director & CTO</div>
-    </div>
-  </div>
+<h2 style="text-align:center;">Core Team</h2>
+<div class="grid">
+<div class="card team" style="text-align:center;">
+<img src="profile.jpg">
+<h3>Abdulla Bin Aqueel</h3>
+<p style="color:#38bdf8;">Founder, Director & CTO</p>
+</div>
+</div>
 </section>
 
+<!-- LOCATIONS -->
 <section id="locations">
-  <h2>Our Presence</h2>
-  <div class="grid">
-    <div class="card"><span class="flag">🇦🇪</span> UAE</div>
-    <div class="card"><span class="flag">🇸🇦</span> KSA</div>
-    <div class="card"><span class="flag">🇮🇳</span> India</div>
-    <div class="card"><span class="flag">🇺🇸</span> USA</div>
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="form">
-    <input placeholder="Your Name"/>
-    <input placeholder="Email"/>
-    <textarea rows="4" placeholder="Message"></textarea>
-    <button class="btn">Send Message</button>
-  </div>
+<h2 style="text-align:center;">Our Presence</h2>
+<div class="grid">
+<div class="card">🇦🇪 UAE</div>
+<div class="card">🇸🇦 KSA</div>
+<div class="card">🇮🇳 India</div>
+<div class="card">🇺🇸 USA</div>
+</div>
 </section>
 
 <footer>
-  © 2026 ABA Technologies Pvt Ltd
+<p>© 2026 ABA Technologies Pvt Ltd</p>
 </footer>
-
-<a class="wa" href="https://wa.me/917207521183" target="_blank">WA</a>
 
 <script>
 function toggle(id){
-  const el=document.getElementById(id);
-  el.style.display = el.style.display==='block' ? 'none':'block';
-}
-function scrollToSection(id){
-  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+var x=document.getElementById(id);
+x.style.display = x.style.display==="none" ? "block":"none";
 }
 </script>
-
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>AOS.init({once:true});</script>
 
 </body>
 </html>
