@@ -1,103 +1,1025 @@
-import React from "react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-export default function ABATechnologiesSite() {
-  return (
-    <div className="min-h-screen w-full bg-[#0b1120] text-white font-[Poppins]">
-      {/* NAVBAR */}
-      <nav className="fixed top-0 left-0 w-full z-50 bg-black/60 backdrop-blur-md flex justify-between items-center px-6 py-3">
-        logo.png
-        <div className="flex gap-6">
-          <a href="#services" className="hover:text-cyan-300 transition">Services</a>
-          <a href="#team" className="hover:text-cyan-300 transition">Team</a>
-          <a href="#contact" className="hover:text-cyan-300 transition">Contact</a>
+  <title>ABA Technologies Services | Microsoft 365, Cloud Migration, Copilot & Security</title>
+  <meta name="description" content="ABA Technologies Services provides Microsoft 365 consulting, cloud migrations, Copilot/AI adoption, and security solutions (Entra ID, Intune) for modern businesses." />
+  <meta name="keywords" content="Microsoft 365 consulting, cloud migration, Google Workspace to Microsoft 365, Copilot adoption, Entra ID, Intune, security, SharePoint, Teams" />
+  <meta name="author" content="ABA Technologies Services" />
+  <meta name="theme-color" content="#0b1120" />
+
+  <!-- Open Graph (social previews) -->
+  <meta property="og:title" content="ABA Technologies Services" />
+  <meta property="og:description" content="Enterprise-grade Microsoft 365 consulting, cloud migrations, Copilot/AI adoption, and security (Entra ID, Intune)." />
+  <meta property="og:type" content="website" />
+  <!-- Tip: update this once your domain is live -->
+  <meta property="og:url" content="https://yourdomain.com/" />
+  <meta property="og:image" content="https://yourdomain.com/og-image.png" />
+
+  <!-- Performance: font loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================
+       ABA Technologies Services
+       Enterprise Landing Page
+       Single-file: HTML + CSS + JS
+       ========================= */
+
+    :root{
+      --bg: #0b1120;
+      --panel: rgba(255,255,255,0.06);
+      --panel2: rgba(255,255,255,0.08);
+      --stroke: rgba(255,255,255,0.12);
+
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.72);
+      --muted2: rgba(255,255,255,0.60);
+
+      --cyan: #38bdf8;
+      --violet: #a855f7;
+      --teal: #2dd4bf;
+
+      --shadow: 0 20px 60px rgba(0,0,0,0.35);
+      --shadow2: 0 16px 40px rgba(0,0,0,0.22);
+
+      --radius: 16px;
+      --radius2: 22px;
+
+      --max: 1120px;
+
+      /* navbar height used for scroll offset */
+      --navH: 74px;
+    }
+
+    *{ box-sizing: border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color: var(--text);
+      background: radial-gradient(1200px 700px at 10% 10%, rgba(56,189,248,0.16), transparent 60%),
+                  radial-gradient(900px 600px at 90% 20%, rgba(168,85,247,0.14), transparent 55%),
+                  radial-gradient(900px 600px at 50% 90%, rgba(45,212,191,0.10), transparent 55%),
+                  var(--bg);
+      overflow-x:hidden;
+    }
+
+    /* Prevent content from hiding under fixed nav */
+    main{ padding-top: var(--navH); }
+
+    a{ color: inherit; text-decoration: none; }
+    img{ max-width: 100%; display:block; }
+
+    .container{
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ---------------- NAV ---------------- */
+    nav{
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--navH);
+      z-index: 1000;
+      background: rgba(10, 14, 28, 0.62);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .nav-inner{
+      height: 100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 14px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      min-width: 180px;
+    }
+    .brand img{
+      height: 42px;
+      width: auto;
+      filter: drop-shadow(0 6px 16px rgba(0,0,0,0.35));
+    }
+    .brand .name{
+      display:flex;
+      flex-direction:column;
+      line-height:1.05;
+    }
+    .brand .name strong{ font-size: 14px; letter-spacing: 0.2px;}
+    .brand .name span{ font-size: 12px; color: var(--muted2);}
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap: 18px;
+    }
+    .nav-links a{
+      color: var(--muted);
+      font-weight: 500;
+      font-size: 14px;
+      padding: 10px 10px;
+      border-radius: 10px;
+      transition: 0.25s ease;
+    }
+    .nav-links a:hover{
+      color: white;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .nav-cta{
+      display:flex;
+      gap: 10px;
+      align-items:center;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+      border-radius: 12px;
+      padding: 10px 14px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.06);
+      box-shadow: none;
+      transition: 0.25s ease;
+      user-select:none;
+    }
+    .btn:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,0.10);
+      border-color: rgba(255,255,255,0.16);
+    }
+    .btn.primary{
+      border: 0;
+      background: linear-gradient(90deg, var(--cyan), var(--violet));
+      box-shadow: 0 14px 40px rgba(56,189,248,0.18);
+      color: #07101f;
+    }
+    .btn.primary:hover{
+      filter: brightness(1.03);
+      transform: translateY(-1px);
+    }
+
+    /* Mobile menu */
+    .menu-btn{
+      display:none;
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      color: white;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+    }
+    .menu-panel{
+      display:none;
+      position: fixed;
+      top: var(--navH);
+      left: 0; right: 0;
+      background: rgba(10, 14, 28, 0.92);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 999;
+    }
+    .menu-panel .container{
+      padding: 14px 20px 18px;
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+    }
+    .menu-panel a{
+      padding: 12px 12px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* ---------------- HERO ---------------- */
+    header.hero{
+      position: relative;
+      min-height: calc(100vh - var(--navH));
+      display:flex;
+      align-items:center;
+      padding: 70px 0 40px;
+      overflow:hidden;
+    }
+
+    /* optional image overlay: keep your existing unsplash background but improved */
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(180deg, rgba(11,17,32,0.65), rgba(11,17,32,0.92)),
+        url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      filter: saturate(1.1) contrast(1.05);
+      transform: scale(1.02);
+      z-index:-2;
+    }
+
+    /* soft gradient blobs */
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:-120px -200px;
+      background:
+        radial-gradient(600px 420px at 18% 35%, rgba(56,189,248,0.22), transparent 60%),
+        radial-gradient(560px 420px at 70% 25%, rgba(168,85,247,0.22), transparent 60%),
+        radial-gradient(620px 480px at 60% 80%, rgba(45,212,191,0.14), transparent 60%);
+      z-index:-1;
+      pointer-events:none;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 26px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      gap: 10px;
+      align-items:center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      color: var(--muted);
+      font-size: 13px;
+      width: fit-content;
+    }
+    .dot{
+      width: 8px; height: 8px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--cyan), var(--violet));
+      box-shadow: 0 0 0 6px rgba(56,189,248,0.10);
+    }
+
+    h1{
+      margin: 14px 0 12px;
+      font-size: clamp(34px, 4.2vw, 56px);
+      line-height: 1.07;
+      letter-spacing: -0.6px;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--cyan), var(--violet));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color: transparent;
+    }
+    .hero p{
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(15px, 1.4vw, 18px);
+      line-height: 1.7;
+      max-width: 60ch;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .trustbar{
+      margin-top: 22px;
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      color: var(--muted2);
+      font-size: 13px;
+      align-items:center;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+    .check{
+      width: 16px; height: 16px;
+      border-radius: 6px;
+      display:inline-grid;
+      place-items:center;
+      background: rgba(45,212,191,0.12);
+      border: 1px solid rgba(45,212,191,0.28);
+      color: #b8fff6;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .hero-card{
+      border-radius: var(--radius2);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      position: relative;
+      overflow:hidden;
+    }
+    .hero-card::before{
+      content:"";
+      position:absolute;
+      inset:-80px -80px;
+      background: radial-gradient(240px 200px at 30% 30%, rgba(56,189,248,0.18), transparent 60%),
+                  radial-gradient(240px 200px at 70% 55%, rgba(168,85,247,0.16), transparent 60%);
+      pointer-events:none;
+    }
+    .stat-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      position: relative;
+    }
+    .stat{
+      border-radius: 16px;
+      padding: 14px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.05);
+      box-shadow: var(--shadow2);
+    }
+    .stat strong{
+      display:block;
+      font-size: 18px;
+      margin-bottom: 6px;
+      color: white;
+    }
+    .stat span{
+      color: var(--muted2);
+      font-size: 12.5px;
+      line-height: 1.4;
+      display:block;
+    }
+
+    /* ---------------- SECTIONS ---------------- */
+    section{
+      padding: 76px 0;
+    }
+    section[id]{
+      scroll-margin-top: calc(var(--navH) + 18px); /* ensures anchor scroll positions correctly */
+    }
+
+    .section-title{
+      display:flex;
+      align-items:flex-end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+    h2{
+      margin: 0;
+      font-size: clamp(24px, 2.2vw, 34px);
+      letter-spacing: -0.3px;
+      font-weight: 800;
+      color: white;
+    }
+    .subhead{
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.75;
+      max-width: 78ch;
+    }
+
+    /* ---------------- SERVICES ---------------- */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .card{
+      grid-column: span 6;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow2);
+      position: relative;
+      overflow:hidden;
+      transition: 0.25s ease;
+      min-height: 220px;
+    }
+    .card:hover{
+      transform: translateY(-2px);
+      border-color: rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.08);
+    }
+    .card .icon{
+      width: 42px; height: 42px;
+      border-radius: 14px;
+      display:grid;
+      place-items:center;
+      background: linear-gradient(135deg, rgba(56,189,248,0.18), rgba(168,85,247,0.16));
+      border: 1px solid rgba(255,255,255,0.12);
+      margin-bottom: 12px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.25);
+    }
+    .card h3{
+      margin: 0 0 8px;
+      font-size: 18px;
+      font-weight: 800;
+      color: white;
+      letter-spacing: -0.2px;
+    }
+    .card p{
+      margin: 0 0 12px;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14.5px;
+    }
+    .card ul{
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted2);
+      line-height: 1.85;
+      font-size: 14px;
+    }
+    .tagline{
+      margin-top: 12px;
+      font-weight: 800;
+      color: rgba(168,85,247,0.95);
+    }
+
+    /* ---------------- TEAM ---------------- */
+    .team-wrap{
+      display:grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 18px;
+      align-items: center;
+      margin-top: 30px;
+    }
+    .profile-card{
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 22px;
+      box-shadow: var(--shadow);
+      display:flex;
+      gap: 16px;
+      align-items:center;
+    }
+    .profile-img{
+      width: 108px; height: 108px;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 2px solid rgba(56,189,248,0.60);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+      flex: none;
+    }
+    .profile-meta h3{
+      margin: 0;
+      font-size: 18px;
+      font-weight: 900;
+    }
+    .designation{
+      margin: 6px 0 0;
+      color: var(--cyan);
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .profile-meta p{
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 14px;
+    }
+    .team-points{
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.10);
+      padding: 22px;
+    }
+    .team-points h4{
+      margin: 0 0 10px;
+      font-size: 16px;
+      font-weight: 900;
+    }
+    .team-points ul{
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.9;
+      font-size: 14px;
+    }
+
+    /* ---------------- CONTACT ---------------- */
+    .contact-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 26px;
+      align-items: start;
+    }
+    .contact-card{
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 22px;
+      box-shadow: var(--shadow2);
+    }
+    .contact-card h3{
+      margin: 0 0 10px;
+      font-size: 16px;
+      font-weight: 900;
+    }
+    .contact-row{
+      display:flex;
+      gap: 10px;
+      align-items:flex-start;
+      padding: 10px 0;
+      border-bottom: 1px dashed rgba(255,255,255,0.12);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .contact-row:last-child{ border-bottom: 0; }
+    .badge{
+      font-size: 12px;
+      font-weight: 800;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.86);
+      width: fit-content;
+      white-space: nowrap;
+    }
+
+    form{
+      display:flex;
+      flex-direction:column;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .field{
+      display:flex;
+      flex-direction:column;
+      gap: 6px;
+    }
+    label{
+      font-size: 13px;
+      color: var(--muted2);
+      font-weight: 600;
+    }
+    input, textarea{
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      color: white;
+      padding: 12px 12px;
+      outline: none;
+      font-family: inherit;
+      font-size: 14px;
+      transition: 0.2s ease;
+    }
+    input:focus, textarea:focus{
+      border-color: rgba(56,189,248,0.45);
+      box-shadow: 0 0 0 4px rgba(56,189,248,0.12);
+    }
+    textarea{ min-height: 120px; resize: vertical; }
+
+    .fineprint{
+      margin-top: 10px;
+      color: var(--muted2);
+      font-size: 12.5px;
+      line-height: 1.6;
+    }
+
+    /* ---------------- FOOTER ---------------- */
+    footer{
+      padding: 30px 0 40px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      background: rgba(0,0,0,0.14);
+      margin-top: 36px;
+    }
+    .footer-inner{
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      align-items:center;
+      color: var(--muted2);
+      font-size: 13px;
+    }
+    .footer-links{
+      display:flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .footer-links a{
+      color: var(--muted2);
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      transition: 0.2s ease;
+    }
+    .footer-links a:hover{
+      color: white;
+      border-color: rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.06);
+    }
+
+    /* ---------------- RESPONSIVE ---------------- */
+    @media (max-width: 980px){
+      .hero-grid{
+        grid-template-columns: 1fr;
+      }
+      .hero-card{ order: 2; }
+      .card{ grid-column: span 12; }
+      .team-wrap{ grid-template-columns: 1fr; }
+      .contact-grid{ grid-template-columns: 1fr; }
+      .brand .name{ display:none; } /* keep header clean on small screens */
+    }
+
+    @media (max-width: 760px){
+      .nav-links, .nav-cta{ display:none; }
+      .menu-btn{ display:flex; }
+      header.hero{ padding: 58px 0 24px; }
+      section{ padding: 64px 0; }
+    }
+
+    /* Reduce motion preference */
+    @media (prefers-reduced-motion: reduce){
+      html{ scroll-behavior: auto; }
+      .card, .btn { transition: none !important; }
+    }
+  </style>
+
+  <!-- Structured Data (basic local business / organization) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ABA Technologies Services",
+    "url": "https://yourdomain.com/",
+    "logo": "https://yourdomain.com/logo.png",
+    "sameAs": [],
+    "description": "Microsoft 365 consulting, cloud migrations, Copilot/AI adoption, and security solutions (Entra ID, Intune)."
+  }
+  </script>
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav aria-label="Primary">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="ABA Technologies Services home">
+        <img src="logo.png" alt="ABA Technologies Services logo" />
+        <div class="name">
+          <strong>ABA Technologies Services</strong>
+          <span>Cloud • Microsoft 365 • Security • AI</span>
         </div>
-      </nav>
+      </a>
 
-      {/* HERO SECTION */}
-      <header
-        className="h-screen flex flex-col justify-center items-center text-center px-4 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1531297484001-80022131f5a1')",
-        }}
-      >
-        <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-          Transform Your Business with Cloud & AI
-        </h1>
-        <p className="mt-4 text-lg md:text-xl text-gray-300">
-          Microsoft 365 | Migration | Copilot | Security
-        </p>
-      </header>
+      <div class="nav-links" role="navigation" aria-label="Site navigation">
+        <a href="#services">Services</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </div>
 
-      {/* SERVICES */}
-      <section id="services" className="max-w-5xl mx-auto px-5 py-20 scroll-mt-24">
-        <h2 className="text-3xl font-semibold mb-10 text-center">Our Services</h2>
+      <div class="nav-cta">
+        <a class="btn" href="#services">Explore Services</a>
+        <a class="btn primary" href="#contact">Get a Consultation</a>
+      </div>
 
-        <div className="space-y-6">
-          {/* CARD */}
-          <div className="bg-white/5 p-6 rounded-2xl shadow-lg">
-            <h3 className="text-xl font-semibold mb-3 text-cyan-300">Microsoft 365 Consulting</h3>
-            <ul className="list-disc ml-6 space-y-1 text-gray-300">
-              <li>Tenant setup & configuration</li>
-              <li>Teams, SharePoint, OneDrive</li>
-              <li>Licensing optimization</li>
-              <li>Governance & compliance</li>
-            </ul>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        ☰
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu panel -->
+  <div class="menu-panel" id="menuPanel" aria-hidden="true">
+    <div class="container">
+      <a href="#services" class="mLink">Services</a>
+      <a href="#team" class="mLink">Team</a>
+      <a href="#contact" class="mLink">Contact</a>
+      <a href="#contact" class="btn primary mLink" style="justify-content:center;">Get a Consultation</a>
+    </div>
+  </div>
+
+  <main id="top">
+    <!-- HERO -->
+    <header class="hero" role="banner">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow">
+              <span class="dot"></span>
+              <span>Enterprise-grade consulting for modern workplaces</span>
+            </div>
+
+            <h1>Transform your business with Cloud, Microsoft 365 & AI.</h1>
+
+            <p>
+              ABA Technologies Services helps organizations modernize collaboration, secure identities and devices,
+              migrate data with confidence, and enable Microsoft Copilot adoption — with practical governance and measurable outcomes.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn primary" href="#contact">Talk to an Expert</a>
+              <a class="btn" href="#services">View Our Services</a>
+            </div>
+
+            <div class="trustbar" aria-label="Key strengths">
+              <span class="pill"><span class="check">✓</span> Migration planning & execution</span>
+              <span class="pill"><span class="check">✓</span> Security-first architecture</span>
+              <span class="pill"><span class="check">✓</span> Copilot readiness & enablement</span>
+            </div>
           </div>
 
-          <div className="bg-white/5 p-6 rounded-2xl shadow-lg">
-            <h3 className="text-xl font-semibold mb-3 text-cyan-300">Cloud Migration</h3>
-            <ul className="list-disc ml-6 space-y-1 text-gray-300">
-              <li>Google → Microsoft 365</li>
-              <li>Zoho → Microsoft 365</li>
-              <li>Microsoft → Google</li>
-              <li>Any Source → Any Destination</li>
+          <aside class="hero-card" aria-label="Highlights">
+            <div class="stat-grid">
+              <div class="stat">
+                <strong>Microsoft 365</strong>
+                <span>Tenant architecture, Teams/SharePoint rollout, licensing & governance.</span>
+              </div>
+              <div class="stat">
+                <strong>Cloud Migrations</strong>
+                <span>Google Workspace/Zoho to Microsoft 365 with minimal disruption.</span>
+              </div>
+              <div class="stat">
+                <strong>Copilot / AI</strong>
+                <span>Readiness, adoption, prompts, security controls, and change management.</span>
+              </div>
+              <div class="stat">
+                <strong>Security</strong>
+                <span>Entra ID, MFA, Conditional Access, Intune, compliance fundamentals.</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </header>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>Services built for enterprise reliability</h2>
+            <p class="subhead">
+              Practical consulting with clear scope, secure design, and outcomes. From Microsoft 365 foundations to Copilot adoption,
+              we help you deploy with confidence and operate with control.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <div class="icon" aria-hidden="true">☁️</div>
+            <h3>Microsoft 365 Consulting</h3>
+            <p>Design, deploy, and optimize your modern workplace with governance and best practices.</p>
+            <ul>
+              <li>Tenant setup & configuration</li>
+              <li>Teams, SharePoint, OneDrive architecture</li>
+              <li>Licensing optimization and cost governance</li>
+              <li>Policies, compliance basics & operational readiness</li>
             </ul>
-            <p className="mt-3 font-semibold text-purple-300">
-              Zero data loss. Zero downtime. 100% integrity.
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">🔁</div>
+            <h3>Cloud Migration Services</h3>
+            <p>Structured migration planning and execution — focused on data integrity and user continuity.</p>
+            <ul>
+              <li>Google Workspace → Microsoft 365</li>
+              <li>Zoho → Microsoft 365</li>
+              <li>Microsoft 365 → Google (when required)</li>
+              <li>Mailbox, Drive, permissions & cutover planning</li>
+            </ul>
+            <div class="tagline">Zero data loss. Minimal downtime. Maximum control.</div>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">🤖</div>
+            <h3>Copilot / AI Solutions</h3>
+            <p>Enable Copilot responsibly with adoption playbooks, governance, and secure access controls.</p>
+            <ul>
+              <li>Readiness assessment & deployment planning</li>
+              <li>Prompt libraries & role-based use-case design</li>
+              <li>Automation opportunities with M365 ecosystem</li>
+              <li>Change management & user enablement sessions</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">🛡️</div>
+            <h3>Security, Entra ID & Intune</h3>
+            <p>Strengthen identity security and device compliance while reducing operational risk.</p>
+            <ul>
+              <li>Entra ID hardening & identity governance basics</li>
+              <li>MFA, Conditional Access strategy</li>
+              <li>Intune device management & baselines</li>
+              <li>Secure collaboration foundations</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>Core team</h2>
+            <p class="subhead">
+              Hands-on leadership with a delivery-first mindset — focused on secure implementation, user adoption, and measurable impact.
+            </p>
+          </div>
+        </div>
+
+        <div class="team-wrap">
+          <div class="profile-card">
+            <img class="profile-img" src="profile.jpg" alt="Abdulla Nawab - Co-Founder & Director" />
+            <div class="profile-meta">
+              <h3>Abdulla Nawab</h3>
+              <div class="designation">Co‑Founder & Director</div>
+              <p>
+                Microsoft 365 and cloud specialist focused on modern workplace design, secure identity, migrations, and AI adoption.
+                Delivery-driven approach with strong emphasis on governance and end-user enablement.
+              </p>
+            </div>
+          </div>
+
+          <div class="team-points">
+            <h4>How we work</h4>
+            <ul>
+              <li><strong>Assess:</strong> Understand your current environment, risks, and goals.</li>
+              <li><strong>Plan:</strong> Define scope, timeline, and success criteria with clear deliverables.</li>
+              <li><strong>Implement:</strong> Execute migrations and deployments with security-first controls.</li>
+              <li><strong>Enable:</strong> Train users and teams to maximize adoption and ROI.</li>
+              <li><strong>Support:</strong> Post-go-live stabilization and continuous improvement.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>Contact</h2>
+            <p class="subhead">
+              Tell us what you’re trying to achieve — we’ll respond with a clear plan, recommended approach, and next steps.
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Reach us</h3>
+
+            <div class="contact-row">
+              <span class="badge">Email</span>
+              <span>
+                <a href="mailto:your@email.com">your@email.com</a>
+                <div style="color: rgba(255,255,255,0.55); font-size: 12.5px; margin-top: 3px;">
+                  Replace this with your business email
+                </div>
+              </span>
+            </div>
+
+            <div class="contact-row">
+              <span class="badge">Consulting</span>
+              <span>
+                Microsoft 365 • Cloud Migration • Copilot/AI • Security
+              </span>
+            </div>
+
+            <div class="contact-row">
+              <span class="badge">Availability</span>
+              <span>
+                Remote & onsite (based on engagement scope)
+              </span>
+            </div>
+
+            <p class="fineprint">
+              Tip: If you want a real contact form (without opening email), use Formspree or a lightweight serverless form handler.
+              I can help you set that up when you’re ready.
             </p>
           </div>
 
-          <div className="bg-white/5 p-6 rounded-2xl shadow-lg">
-            <h3 className="text-xl font-semibold mb-3 text-cyan-300">Copilot AI Solutions</h3>
-            <ul className="list-disc ml-6 space-y-1 text-gray-300">
-              <li>Copilot deployment</li>
-              <li>AI automation</li>
-              <li>Use-case design</li>
-            </ul>
-          </div>
+          <div class="contact-card">
+            <h3>Send a message</h3>
+            <!-- mailto-based simple form (works on GitHub Pages) -->
+            <form id="contactForm">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required />
+              </div>
 
-          <div className="bg-white/5 p-6 rounded-2xl shadow-lg">
-            <h3 className="text-xl font-semibold mb-3 text-cyan-300">Security & Intune</h3>
-            <ul className="list-disc ml-6 space-y-1 text-gray-300">
-              <li>Entra ID</li>
-              <li>MFA & Conditional Access</li>
-              <li>Device management</li>
-            </ul>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@company.com" required />
+              </div>
+
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Briefly describe your requirement..." required></textarea>
+              </div>
+
+              <button class="btn primary" type="submit">Send Message</button>
+              <div class="fineprint">
+                This uses your email client (mailto). For a hosted form endpoint, ask me and I’ll add it cleanly.
+              </div>
+            </form>
           </div>
         </div>
-      </section>
 
-      {/* TEAM */}
-      <section id="team" className="max-w-5xl mx-auto px-5 py-20 text-center scroll-mt-24">
-        <h2 className="text-3xl font-semibold mb-10">Core Team</h2>
+      </div>
+    </section>
 
-        <div className="flex flex-col items-center">
-          <img
-            src="profile.jpg"
-            alt="Profile"
-            className="w-40 h-40 rounded-full object-cover shadow-xl border-2 border-cyan-400 mb-4"
-          />
-          <h3 className="text-2xl font-semibold">Abdulla Nawab</h3>
-          <p className="text-cyan-300">Co-Founder & Director</p>
+    <!-- FOOTER -->
+    <footer>
+      <div class="container footer-inner">
+        <div>
+          © <span id="year"></span> <strong>ABA Technologies Services</strong>. All rights reserved.
         </div>
-      </section>
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#team">Team</a>
+          <a href="#contact">Contact</a>
+          <a href="#top">Back to top ↑</a>
+        </div>
+      </div>
+    </footer>
+  </main>
 
-      {/* CONTACT */}
-      <section id="contact" className="max-w-4xl mx-auto px-5 py-20 scroll-mt-24 text-center">
-        <h2 className="text-3xl font-semibold mb-6">Contact</h2>
-        <p className="text-gray-300">Email: your@email.com</p>
-      </section>
-    </div>
-  );
-}
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const menuPanel = document.getElementById('menuPanel');
+    const mobileLinks = document.querySelectorAll('.mLink');
+
+    function closeMenu(){
+      menuPanel.style.display = 'none';
+      menuPanel.setAttribute('aria-hidden', 'true');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.textContent = '☰';
+    }
+
+    menuBtn.addEventListener('click', () => {
+      const open = menuPanel.style.display === 'block';
+      if(open){
+        closeMenu();
+      } else {
+        menuPanel.style.display = 'block';
+        menuPanel.setAttribute('aria-hidden', 'false');
+        menuBtn.setAttribute('aria-expanded', 'true');
+        menuBtn.textContent = '✕';
+      }
+    });
+
+    mobileLinks.forEach(a => a.addEventListener('click', closeMenu));
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple mailto form (GitHub Pages friendly)
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value.trim());
+      const email = encodeURIComponent(document.getElementById('email').value.trim());
+      const message = encodeURIComponent(document.getElementById('message').value.trim());
+
+      const subject = encodeURIComponent(`Website Inquiry - ABA Technologies Services (${decodeURIComponent(name)})`);
+      const body = encodeURIComponent(
+        `Name: ${decodeURIComponent(name)}\nEmail: ${decodeURIComponent(email)}\n\nMessage:\n${decodeURIComponent(message)}`
+      );
+
+      // Update this email address
+      window.location.href = `mailto:your@email.com?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
