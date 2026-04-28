@@ -1,127 +1,119 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ABA Technologies Services</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ABA Technologies Services</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-  <!-- AOS Animation -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<style>
+body {
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  color:white;
+  background:#0f172a;
+}
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e3a8a);
-      color: white;
-    }
+/* NAVBAR */
+nav {
+  position:fixed;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:20px;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
+  padding:10px;
+  z-index:1000;
+}
+nav img {height:40px;}
+nav a {color:white;text-decoration:none;}
 
-    nav {
-      position: fixed;
-      width: 100%;
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(10px);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
-      padding: 10px;
-      z-index: 1000;
-    }
+/* HERO */
+header {
+  height:100vh;
+  background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+  url('https://images.unsplash.com/photo-1519389950473-47ba0277781c');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+header h1 {
+  font-size:55px;
+  background:linear-gradient(90deg,#38bdf8,#a855f7);
+  -webkit-background-clip:text;
+  color:transparent;
+}
 
-    nav img {
-      height: 40px;
-    }
+/* SECTION */
+section {
+  padding:80px 20px;
+  max-width:1100px;
+  margin:auto;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-    }
+/* GRID */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
 
-    header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
+/* CARDS */
+.card {
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+  padding:25px;
+  border-radius:15px;
+  transition:0.3s;
+}
+.card:hover {transform:translateY(-10px);}
 
-    header h1 {
-      font-size: 50px;
-      background: linear-gradient(90deg, #38bdf8, #a855f7);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
+/* TEAM */
+.team img {
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  object-fit:cover;
+}
 
-    .btn {
-      padding: 12px 25px;
-      margin: 10px;
-      border-radius: 30px;
-      border: none;
-      background: linear-gradient(90deg, #38bdf8, #a855f7);
-      color: white;
-      cursor: pointer;
-    }
+/* SERVICE BACKGROUND */
+.services-bg {
+  background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
+  url('https://images.unsplash.com/photo-1531297484001-80022131f5a1');
+  background-size:cover;
+}
 
-    section {
-      padding: 80px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+/* ABOUT BG */
+.about-bg {
+  background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
+  url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d');
+  background-size:cover;
+}
 
-    h2 {
-      text-align: center;
-      margin-bottom: 40px;
-    }
+/* LOCATION BG */
+.location-bg {
+  background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
+  url('https://images.unsplash.com/photo-1521790361543-f645cf042ec4');
+  background-size:cover;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.08);
-      backdrop-filter: blur(12px);
-      padding: 25px;
-      border-radius: 15px;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-    }
-
-    .team-card img {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 10px;
-    }
-
-    .designation {
-      color: #38bdf8;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: rgba(0,0,0,0.5);
-    }
-
-    .service-title {
-      cursor: pointer;
-    }
-  </style>
+footer {
+  text-align:center;
+  padding:30px;
+  background:black;
+}
+</style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
   <img src="logo.png">
   <a href="#">Home</a>
@@ -131,118 +123,113 @@
   <a href="#locations">Locations</a>
 </nav>
 
+<!-- HERO -->
 <header>
   <h1>Empowering Cloud & AI Transformation</h1>
   <p>Microsoft 365 | Copilot | Migration Experts</p>
-  <div>
-    <button class="btn">Our Services</button>
-    <button class="btn">Contact Us</button>
-  </div>
 </header>
 
-<section id="services">
-  <h2>Our Services</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3 class="service-title" onclick="toggle('m365')">Microsoft 365 Consulting ⬇️</h3>
-      <div id="m365" style="display:none;">
-        <p>
-        Tenant Setup & Deployment <br>
-        Exchange Online, Teams, SharePoint <br>
-        Licensing Optimization <br>
-        Copilot Readiness & Enablement
-        </p>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3 class="service-title" onclick="toggle('migration')">Cloud Migration ⬇️</h3>
-      <div id="migration" style="display:none;">
-        <p>
-        Google Workspace → Microsoft 365 <br>
-        Zoho → Microsoft 365 <br>
-        Microsoft 365 → Google Workspace <br>
-        Any Source → Any Destination
-        </p>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3 class="service-title" onclick="toggle('copilot')">Microsoft 365 Copilot ⬇️</h3>
-      <div id="copilot" style="display:none;">
-        <p>
-        Copilot Readiness Assessment <br>
-        Business Use Cases <br>
-        Prompt Engineering <br>
-        Adoption & Training
-        </p>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3 class="service-title" onclick="toggle('security')">Security & Intune ⬇️</h3>
-      <div id="security" style="display:none;">
-        <p>
-        Entra ID (Azure AD) <br>
-        MFA & Conditional Access <br>
-        Intune Device Management <br>
-        Endpoint Security
-        </p>
-      </div>
-    </div>
-
-  </div>
+<!-- TRUSTED BY -->
+<section>
+<h2 style="text-align:center;">Trusted By Businesses</h2>
+<div class="grid">
+  <div class="card">Microsoft Ecosystem Clients</div>
+  <div class="card">SMBs & Startups</div>
+  <div class="card">Enterprise IT Teams</div>
+  <div class="card">Global Clients</div>
+</div>
 </section>
 
-<section id="about">
-  <h2>About Us</h2>
-  <p style="text-align:center;">
-    ABA Technologies Services delivers enterprise-grade Microsoft 365, 
-    cloud migration, and AI-driven Copilot solutions to modernize businesses.
-  </p>
+<!-- SERVICES -->
+<section id="services" class="services-bg">
+<h2 style="text-align:center;">Our Services</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3 onclick="toggle('m365')">Microsoft 365 Consulting ⬇️</h3>
+<div id="m365" style="display:none;">
+Tenant Setup <br>
+Exchange, Teams, SharePoint <br>
+Licensing Optimization <br>
+Copilot Enablement
+</div>
+</div>
+
+<div class="card">
+<h3 onclick="toggle('migration')">Cloud Migration ⬇️</h3>
+<div id="migration" style="display:none;">
+Google → M365 <br>
+Zoho → M365 <br>
+M365 → Google <br>
+Any Source → Any Destination
+</div>
+</div>
+
+<div class="card">
+<h3 onclick="toggle('copilot')">Copilot AI ⬇️</h3>
+<div id="copilot" style="display:none;">
+Copilot Readiness <br>
+Use Case Design <br>
+Prompt Engineering <br>
+Adoption Training
+</div>
+</div>
+
+<div class="card">
+<h3 onclick="toggle('security')">Security & Intune ⬇️</h3>
+<div id="security" style="display:none;">
+Entra ID <br>
+MFA <br>
+Conditional Access <br>
+Endpoint Security
+</div>
+</div>
+
+</div>
 </section>
 
+<!-- ABOUT -->
+<section id="about" class="about-bg">
+<h2 style="text-align:center;">About Us</h2>
+<p style="text-align:center;">
+We deliver Microsoft 365, Cloud Migration and AI-powered Copilot solutions 
+to help businesses transform and grow securely.
+</p>
+</section>
+
+<!-- TEAM -->
 <section id="team">
-  <h2>Core Team</h2>
-  <div class="grid">
-    <div class="card team-card" style="text-align:center;">
-      <img src="profile.jpg">
-      <h3>Abdulla Nawab</h3>
-      <p class="designation">Co-Founder & Director</p>
-    </div>
-  </div>
+<h2 style="text-align:center;">Core Team</h2>
+<div class="grid">
+<div class="card team" style="text-align:center;">
+<img src="profile.jpg">
+<h3>Abdulla Nawab</h3>
+<p style="color:#38bdf8;">Co-Founder & Director</p>
+</div>
+</div>
 </section>
 
-<section id="locations">
-  <h2>Our Presence</h2>
-  <div class="grid">
-    <div class="card">🇦🇪 UAE</div>
-    <div class="card">🇸🇦 KSA</div>
-    <div class="card">🇮🇳 India</div>
-    <div class="card">🇺🇸 USA</div>
-  </div>
+<!-- LOCATIONS -->
+<section id="locations" class="location-bg">
+<h2 style="text-align:center;">Our Presence</h2>
+<div class="grid">
+<div class="card">🇦🇪 UAE</div>
+<div class="card">🇸🇦 KSA</div>
+<div class="card">🇮🇳 India</div>
+<div class="card">🇺🇸 USA</div>
+</div>
 </section>
 
 <footer>
-  <p>© 2026 ABA Technologies Services</p>
+<p>© 2026 ABA Technologies Services</p>
 </footer>
 
 <script>
-function toggle(id) {
-  var x = document.getElementById(id);
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
+function toggle(id){
+var x=document.getElementById(id);
+x.style.display = x.style.display==="none" ? "block":"none";
 }
-</script>
-
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init();
 </script>
 
 </body>
