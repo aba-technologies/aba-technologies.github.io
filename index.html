@@ -2,508 +2,685 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <link rel="icon" href="favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#070B16" />
 
-  <title>ABA Technologies Pvt Ltd | Premium IT Consulting – Cloud, AI, Security & Migrations</title>
-  <meta name="description" content="ABA Technologies Pvt Ltd delivers premium IT consulting across Microsoft 365, Copilot/AI adoption, Google Workspace, identity & security (Entra ID), endpoint management (Intune), and large-scale migrations." />
-  <meta name="keywords" content="IT consulting, Microsoft 365, Microsoft Copilot, Google Workspace, cloud migration, Entra ID, Azure AD, Intune, security, endpoint management, email migration, drive migration, cross-tenant migration, PowerShell, GAM" />
+  <title>ABA Technologies Pvt Ltd | Microsoft 365, Cloud Migration, Copilot & Security</title>
+  <meta name="description" content="ABA Technologies Pvt Ltd provides Microsoft 365 consulting, cloud migrations, Copilot/AI adoption, and security solutions (Entra ID, Intune) for modern businesses." />
+  <meta name="keywords" content="Microsoft 365 consulting, cloud migration, Google Workspace to Microsoft 365, Copilot adoption, Entra ID, Intune, security, SharePoint, Teams" />
   <meta name="author" content="ABA Technologies Pvt Ltd" />
+  <meta name="theme-color" content="#0b1120" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="ABA Technologies Pvt Ltd | Premium IT Consulting" />
-  <meta property="og:description" content="Cloud, AI adoption, migrations, identity & security, and endpoint management—delivered with enterprise-grade governance." />
+  <!-- Open Graph (social previews) -->
+  <meta property="og:title" content="ABA Technologies Pvt Ltd" />
+  <meta property="og:description" content="Enterprise-grade Microsoft 365 consulting, cloud migrations, Copilot/AI adoption, and security (Entra ID, Intune)." />
   <meta property="og:type" content="website" />
+  <!-- Tip: update this once your domain is live -->
   <meta property="og:url" content="https://yourdomain.com/" />
   <meta property="og:image" content="https://yourdomain.com/og-image.png" />
 
-  <!-- Fonts -->
-  https://fonts.googleapis.com
-  https://fonts.gstatic.com
-  https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap
+  <!-- Performance: font loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+    /* =========================
+       ABA Technologies Pvt Ltd
+       Enterprise Landing Page
+       Single-file: HTML + CSS + JS
+       ========================= */
+
     :root{
-      --bg0:#070B16;
-      --bg1:#0B1120;
+      --bg: #0b1120;
       --panel: rgba(255,255,255,0.06);
-      --panel2: rgba(255,255,255,0.09);
+      --panel2: rgba(255,255,255,0.08);
       --stroke: rgba(255,255,255,0.12);
-      --text: rgba(255,255,255,0.93);
+
+      --text: rgba(255,255,255,0.92);
       --muted: rgba(255,255,255,0.72);
       --muted2: rgba(255,255,255,0.60);
-      --cyan:#38bdf8;
-      --violet:#a855f7;
-      --teal:#2dd4bf;
-      --lime:#a3e635;
-      --amber:#fbbf24;
-      --shadow: 0 24px 80px rgba(0,0,0,0.45);
-      --shadow2: 0 18px 50px rgba(0,0,0,0.30);
+
+      --cyan: #38bdf8;
+      --violet: #a855f7;
+      --teal: #2dd4bf;
+
+      --shadow: 0 20px 60px rgba(0,0,0,0.35);
+      --shadow2: 0 16px 40px rgba(0,0,0,0.22);
+
       --radius: 16px;
       --radius2: 22px;
-      --max: 1180px;
-      --navH: 76px;
+
+      --max: 1120px;
+
+      /* navbar height used for scroll offset */
+      --navH: 74px;
     }
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
+    *{ box-sizing: border-box; }
+    html{ scroll-behavior:smooth; }
     body{
       margin:0;
       font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(1200px 700px at 12% 12%, rgba(56,189,248,0.14), transparent 60%),
-        radial-gradient(1000px 700px at 88% 18%, rgba(168,85,247,0.16), transparent 58%),
-        radial-gradient(1000px 700px at 50% 92%, rgba(45,212,191,0.10), transparent 60%),
-        linear-gradient(180deg, var(--bg0), var(--bg1));
+      color: var(--text);
+      background: radial-gradient(1200px 700px at 10% 10%, rgba(56,189,248,0.16), transparent 60%),
+                  radial-gradient(900px 600px at 90% 20%, rgba(168,85,247,0.14), transparent 55%),
+                  radial-gradient(900px 600px at 50% 90%, rgba(45,212,191,0.10), transparent 55%),
+                  var(--bg);
       overflow-x:hidden;
     }
 
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    main{padding-top:var(--navH)}
+    /* Prevent content from hiding under fixed nav */
+    main{ padding-top: var(--navH); }
 
-    .container{max-width:var(--max);margin:0 auto;padding:0 20px}
-    .sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+    a{ color: inherit; text-decoration: none; }
+    img{ max-width: 100%; display:block; }
 
-    /* NAV */
+    .container{
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ---------------- NAV ---------------- */
     nav{
-      position:fixed;top:0;left:0;right:0;height:var(--navH);z-index:1000;
-      background: rgba(7, 11, 22, 0.62);
-      border-bottom:1px solid rgba(255,255,255,0.08);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--navH);
+      z-index: 1000;
+      background: rgba(10, 14, 28, 0.62);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
     }
     .nav-inner{
-      height:100%;display:flex;align-items:center;justify-content:space-between;gap:14px;
+      height: 100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 14px;
     }
-    .brand{display:flex;align-items:center;gap:12px;min-width:220px}
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      min-width: 180px;
+    }
     .brand img{
-      width:44px;height:44px;border-radius:12px;object-fit:cover;
-      box-shadow: 0 16px 40px rgba(0,0,0,0.35);
-      border:1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.04);
+      height: 42px;
+      width: auto;
+      filter: drop-shadow(0 6px 16px rgba(0,0,0,0.35));
     }
-    .brand .name{line-height:1.05}
-    .brand .name strong{display:block;font-size:14px;letter-spacing:0.2px}
-    .brand .name span{display:block;font-size:12px;color:var(--muted2);margin-top:3px}
+    .brand .name{
+      display:flex;
+      flex-direction:column;
+      line-height:1.05;
+    }
+    .brand .name strong{ font-size: 14px; letter-spacing: 0.2px;}
+    .brand .name span{ font-size: 12px; color: var(--muted2);}
 
-    .nav-links{display:flex;align-items:center;gap:16px}
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap: 18px;
+    }
     .nav-links a{
-      color:var(--muted);font-weight:600;font-size:13.5px;
-      padding:10px 10px;border-radius:12px;transition:.22s ease;
-      border:1px solid transparent;
+      color: var(--muted);
+      font-weight: 500;
+      font-size: 14px;
+      padding: 10px 10px;
+      border-radius: 10px;
+      transition: 0.25s ease;
     }
     .nav-links a:hover{
-      color:white;background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.10);
+      color: white;
+      background: rgba(255,255,255,0.06);
     }
 
-    .nav-cta{display:flex;align-items:center;gap:10px}
+    .nav-cta{
+      display:flex;
+      gap: 10px;
+      align-items:center;
+    }
+
     .btn{
-      display:inline-flex;align-items:center;justify-content:center;gap:10px;
-      padding:10px 14px;border-radius:12px;font-weight:700;font-size:13.5px;
-      border:1px solid rgba(255,255,255,0.12);
-      background:rgba(255,255,255,0.06);
-      transition:.22s ease; user-select:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 10px;
+      border-radius: 12px;
+      padding: 10px 14px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.06);
+      box-shadow: none;
+      transition: 0.25s ease;
+      user-select:none;
     }
-    .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,0.10)}
+    .btn:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,0.10);
+      border-color: rgba(255,255,255,0.16);
+    }
     .btn.primary{
-      border:0;
-      color:#07101f;
-      background:linear-gradient(90deg,var(--cyan),var(--violet));
-      box-shadow:0 18px 46px rgba(56,189,248,0.18);
+      border: 0;
+      background: linear-gradient(90deg, var(--cyan), var(--violet));
+      box-shadow: 0 14px 40px rgba(56,189,248,0.18);
+      color: #07101f;
     }
-    .btn.primary:hover{filter:brightness(1.05)}
-    .btn.ghost{
-      background:transparent;border:1px solid rgba(255,255,255,0.14)
+    .btn.primary:hover{
+      filter: brightness(1.03);
+      transform: translateY(-1px);
     }
 
+    /* Mobile menu */
     .menu-btn{
-      display:none;width:46px;height:46px;border-radius:14px;
-      border:1px solid rgba(255,255,255,0.14);
-      background:rgba(255,255,255,0.06);color:white;cursor:pointer;
+      display:none;
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      color: white;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
     }
     .menu-panel{
-      display:none; position:fixed; top:var(--navH); left:0; right:0; z-index:999;
-      background: rgba(7, 11, 22, 0.92);
-      border-bottom:1px solid rgba(255,255,255,0.10);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      display:none;
+      position: fixed;
+      top: var(--navH);
+      left: 0; right: 0;
+      background: rgba(10, 14, 28, 0.92);
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 999;
     }
-    .menu-panel .container{padding:14px 20px 18px;display:flex;flex-direction:column;gap:10px}
+    .menu-panel .container{
+      padding: 14px 20px 18px;
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+    }
     .menu-panel a{
-      padding:12px 12px;border-radius:14px;
-      background:rgba(255,255,255,0.06);
-      border:1px solid rgba(255,255,255,0.10);
-      font-weight:800;
+      padding: 12px 12px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      color: var(--text);
+      font-weight: 600;
     }
 
-    /* HERO */
+    /* ---------------- HERO ---------------- */
     header.hero{
-      position:relative;
-      min-height: calc(92vh - var(--navH));
-      padding: 68px 0 30px;
+      position: relative;
+      min-height: calc(100vh - var(--navH));
+      display:flex;
+      align-items:center;
+      padding: 70px 0 40px;
       overflow:hidden;
     }
 
-    /* Decorative premium “AI” backdrop (no external images; safe + fast) */
+    /* optional image overlay: keep your existing unsplash background but improved */
     .hero::before{
       content:"";
-      position:absolute; inset:-80px -120px;
+      position:absolute;
+      inset:0;
       background:
-        radial-gradient(560px 380px at 18% 35%, rgba(56,189,248,0.22), transparent 62%),
-        radial-gradient(620px 420px at 70% 28%, rgba(168,85,247,0.22), transparent 62%),
-        radial-gradient(700px 520px at 55% 82%, rgba(45,212,191,0.14), transparent 66%),
-        radial-gradient(420px 320px at 92% 72%, rgba(163,230,53,0.09), transparent 62%);
-      filter:saturate(1.1);
+        linear-gradient(180deg, rgba(11,17,32,0.65), rgba(11,17,32,0.92)),
+        url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      filter: saturate(1.1) contrast(1.05);
+      transform: scale(1.02);
       z-index:-2;
+    }
+
+    /* soft gradient blobs */
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:-120px -200px;
+      background:
+        radial-gradient(600px 420px at 18% 35%, rgba(56,189,248,0.22), transparent 60%),
+        radial-gradient(560px 420px at 70% 25%, rgba(168,85,247,0.22), transparent 60%),
+        radial-gradient(620px 480px at 60% 80%, rgba(45,212,191,0.14), transparent 60%);
+      z-index:-1;
       pointer-events:none;
     }
-    .grid-hero{
+
+    .hero-grid{
       display:grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap:22px;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 26px;
       align-items:center;
     }
 
     .eyebrow{
-      display:inline-flex;gap:10px;align-items:center;
-      padding:8px 12px;border-radius:999px;
-      border:1px solid rgba(255,255,255,0.12);
-      background:rgba(255,255,255,0.06);
-      color:var(--muted);font-size:13px;
-      width:fit-content;
+      display:inline-flex;
+      gap: 10px;
+      align-items:center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      color: var(--muted);
+      font-size: 13px;
+      width: fit-content;
     }
     .dot{
-      width:9px;height:9px;border-radius:999px;
-      background:linear-gradient(90deg,var(--cyan),var(--violet));
-      box-shadow:0 0 0 6px rgba(56,189,248,0.10);
+      width: 8px; height: 8px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--cyan), var(--violet));
+      box-shadow: 0 0 0 6px rgba(56,189,248,0.10);
     }
 
     h1{
-      margin:14px 0 12px;
-      font-size:clamp(34px,4.2vw,58px);
-      line-height:1.05;
-      letter-spacing:-0.7px;
-      font-weight:900;
+      margin: 14px 0 12px;
+      font-size: clamp(34px, 4.2vw, 56px);
+      line-height: 1.07;
+      letter-spacing: -0.6px;
+      font-weight: 800;
       background: linear-gradient(90deg, var(--cyan), var(--violet));
-      -webkit-background-clip:text;background-clip:text;color:transparent;
+      -webkit-background-clip:text;
+      background-clip:text;
+      color: transparent;
     }
-    .lead{
-      margin:0;color:var(--muted);
-      font-size:clamp(15px,1.45vw,18px);
-      line-height:1.75;
-      max-width: 62ch;
+    .hero p{
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(15px, 1.4vw, 18px);
+      line-height: 1.7;
+      max-width: 60ch;
     }
 
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
-    .trust{
-      margin-top:22px; display:flex;flex-wrap:wrap;gap:10px;
-      color:var(--muted2); font-size:13px; align-items:center;
+    .hero-actions{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .trustbar{
+      margin-top: 22px;
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      color: var(--muted2);
+      font-size: 13px;
+      align-items:center;
     }
     .pill{
-      display:inline-flex;gap:8px;align-items:center;
-      padding:8px 10px;border-radius:999px;
-      background:rgba(255,255,255,0.06);
-      border:1px solid rgba(255,255,255,0.10);
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
     }
     .check{
-      width:16px;height:16px;border-radius:6px;
-      display:grid;place-items:center;
-      background:rgba(45,212,191,0.12);
-      border:1px solid rgba(45,212,191,0.28);
-      color:#b8fff6;font-size:12px;font-weight:900;
+      width: 16px; height: 16px;
+      border-radius: 6px;
+      display:inline-grid;
+      place-items:center;
+      background: rgba(45,212,191,0.12);
+      border: 1px solid rgba(45,212,191,0.28);
+      color: #b8fff6;
+      font-size: 12px;
+      font-weight: 800;
     }
 
     .hero-card{
-      border-radius:var(--radius2);
-      background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.05));
-      border:1px solid rgba(255,255,255,0.12);
-      box-shadow:var(--shadow);
-      padding:18px;
-      position:relative;
+      border-radius: var(--radius2);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      position: relative;
       overflow:hidden;
     }
     .hero-card::before{
       content:"";
-      position:absolute; inset:-120px -120px;
-      background:
-        radial-gradient(280px 220px at 25% 30%, rgba(56,189,248,0.22), transparent 60%),
-        radial-gradient(280px 240px at 70% 60%, rgba(168,85,247,0.18), transparent 62%),
-        radial-gradient(260px 200px at 60% 20%, rgba(251,191,36,0.09), transparent 62%);
+      position:absolute;
+      inset:-80px -80px;
+      background: radial-gradient(240px 200px at 30% 30%, rgba(56,189,248,0.18), transparent 60%),
+                  radial-gradient(240px 200px at 70% 55%, rgba(168,85,247,0.16), transparent 60%);
       pointer-events:none;
     }
-
     .stat-grid{
-      display:grid;grid-template-columns:1fr 1fr;gap:12px;
-      position:relative;
-    }
-    .stat{
-      border-radius:16px;padding:14px;
-      border:1px solid rgba(255,255,255,0.10);
-      background:rgba(255,255,255,0.05);
-      box-shadow:var(--shadow2);
-      min-height: 104px;
-    }
-    .stat strong{display:block;font-size:16px;color:white;margin-bottom:6px}
-    .stat span{display:block;font-size:12.5px;color:var(--muted2);line-height:1.4}
-
-    .mini{
-      margin-top:12px;
-      display:flex; gap:10px; flex-wrap:wrap;
-      position:relative;
-    }
-    .chip{
-      font-size:12px;font-weight:800;
-      padding:7px 10px;border-radius:999px;
-      border:1px solid rgba(255,255,255,0.12);
-      background:rgba(255,255,255,0.06);
-      color:rgba(255,255,255,0.86);
-    }
-
-    /* SECTIONS */
-    section{padding:78px 0}
-    section[id]{scroll-margin-top: calc(var(--navH) + 18px)}
-    .section-title{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;margin-bottom:18px}
-    h2{
-      margin:0;font-size:clamp(24px,2.2vw,36px);
-      letter-spacing:-0.3px;font-weight:900;color:white;
-    }
-    .subhead{
-      margin:10px 0 0;color:var(--muted);
-      line-height:1.8;max-width:80ch;
-    }
-
-    /* CARDS / GRID */
-    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:26px}
-    .card{
-      grid-column: span 6;
-      border-radius: var(--radius);
-      background: rgba(255,255,255,0.06);
-      border:1px solid rgba(255,255,255,0.10);
-      padding:22px;
-      box-shadow: var(--shadow2);
-      position:relative; overflow:hidden;
-      transition: .22s ease;
-      min-height: 240px;
-    }
-    .card:hover{transform:translateY(-2px);background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.16)}
-    .icon{
-      width:44px;height:44px;border-radius:14px;
-      display:grid;place-items:center;
-      background: linear-gradient(135deg, rgba(56,189,248,0.20), rgba(168,85,247,0.18));
-      border:1px solid rgba(255,255,255,0.12);
-      box-shadow:0 12px 30px rgba(0,0,0,0.28);
-      margin-bottom:12px;
-    }
-    .card h3{margin:0 0 8px;font-size:18px;font-weight:900;color:white}
-    .card p{margin:0 0 12px;color:var(--muted);line-height:1.75;font-size:14.5px}
-    .card ul{margin:0;padding-left:18px;color:var(--muted2);line-height:1.9;font-size:14px}
-    .kpi{
-      margin-top:14px;
-      display:flex;flex-wrap:wrap;gap:10px;
-    }
-    .kpi span{
-      font-size:12px;font-weight:900;
-      padding:7px 10px;border-radius:999px;
-      background: rgba(56,189,248,0.10);
-      border:1px solid rgba(56,189,248,0.22);
-      color: rgba(225,248,255,0.92);
-    }
-
-    /* SPLIT SECTION */
-    .split{
-      display:grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap:16px;
-      margin-top: 26px;
-      align-items:start;
-    }
-    .panel{
-      border-radius: var(--radius2);
-      background: rgba(255,255,255,0.06);
-      border:1px solid rgba(255,255,255,0.12);
-      padding:22px;
-      box-shadow: var(--shadow2);
-    }
-    .panel h3{margin:0 0 10px;font-size:16px;font-weight:900}
-    .panel p{margin:0;color:var(--muted);line-height:1.85}
-    .panel ul{margin:12px 0 0;padding-left:18px;color:var(--muted);line-height:1.95;font-size:14px}
-
-    /* PROCESS */
-    .steps{
-      margin-top: 18px;
-      display:grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 12px;
-    }
-    .step{
-      border-radius:16px;
-      padding:14px;
-      border:1px solid rgba(255,255,255,0.10);
-      background: rgba(255,255,255,0.05);
-      box-shadow: var(--shadow2);
-      min-height: 124px;
-    }
-    .step b{display:block;font-size:13px;color:white}
-    .step small{display:block;margin-top:8px;color:var(--muted2);line-height:1.6}
-
-    /* FAQ */
-    .faq{margin-top: 18px; display:grid; gap:12px}
-    details{
-      border-radius:16px;
-      background: rgba(255,255,255,0.06);
-      border:1px solid rgba(255,255,255,0.10);
-      padding: 14px 16px;
-      box-shadow: var(--shadow2);
-    }
-    summary{cursor:pointer;font-weight:900;color:white}
-    details p{margin:10px 0 0;color:var(--muted);line-height:1.8}
-
-    /* CONTACT */
-    .contact-grid{
-      margin-top: 22px;
       display:grid;
       grid-template-columns: 1fr 1fr;
-      gap:16px;
-      align-items:start;
+      gap: 12px;
+      position: relative;
     }
-    .row{
-      display:flex;gap:10px;align-items:flex-start;
-      padding:10px 0;border-bottom:1px dashed rgba(255,255,255,0.12);
-      color:var(--muted);font-size:14px;
+    .stat{
+      border-radius: 16px;
+      padding: 14px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.05);
+      box-shadow: var(--shadow2);
     }
-    .row:last-child{border-bottom:0}
+    .stat strong{
+      display:block;
+      font-size: 18px;
+      margin-bottom: 6px;
+      color: white;
+    }
+    .stat span{
+      color: var(--muted2);
+      font-size: 12.5px;
+      line-height: 1.4;
+      display:block;
+    }
+
+    /* ---------------- SECTIONS ---------------- */
+    section{
+      padding: 76px 0;
+    }
+    section[id]{
+      scroll-margin-top: calc(var(--navH) + 18px); /* ensures anchor scroll positions correctly */
+    }
+
+    .section-title{
+      display:flex;
+      align-items:flex-end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+    h2{
+      margin: 0;
+      font-size: clamp(24px, 2.2vw, 34px);
+      letter-spacing: -0.3px;
+      font-weight: 800;
+      color: white;
+    }
+    .subhead{
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.75;
+      max-width: 78ch;
+    }
+
+    /* ---------------- SERVICES ---------------- */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .card{
+      grid-column: span 6;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow2);
+      position: relative;
+      overflow:hidden;
+      transition: 0.25s ease;
+      min-height: 220px;
+    }
+    .card:hover{
+      transform: translateY(-2px);
+      border-color: rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.08);
+    }
+    .card .icon{
+      width: 42px; height: 42px;
+      border-radius: 14px;
+      display:grid;
+      place-items:center;
+      background: linear-gradient(135deg, rgba(56,189,248,0.18), rgba(168,85,247,0.16));
+      border: 1px solid rgba(255,255,255,0.12);
+      margin-bottom: 12px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.25);
+    }
+    .card h3{
+      margin: 0 0 8px;
+      font-size: 18px;
+      font-weight: 800;
+      color: white;
+      letter-spacing: -0.2px;
+    }
+    .card p{
+      margin: 0 0 12px;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14.5px;
+    }
+    .card ul{
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted2);
+      line-height: 1.85;
+      font-size: 14px;
+    }
+    .tagline{
+      margin-top: 12px;
+      font-weight: 800;
+      color: rgba(168,85,247,0.95);
+    }
+
+    /* ---------------- TEAM ---------------- */
+    .team-wrap{
+      display:grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 18px;
+      align-items: center;
+      margin-top: 30px;
+    }
+    .profile-card{
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 22px;
+      box-shadow: var(--shadow);
+      display:flex;
+      gap: 16px;
+      align-items:center;
+    }
+    .profile-img{
+      width: 108px; height: 108px;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 2px solid rgba(56,189,248,0.60);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+      flex: none;
+    }
+    .profile-meta h3{
+      margin: 0;
+      font-size: 18px;
+      font-weight: 900;
+    }
+    .designation{
+      margin: 6px 0 0;
+      color: var(--cyan);
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .profile-meta p{
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 14px;
+    }
+    .team-points{
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.10);
+      padding: 22px;
+    }
+    .team-points h4{
+      margin: 0 0 10px;
+      font-size: 16px;
+      font-weight: 900;
+    }
+    .team-points ul{
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.9;
+      font-size: 14px;
+    }
+
+    /* ---------------- CONTACT ---------------- */
+    .contact-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 26px;
+      align-items: start;
+    }
+    .contact-card{
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 22px;
+      box-shadow: var(--shadow2);
+    }
+    .contact-card h3{
+      margin: 0 0 10px;
+      font-size: 16px;
+      font-weight: 900;
+    }
+    .contact-row{
+      display:flex;
+      gap: 10px;
+      align-items:flex-start;
+      padding: 10px 0;
+      border-bottom: 1px dashed rgba(255,255,255,0.12);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .contact-row:last-child{ border-bottom: 0; }
     .badge{
-      font-size:12px;font-weight:900;
-      padding:6px 10px;border-radius:999px;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
       background: rgba(255,255,255,0.06);
-      border:1px solid rgba(255,255,255,0.12);
       color: rgba(255,255,255,0.86);
-      white-space:nowrap;
+      width: fit-content;
+      white-space: nowrap;
     }
-    form{display:flex;flex-direction:column;gap:12px;margin-top:10px}
-    label{font-size:13px;color:var(--muted2);font-weight:700}
+
+    form{
+      display:flex;
+      flex-direction:column;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .field{
+      display:flex;
+      flex-direction:column;
+      gap: 6px;
+    }
+    label{
+      font-size: 13px;
+      color: var(--muted2);
+      font-weight: 600;
+    }
     input, textarea{
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,0.12);
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.12);
       background: rgba(255,255,255,0.06);
-      color:white;
-      padding:12px 12px;
-      outline:none;
-      font-family:inherit;
-      font-size:14px;
-      transition:.2s ease;
+      color: white;
+      padding: 12px 12px;
+      outline: none;
+      font-family: inherit;
+      font-size: 14px;
+      transition: 0.2s ease;
     }
     input:focus, textarea:focus{
       border-color: rgba(56,189,248,0.45);
       box-shadow: 0 0 0 4px rgba(56,189,248,0.12);
     }
-    textarea{min-height:120px;resize:vertical}
-    .fine{
-      margin-top:10px;
-      color:var(--muted2);
-      font-size:12.5px;
-      line-height:1.6;
+    textarea{ min-height: 120px; resize: vertical; }
+
+    .fineprint{
+      margin-top: 10px;
+      color: var(--muted2);
+      font-size: 12.5px;
+      line-height: 1.6;
     }
 
-    /* FOOTER */
+    /* ---------------- FOOTER ---------------- */
     footer{
-      padding: 30px 0 46px;
-      border-top:1px solid rgba(255,255,255,0.08);
+      padding: 30px 0 40px;
+      border-top: 1px solid rgba(255,255,255,0.08);
       background: rgba(0,0,0,0.14);
-      margin-top: 34px;
+      margin-top: 36px;
     }
     .footer-inner{
-      display:flex;flex-wrap:wrap;justify-content:space-between;
-      gap:16px;align-items:center;color:var(--muted2);font-size:13px;
-    }
-    .footer-links{display:flex;gap:12px;flex-wrap:wrap}
-    .footer-links a{
-      color:var(--muted2);
-      padding:8px 10px;border-radius:10px;
-      border:1px solid transparent;transition:.2s ease;
-    }
-    .footer-links a:hover{color:white;border-color:rgba(255,255,255,0.10);background:rgba(255,255,255,0.06)}
-    .toast{
-      position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%);
-      background: rgba(7, 11, 22, 0.92);
-      border:1px solid rgba(255,255,255,0.14);
-      border-radius: 14px;
-      padding: 10px 12px;
-      color: rgba(255,255,255,0.88);
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      align-items:center;
+      color: var(--muted2);
       font-size: 13px;
-      box-shadow: var(--shadow2);
-      display:none;
-      z-index: 2000;
-      max-width: 92vw;
-      text-align:center;
+    }
+    .footer-links{
+      display:flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .footer-links a{
+      color: var(--muted2);
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      transition: 0.2s ease;
+    }
+    .footer-links a:hover{
+      color: white;
+      border-color: rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.06);
     }
 
-    /* RESPONSIVE */
-    @media (max-width: 1020px){
-      .grid-hero{grid-template-columns:1fr}
-      .hero-card{order:2}
-      .steps{grid-template-columns:1fr 1fr}
-      .split{grid-template-columns:1fr}
+    /* ---------------- RESPONSIVE ---------------- */
+    @media (max-width: 980px){
+      .hero-grid{
+        grid-template-columns: 1fr;
+      }
+      .hero-card{ order: 2; }
+      .card{ grid-column: span 12; }
+      .team-wrap{ grid-template-columns: 1fr; }
+      .contact-grid{ grid-template-columns: 1fr; }
+      .brand .name{ display:none; } /* keep header clean on small screens */
     }
-    @media (max-width: 820px){
-      .nav-links, .nav-cta{display:none}
-      .menu-btn{display:inline-flex;align-items:center;justify-content:center}
-      .card{grid-column:span 12}
-      .contact-grid{grid-template-columns:1fr}
-      header.hero{padding:56px 0 20px}
-      section{padding:66px 0}
-      .brand .name{display:none}
+
+    @media (max-width: 760px){
+      .nav-links, .nav-cta{ display:none; }
+      .menu-btn{ display:flex; }
+      header.hero{ padding: 58px 0 24px; }
+      section{ padding: 64px 0; }
     }
+
+    /* Reduce motion preference */
     @media (prefers-reduced-motion: reduce){
-      html{scroll-behavior:auto}
-      .card,.btn{transition:none !important}
+      html{ scroll-behavior: auto; }
+      .card, .btn { transition: none !important; }
     }
   </style>
 
-  <!-- Structured Data -->
+  <!-- Structured Data (basic local business / organization) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": ["Organization","ProfessionalService"],
+    "@type": "Organization",
     "name": "ABA Technologies Pvt Ltd",
     "url": "https://yourdomain.com/",
     "logo": "https://yourdomain.com/logo.png",
-    "description": "Premium IT consulting across Microsoft 365, Copilot/AI adoption, Google Workspace, migrations, identity & security (Entra ID), and endpoint management (Intune).",
-    "sameAs": [
-      "https://www.linkedin.com/in/abdullabinaqueel"
-    ],
-    "areaServed": "IN",
-    "makesOffer": [
-      { "@type": "Offer", "name": "Copilot Readiness & Adoption", "description": "Readiness assessment, governance, use-case design, demos, and enablement." },
-      { "@type": "Offer", "name": "Cloud Migrations", "description": "Any-to-any email & drive migrations including cross-tenant planning and cutover." },
-      { "@type": "Offer", "name": "Identity & Endpoint Security", "description": "Entra ID, MFA, Conditional Access, Intune, Autopilot, device baselines." }
-    ]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {
-        "@type":"Question",
-        "name":"Do you work only on Microsoft 365 projects?",
-        "acceptedAnswer":{"@type":"Answer","text":"No. We deliver across Microsoft 365 and Google Workspace, including migrations, identity/security, endpoint management, and AI adoption programs."}
-      },
-      {
-        "@type":"Question",
-        "name":"How do you approach migrations with minimal disruption?",
-        "acceptedAnswer":{"@type":"Answer","text":"We follow a structured method: assessment, pilot, permissions mapping, staged migration, cutover planning, and post-migration validation with user enablement."}
-      },
-      {
-        "@type":"Question",
-        "name":"Can you help us with Copilot adoption safely?",
-        "acceptedAnswer":{"@type":"Answer","text":"Yes. We run readiness checks for data access, security policies, licensing, and governance, then deliver role-based use cases, prompt libraries, and enablement."}
-      }
-    ]
+    "sameAs": [],
+    "description": "Microsoft 365 consulting, cloud migrations, Copilot/AI adoption, and security solutions (Entra ID, Intune)."
   }
   </script>
 </head>
@@ -512,42 +689,38 @@
   <!-- NAV -->
   <nav aria-label="Primary">
     <div class="container nav-inner">
-      #top
-        <!-- Replace icon.png/logo.png with your file -->
-        logo.png
+      <a class="brand" href="#top" aria-label="ABA Technologies Pvt Ltd home">
+        <img src="logo.png" alt="ABA Technologies Pvt Ltd logo" />
         <div class="name">
           <strong>ABA Technologies Pvt Ltd</strong>
-          <span>Cloud • AI Adoption • Security • Migrations</span>
+          <span>Cloud • Microsoft 365 • Security • AI</span>
         </div>
       </a>
 
       <div class="nav-links" role="navigation" aria-label="Site navigation">
-        #servicesServices</a>
-        #whyWhy ABA</a>
-        #processProcess</a>
-        #aiAI Prompt Library</a>
-        #aboutFounder</a>
-        #contactContact</a>
+        <a href="#services">Services</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
       </div>
 
       <div class="nav-cta">
-        #servicesExplore</a>
-        #contactGet a Consultation</a>
+        <a class="btn" href="#services">Explore Services</a>
+        <a class="btn primary" href="#contact">Get a Consultation</a>
       </div>
 
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        ☰
+      </button>
     </div>
   </nav>
 
-  <!-- MOBILE MENU -->
+  <!-- Mobile menu panel -->
   <div class="menu-panel" id="menuPanel" aria-hidden="true">
     <div class="container">
-      #servicesServices</a>
-      #whyWhy ABA</a>
-      #processProcess</a>
-      #aiAI Prompt Library</a>
-      #aboutFounder</a>
-      #contactGet a Consultation</a>
+      <a href="#services" class="mLink">Services</a>
+      <a href="#team" class="mLink">Team</a>
+      <a href="#contact" class="mLink">Contact</a>
+      <a href="#contact" class="btn primary mLink" style="justify-content:center;">Get a Consultation</a>
     </div>
   </div>
 
@@ -555,59 +728,50 @@
     <!-- HERO -->
     <header class="hero" role="banner">
       <div class="container">
-        <div class="grid-hero">
+        <div class="hero-grid">
           <div>
             <div class="eyebrow">
               <span class="dot"></span>
-              <span>Premium IT Consulting for Modern Work + AI</span>
+              <span>Enterprise-grade consulting for modern workplaces</span>
             </div>
 
-            <h1>Cloud, AI adoption & security—delivered with enterprise discipline.</h1>
+            <h1>Transform your business with Cloud, Microsoft 365 & AI.</h1>
 
-            <p class="lead">
-              ABA Technologies helps organizations modernize Microsoft 365 and Google Workspace, execute large-scale migrations,
-              strengthen identity & endpoint security, and enable Microsoft 365 Copilot adoption with practical governance and measurable outcomes.
+            <p>
+              ABA Technologies Pvt Ltd helps organizations modernize collaboration, secure identities and devices,
+              migrate data with confidence, and enable Microsoft Copilot adoption — with practical governance and measurable outcomes.
             </p>
 
             <div class="hero-actions">
-              #contactTalk to an Expert</a>
-              #servicesView Services</a>
-              #aiGet AI Prompts</a>
+              <a class="btn primary" href="#contact">Talk to an Expert</a>
+              <a class="btn" href="#services">View Our Services</a>
             </div>
 
-            <div class="trust" aria-label="Key strengths">
-              <span class="pill"><span class="check">✓</span> Multi-platform (Microsoft + Google)</span>
-              <span class="pill"><span class="check">✓</span> Security-first implementations</span>
-              <span class="pill"><span class="check">✓</span> Migration factory approach</span>
-              <span class="pill"><span class="check">✓</span> Copilot readiness + enablement</span>
+            <div class="trustbar" aria-label="Key strengths">
+              <span class="pill"><span class="check">✓</span> Migration planning & execution</span>
+              <span class="pill"><span class="check">✓</span> Security-first architecture</span>
+              <span class="pill"><span class="check">✓</span> Copilot readiness & enablement</span>
             </div>
           </div>
 
           <aside class="hero-card" aria-label="Highlights">
             <div class="stat-grid">
               <div class="stat">
-                <strong>Modern Workplace</strong>
-                <span>Microsoft 365 & Google Workspace architecture, rollout, governance, and adoption.</span>
+                <strong>Microsoft 365</strong>
+                <span>Tenant architecture, Teams/SharePoint rollout, licensing & governance.</span>
               </div>
               <div class="stat">
-                <strong>Migrations</strong>
-                <span>Any-to-any email/drive migrations + cross-tenant planning and cutover.</span>
+                <strong>Cloud Migrations</strong>
+                <span>Google Workspace/Zoho to Microsoft 365 with minimal disruption.</span>
               </div>
               <div class="stat">
-                <strong>AI Adoption</strong>
-                <span>Copilot readiness, role-based use cases, prompt libraries, change management.</span>
+                <strong>Copilot / AI</strong>
+                <span>Readiness, adoption, prompts, security controls, and change management.</span>
               </div>
               <div class="stat">
-                <strong>Security & Endpoint</strong>
-                <span>Entra ID, MFA/Conditional Access, Intune, Autopilot, device baselines.</span>
+                <strong>Security</strong>
+                <span>Entra ID, MFA, Conditional Access, Intune, compliance fundamentals.</span>
               </div>
-            </div>
-
-            <div class="mini" aria-label="Quick proof points">
-              <span class="chip">5.5+ years experience</span>
-              <span class="chip">6,000+ users migrated</span>
-              <span class="chip">Presales → Delivery continuity</span>
-              <span class="chip">SOP-led operations</span>
             </div>
           </aside>
         </div>
@@ -619,10 +783,10 @@
       <div class="container">
         <div class="section-title">
           <div>
-            <h2>Services designed for outcomes (not just tools)</h2>
+            <h2>Services built for enterprise reliability</h2>
             <p class="subhead">
-              We combine solutioning and hands-on delivery—from discovery workshops and proposals to implementation and post-go-live support.
-              Choose a service track or build a program across cloud, AI, migrations, and security.
+              Practical consulting with clear scope, secure design, and outcomes. From Microsoft 365 foundations to Copilot adoption,
+              we help you deploy with confidence and operate with control.
             </p>
           </div>
         </div>
@@ -630,344 +794,91 @@
         <div class="grid">
           <article class="card">
             <div class="icon" aria-hidden="true">☁️</div>
-            <h3>Modern Workplace Consulting</h3>
-            <p>Architecture, rollout, governance and adoption for Microsoft 365 and collaboration platforms.</p>
+            <h3>Microsoft 365 Consulting</h3>
+            <p>Design, deploy, and optimize your modern workplace with governance and best practices.</p>
             <ul>
-              <li>Tenant foundations, Teams/SharePoint/OneDrive strategy</li>
-              <li>Google Workspace assessments & optimization</li>
-              <li>Licensing mapping + cost governance</li>
-              <li>End-user enablement and adoption guides</li>
+              <li>Tenant setup & configuration</li>
+              <li>Teams, SharePoint, OneDrive architecture</li>
+              <li>Licensing optimization and cost governance</li>
+              <li>Policies, compliance basics & operational readiness</li>
             </ul>
-            <div class="kpi">
-              <span>Faster adoption</span><span>Lower support load</span><span>Governed collaboration</span>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="icon" aria-hidden="true">🤖</div>
-            <h3>Microsoft 365 Copilot Readiness & Adoption</h3>
-            <p>Make Copilot valuable and safe—readiness, governance, demos, and role-based use cases.</p>
-            <ul>
-              <li>Readiness assessment: security, data access, compliance, licensing</li>
-              <li>Live demos + hands-on scenarios aligned to roles</li>
-              <li>Prompt engineering & internal prompt libraries</li>
-              <li>Change management + adoption roadmap</li>
-            </ul>
-            <div class="kpi">
-              <span>Secure-by-design</span><span>Role-based value</span><span>Measurable ROI</span>
-            </div>
           </article>
 
           <article class="card">
             <div class="icon" aria-hidden="true">🔁</div>
-            <h3>Migration Factory (Any-to-Any)</h3>
-            <p>Structured migrations with permissions accuracy, staged execution, and cutover confidence.</p>
+            <h3>Cloud Migration Services</h3>
+            <p>Structured migration planning and execution — focused on data integrity and user continuity.</p>
             <ul>
-              <li>Google Workspace ↔ Microsoft 365 migrations</li>
-              <li>Zoho ↔ Microsoft 365, IMAP/POP3/SMTP, PST/API-based</li>
-              <li>Drive migrations (Google Drive ↔ OneDrive) with permissions mapping</li>
-              <li>Cross-tenant Microsoft 365 migrations</li>
+              <li>Google Workspace → Microsoft 365</li>
+              <li>Zoho → Microsoft 365</li>
+              <li>Microsoft 365 → Google (when required)</li>
+              <li>Mailbox, Drive, permissions & cutover planning</li>
             </ul>
-            <div class="kpi">
-              <span>Minimal downtime</span><span>Data integrity</span><span>Validated cutover</span>
-            </div>
+            <div class="tagline">Zero data loss. Minimal downtime. Maximum control.</div>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">🤖</div>
+            <h3>Copilot / AI Solutions</h3>
+            <p>Enable Copilot responsibly with adoption playbooks, governance, and secure access controls.</p>
+            <ul>
+              <li>Readiness assessment & deployment planning</li>
+              <li>Prompt libraries & role-based use-case design</li>
+              <li>Automation opportunities with M365 ecosystem</li>
+              <li>Change management & user enablement sessions</li>
+            </ul>
           </article>
 
           <article class="card">
             <div class="icon" aria-hidden="true">🛡️</div>
-            <h3>Identity & Security (Entra ID)</h3>
-            <p>Reduce risk using identity hardening and access controls aligned to real operations.</p>
+            <h3>Security, Entra ID & Intune</h3>
+            <p>Strengthen identity security and device compliance while reducing operational risk.</p>
             <ul>
-              <li>MFA strategy + Conditional Access design</li>
-              <li>SSO integrations (LDAP/SSO), secure access reviews</li>
-              <li>Baseline security posture improvements</li>
-              <li>Secure collaboration guardrails</li>
+              <li>Entra ID hardening & identity governance basics</li>
+              <li>MFA, Conditional Access strategy</li>
+              <li>Intune device management & baselines</li>
+              <li>Secure collaboration foundations</li>
             </ul>
-            <div class="kpi">
-              <span>Lower breach risk</span><span>Stronger access control</span><span>Operational clarity</span>
-            </div>
           </article>
-
-          <article class="card">
-            <div class="icon" aria-hidden="true">💻</div>
-            <h3>Endpoint & Device Management</h3>
-            <p>Operationally stable endpoints for secure cloud work and Copilot-ready productivity.</p>
-            <ul>
-              <li>Microsoft Intune MDM + BitLocker policies</li>
-              <li>Windows Autopilot provisioning</li>
-              <li>Google Endpoint Management + Zero‑Touch enrollment</li>
-              <li>Baseline compliance + device posture</li>
-            </ul>
-            <div class="kpi">
-              <span>Secure endpoints</span><span>Faster onboarding</span><span>Standardized baseline</span>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="icon" aria-hidden="true">⚙️</div>
-            <h3>Automation, Tooling & Operations</h3>
-            <p>Speed, consistency, and quality using scripts, SOPs, and operational playbooks.</p>
-            <ul>
-              <li>PowerShell automation for M365 operations</li>
-              <li>GAM automation for Google Workspace</li>
-              <li>Migration tools: BitTitan, Quest, Google DMS</li>
-              <li>SOP development + team enablement</li>
-            </ul>
-            <div class="kpi">
-              <span>Fewer errors</span><span>Faster delivery</span><span>Repeatable process</span>
-            </div>
-          </article>
-        </div>
-
-        <div class="split" style="margin-top:20px;">
-          <div class="panel">
-            <h3>Engagement models</h3>
-            <p>
-              Choose a focused engagement or build a full program. We can start with a low-risk assessment and expand to implementation.
-            </p>
-            <ul>
-              <li><b>Assessment:</b> discovery, gaps, readiness, roadmap</li>
-              <li><b>Implementation:</b> delivery, cutover, stabilization</li>
-              <li><b>Managed Support:</b> operations, improvements, enablement</li>
-            </ul>
-          </div>
-          <div class="panel">
-            <h3>Industries & use cases</h3>
-            <p>Common outcomes we deliver—optimized for collaboration, compliance, and productivity.</p>
-            <ul>
-              <li>SMB → enterprise scale migrations</li>
-              <li>Hybrid work enablement (Teams/Meet, SharePoint/Drive)</li>
-              <li>Security uplift: MFA/CA, device compliance, access hygiene</li>
-              <li>Copilot adoption for HR, Sales, Finance, Leadership</li>
-            </ul>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- WHY ABA -->
-    <section id="why">
+    <!-- TEAM -->
+    <section id="team">
       <div class="container">
         <div class="section-title">
           <div>
-            <h2>Why ABA Technologies</h2>
+            <h2>Core team</h2>
             <p class="subhead">
-              You get a rare mix: presales solutioning + hands-on delivery + support leadership—so the plan is realistic, secure, and implementable.
+              Hands-on leadership with a delivery-first mindset — focused on secure implementation, user adoption, and measurable impact.
             </p>
           </div>
         </div>
 
-        <div class="grid">
-          <article class="card">
-            <div class="icon" aria-hidden="true">📌</div>
-            <h3>Presales to delivery continuity</h3>
-            <p>Discovery workshops, architecture, proposals, and SOW inputs—then implementation that matches the plan.</p>
-            <ul>
-              <li>Stakeholder workshops and requirement discovery</li>
-              <li>POCs, demos, and high-level solution architecture</li>
-              <li>Licensing strategy + cost optimization</li>
-              <li>Clear deliverables + success criteria</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <div class="icon" aria-hidden="true">📈</div>
-            <h3>Proven migration experience</h3>
-            <p>Execution experience at scale with permissions accuracy and minimal disruption.</p>
-            <ul>
-              <li>6,000+ users migration execution experience</li>
-              <li>Email + drive migrations with complex permissions</li>
-              <li>Staged migration + validation approach</li>
-              <li>End-user communication and enablement</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <div class="icon" aria-hidden="true">🔒</div>
-            <h3>Security-first by default</h3>
-            <p>We bake governance into rollout so you don’t “secure later” after incidents happen.</p>
-            <ul>
-              <li>Entra ID hardening, MFA, Conditional Access</li>
-              <li>Device compliance with Intune baselines</li>
-              <li>Access control hygiene for AI readiness</li>
-              <li>Operational SOPs for consistent delivery</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <div class="icon" aria-hidden="true">🧠</div>
-            <h3>AI adoption that’s practical</h3>
-            <p>Copilot value comes from use-case design, data access alignment, and role-based enablement—not hype.</p>
-            <ul>
-              <li>Readiness + governance + licensing prerequisites</li>
-              <li>Use-case mapping for business roles</li>
-              <li>Prompt libraries + training sessions</li>
-              <li>Measurable outcomes and adoption plan</li>
-            </ul>
-          </article>
-        </div>
-
-        <p class="fine">
-          Proof points above are based on the founder’s experience across Microsoft 365, Microsoft 365 Copilot, Google Workspace, migrations, security, and endpoint management. Replace or expand with company-specific proof as your portfolio grows.
-        </p>
-      </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section id="process">
-      <div class="container">
-        <div class="section-title">
-          <div>
-            <h2>Delivery process</h2>
-            <p class="subhead">
-              A repeatable method that protects users, data, and operations—while delivering outcomes quickly.
-            </p>
-          </div>
-        </div>
-
-        <div class="steps" aria-label="Process steps">
-          <div class="step"><b>1) Assess</b><small>Current state, risks, dependencies, and success metrics.</small></div>
-          <div class="step"><b>2) Plan</b><small>Scope, timeline, governance, and adoption strategy.</small></div>
-          <div class="step"><b>3) Implement</b><small>Build, migrate, configure security, and validate outcomes.</small></div>
-          <div class="step"><b>4) Enable</b><small>Role-based training, guides, and change management.</small></div>
-          <div class="step"><b>5) Support</b><small>Stabilization, optimization, and ongoing improvements.</small></div>
-        </div>
-
-        <div class="split">
-          <div class="panel">
-            <h3>Case studies (placeholders)</h3>
-            <ul>
-              <li><b>Migration:</b> Google Workspace → Microsoft 365 (mail + drive), staged cutover, permissions preserved.</li>
-              <li><b>Security uplift:</b> Entra ID MFA + Conditional Access baseline + endpoint compliance.</li>
-              <li><b>Copilot:</b> readiness + role-based prompts + enablement for leadership and sales.</li>
-            </ul>
-            <p class="fine">Tip: Replace these with real anonymized case studies (industry, size, problem, approach, measurable outcome).</p>
-          </div>
-          <div class="panel">
-            <h3>Certifications & tool stack</h3>
-            <ul>
-              <li>Professional Google Workspace Administrator</li>
-              <li>Google Workspace Deployment Specialist</li>
-              <li>Microsoft Teams Administrator Associate</li>
-              <li>ChromeOS Certification</li>
-              <li>PowerShell, GAM, BitTitan, Quest Migration Manager, Google DMS</li>
-            </ul>
-            <p class="fine">Add your Microsoft/Google partner badges here if applicable.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- AI PROMPT LIBRARY -->
-    <section id="ai">
-      <div class="container">
-        <div class="section-title">
-          <div>
-            <h2>AI Prompt Library Preview (Copilot-ready)</h2>
-            <p class="subhead">
-              Show customers you don’t just “turn on AI”—you enable it with role-based prompts, governance, and adoption.
-              Copy these examples into Microsoft 365 Copilot to demonstrate value.
-            </p>
-          </div>
-          <div>
-            <button class="btn" id="copyPromptsBtn" type="button">Copy sample prompts</button>
-          </div>
-        </div>
-
-        <div class="panel">
-          <h3>Sample prompts (preview)</h3>
-          <p class="fine" style="margin-top:0;">
-            These are safe demo-style prompts. For real deployments, we tailor prompts and ensure data access and governance are correct.
-          </p>
-          <ul id="promptList">
-            <li><b>Leadership:</b> “Summarize the key risks, blockers, and next steps from last week’s project updates. Provide a 5-bullet executive summary.”</li>
-            <li><b>Sales:</b> “Draft a follow-up email for a prospect based on our meeting notes. Keep it professional and include 3 next-step options.”</li>
-            <li><b>HR:</b> “Create a first draft onboarding plan for a new hire (first 30 days) including training, check-ins, and deliverables.”</li>
-            <li><b>IT:</b> “Create a rollout checklist for MFA + Conditional Access including pilot plan, communications, and support readiness.”</li>
-            <li><b>Operations:</b> “Turn these bullet points into a standard operating procedure (SOP) with steps, owners, and validation checks.”</li>
-          </ul>
-          <div class="hero-actions" style="margin-top:14px;">
-            #contactRequest a Copilot readiness assessment</a>
-            #servicesSee AI adoption services</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT / FOUNDER -->
-    <section id="about">
-      <div class="container">
-        <div class="section-title">
-          <div>
-            <h2>Founder</h2>
-            <p class="subhead">
-              Hands-on leadership focused on secure implementation, realistic plans, and user adoption.
-            </p>
-          </div>
-        </div>
-
-        <div class="split">
-          <div class="panel" style="display:flex;gap:16px;align-items:center;">
-            profile.jpgbox-shadow:0 16px 40px rgba(0,0,0,0.35);flex:none;">
-            <div>
-              <h3 style="margin:0;"><span style="color:white;font-weight:900;">Abdulla Bin Aqueel</span></h3>
-              <p style="margin:6px 0 0;color:var(--cyan);font-weight:800;">Cloud Presales Engineer • Cloud Support Lead</p>
-              <p style="margin:10px 0 0;color:var(--muted);line-height:1.85;">
-                Customer-focused cloud presales and support leader with experience across Microsoft 365, Microsoft 365 Copilot,
-                Google Workspace, Intune, identity & security, and large-scale migrations. Skilled in solutioning, demos, use-case mapping,
-                proposals, and delivery leadership.
+        <div class="team-wrap">
+          <div class="profile-card">
+            <img class="profile-img" src="profile.jpg" alt="Abdulla Bin Aqueel - Founder, Director & CTO" />
+            <div class="profile-meta">
+              <h3>Abdulla Bin Aqueel</h3>
+              <div class="designation">Founder, Director & CTO</div>
+              <p>
+                Microsoft 365 and cloud specialist focused on modern workplace design, secure identity, migrations, and AI adoption.
+                Delivery-driven approach with strong emphasis on governance and end-user enablement.
               </p>
-              <div class="hero-actions" style="margin-top:12px;">
-                <a class="btn" href="https://www.linkedin.com/in/abdullabinaqueel" target="_blank" rel="noopener">LinkedIn</a>
-                #contactWork with us</a>
-              </div>
             </div>
           </div>
 
-          <div class="panel">
-            <h3>What you get</h3>
+          <div class="team-points">
+            <h4>How we work</h4>
             <ul>
-              <li><b>Clarity:</b> scope, effort, risks, and deliverables</li>
-              <li><b>Security:</b> identity + endpoint posture aligned to real operations</li>
-              <li><b>Reliability:</b> SOP-led implementations, validation, and stabilization</li>
-              <li><b>Enablement:</b> training, prompt libraries, and adoption support</li>
+              <li><strong>Assess:</strong> Understand your current environment, risks, and goals.</li>
+              <li><strong>Plan:</strong> Define scope, timeline, and success criteria with clear deliverables.</li>
+              <li><strong>Implement:</strong> Execute migrations and deployments with security-first controls.</li>
+              <li><strong>Enable:</strong> Train users and teams to maximize adoption and ROI.</li>
+              <li><strong>Support:</strong> Post-go-live stabilization and continuous improvement.</li>
             </ul>
-            <p class="fine">Tip: Add company registration details and office address if you want stronger local trust signals.</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq">
-      <div class="container">
-        <div class="section-title">
-          <div>
-            <h2>FAQ</h2>
-            <p class="subhead">Common questions from customers evaluating cloud, migrations, and AI adoption.</p>
-          </div>
-        </div>
-
-        <div class="faq">
-          <details>
-            <summary>Do you work only on Microsoft 365?</summary>
-            <p>No. We work across Microsoft 365 and Google Workspace, including migrations, security, identity, endpoint management, and AI adoption.</p>
-          </details>
-
-          <details>
-            <summary>Can you do migrations without downtime?</summary>
-            <p>Every environment is different, but we aim for minimal disruption using staged migration, validation, and cutover planning—with clear communications and support readiness.</p>
-          </details>
-
-          <details>
-            <summary>How do you ensure Copilot is safe?</summary>
-            <p>We begin with readiness checks: data access, security policies, conditional access, licensing, and governance. Then we build role-based use cases and enablement.</p>
-          </details>
-
-          <details>
-            <summary>Do you offer managed support?</summary>
-            <p>Yes. We can provide post-go-live support, ongoing optimization, and operational improvements using SOPs and reporting.</p>
-          </details>
         </div>
       </div>
     </section>
@@ -979,71 +890,71 @@
           <div>
             <h2>Contact</h2>
             <p class="subhead">
-              Tell us what you’re trying to achieve. We’ll respond with a recommended approach, scope options, and next steps.
+              Tell us what you’re trying to achieve — we’ll respond with a clear plan, recommended approach, and next steps.
             </p>
           </div>
         </div>
 
         <div class="contact-grid">
-          <div class="panel">
+          <div class="contact-card">
             <h3>Reach us</h3>
 
-            <div class="row">
+            <div class="contact-row">
               <span class="badge">Email</span>
               <span>
-                support@abatec.co.insupport@abatec.co.in</a>
+                <a href="mailto:support@abatech.co.in">support@abatech.co.in</a>
                 <div style="color: rgba(255,255,255,0.55); font-size: 12.5px; margin-top: 3px;">
-                  Replace with your primary inbox if different.
                 </div>
               </span>
             </div>
 
-            <div class="row">
-              <span class="badge">Focus</span>
-              <span>Cloud • AI adoption • Migrations • Identity & security • Endpoint</span>
+            <div class="contact-row">
+              <span class="badge">Consulting</span>
+              <span>
+                Microsoft 365 • Cloud Migration • Copilot/AI • Security
+              </span>
             </div>
 
-            <div class="row">
-              <span class="badge">Delivery</span>
-              <span>Remote + onsite (based on scope)</span>
+            <div class="contact-row">
+              <span class="badge">Availability</span>
+              <span>
+                Remote & onsite (based on engagement scope)
+              </span>
             </div>
 
-            <p class="fine">
-              Prefer a “real form” submission? Use Formspree (easy) or any serverless form handler.
-              The form on the right supports both Formspree and mailto fallback.
+            <p class="fineprint">
+              Tip: If you want a real contact form (without opening email), use Formspree or a lightweight serverless form handler.
+              I can help you set that up when you’re ready.
             </p>
           </div>
 
-          <div class="panel">
+          <div class="contact-card">
             <h3>Send a message</h3>
-
-            <!-- Option A: Formspree (recommended)
-                 Replace action with your Formspree endpoint: https://formspree.io/f/xxxxxx
-            -->
-            <form id="contactForm" action="" method="POST">
-              <div>
+            <!-- mailto-based simple form (works on GitHub Pages) -->
+            <form id="contactForm">
+              <div class="field">
                 <label for="name">Name</label>
                 <input id="name" name="name" type="text" placeholder="Your name" required />
               </div>
 
-              <div>
+              <div class="field">
                 <label for="email">Email</label>
                 <input id="email" name="email" type="email" placeholder="you@company.com" required />
               </div>
 
-              <div>
+              <div class="field">
                 <label for="message">Message</label>
                 <textarea id="message" name="message" placeholder="Briefly describe your requirement..." required></textarea>
               </div>
 
               <button class="btn primary" type="submit">Send Message</button>
-
-              <div class="fine">
-                If no form endpoint is configured, we will open your email client (mailto) automatically.
+              <div class="fineprint">
+                This uses your email client (mailto). For a hosted form endpoint, ask me and I’ll add it cleanly.
               </div>
             </form>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -1054,19 +965,14 @@
           © <span id="year"></span> <strong>ABA Technologies Pvt Ltd</strong>. All rights reserved.
         </div>
         <div class="footer-links">
-          #servicesServices</a>
-          #aiAI</a>
-          #contactContact</a>
-          #faqFAQ</a>
-          privacy.htmlPrivacy</a>
-          terms.htmlTerms</a>
-          #topBack to top ↑</a>
+          <a href="#services">Services</a>
+          <a href="#team">Team</a>
+          <a href="#contact">Contact</a>
+          <a href="#top">Back to top ↑</a>
         </div>
       </div>
     </footer>
   </main>
-
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script>
     // Mobile menu toggle
@@ -1076,18 +982,19 @@
 
     function closeMenu(){
       menuPanel.style.display = 'none';
-      menuPanel.setAttribute('aria-hidden','true');
-      menuBtn.setAttribute('aria-expanded','false');
+      menuPanel.setAttribute('aria-hidden', 'true');
+      menuBtn.setAttribute('aria-expanded', 'false');
       menuBtn.textContent = '☰';
     }
 
     menuBtn.addEventListener('click', () => {
       const open = menuPanel.style.display === 'block';
-      if(open){ closeMenu(); }
-      else{
+      if(open){
+        closeMenu();
+      } else {
         menuPanel.style.display = 'block';
-        menuPanel.setAttribute('aria-hidden','false');
-        menuBtn.setAttribute('aria-expanded','true');
+        menuPanel.setAttribute('aria-hidden', 'false');
+        menuBtn.setAttribute('aria-expanded', 'true');
         menuBtn.textContent = '✕';
       }
     });
@@ -1097,58 +1004,24 @@
     // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Toast helper
-    const toast = document.getElementById('toast');
-    function showToast(msg){
-      toast.textContent = msg;
-      toast.style.display = 'block';
-      clearTimeout(window.__t);
-      window.__t = setTimeout(() => toast.style.display = 'none', 2400);
-    }
-
-    // Copy prompt library button
-    document.getElementById('copyPromptsBtn').addEventListener('click', async () => {
-      const prompts = [
-        "Leadership: Summarize the key risks, blockers, and next steps from last week’s project updates. Provide a 5-bullet executive summary.",
-        "Sales: Draft a follow-up email for a prospect based on our meeting notes. Keep it professional and include 3 next-step options.",
-        "HR: Create a first draft onboarding plan for a new hire (first 30 days) including training, check-ins, and deliverables.",
-        "IT: Create a rollout checklist for MFA + Conditional Access including pilot plan, communications, and support readiness.",
-        "Operations: Turn these bullet points into a standard operating procedure (SOP) with steps, owners, and validation checks."
-      ].join("\n");
-
-      try{
-        await navigator.clipboard.writeText(prompts);
-        showToast("Sample prompts copied to clipboard ✅");
-      }catch(e){
-        showToast("Copy failed. Please select text manually.");
-      }
-    });
-
-    // Contact form logic:
-    // - If action="" (no endpoint), fallback to mailto
-    // - If action has a URL (Formspree), submit normally
+    // Simple mailto form (GitHub Pages friendly)
     const form = document.getElementById('contactForm');
     form.addEventListener('submit', (e) => {
-      const endpoint = (form.getAttribute('action') || '').trim();
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value.trim());
+      const email = encodeURIComponent(document.getElementById('email').value.trim());
+      const message = encodeURIComponent(document.getElementById('message').value.trim());
 
-      if(!endpoint){
-        e.preventDefault();
-        const name = encodeURIComponent(document.getElementById('name').value.trim());
-        const email = encodeURIComponent(document.getElementById('email').value.trim());
-        const message = encodeURIComponent(document.getElementById('message').value.trim());
+      const subject = encodeURIComponent(`Website Inquiry - ABA Technologies Pvt Ltd (${decodeURIComponent(name)})`);
+      const body = encodeURIComponent(
+        `Name: ${decodeURIComponent(name)}\nEmail: ${decodeURIComponent(email)}\n\nMessage:\n${decodeURIComponent(message)}`
+      );
 
-        const subject = encodeURIComponent(`Website Inquiry - ABA Technologies (${decodeURIComponent(name)})`);
-        const body = encodeURIComponent(
-          `Name: ${decodeURIComponent(name)}\nEmail: ${decodeURIComponent(email)}\n\nMessage:\n${decodeURIComponent(message)}`
-        );
-
-        // Update this email if you want a different recipient:
-        window.location.href = `mailto:support@abatec.co.in?subject=${subject}&body=${body}`;
-      } else {
-        // Let normal POST happen to Formspree/endpoint
-        showToast("Sending message…");
-      }
+      // Update this email address
+      window.location.href = `mailto:your@email.com?subject=${subject}&body=${body}`;
     });
   </script>
 </body>
 </html>
+
+
