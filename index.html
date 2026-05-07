@@ -216,18 +216,17 @@
     }
 
     /* ---------------- HERO ---------------- */
-.hero::before{
+.hero::after{
   content:"";
   position:absolute;
-  inset:0;
+  inset:-120px -200px;
   background:
-    linear-gradient(180deg, rgba(15,23,42,0.72), rgba(15,23,42,0.88)),
-    url('hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index:-2;
-}
+    radial-gradient(600px 420px at 18% 35%, rgba(66,133,244,0.10), transparent 60%),
+    radial-gradient(560px 420px at 70% 25%, rgba(52,168,83,0.10), transparent 60%),
+    radial-gradient(620px 480px at 60% 80%, rgba(251,188,5,0.06), transparent 60%);
+  z-index:-1;
+  pointer-events:none;
+}}
     
     /* soft gradient blobs */
     .hero::after{
