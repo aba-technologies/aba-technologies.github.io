@@ -32,21 +32,22 @@
        ========================= */
 
     :root{
-  --bg: #000000;
-  --panel: rgba(255,255,255,0.04);
-  --panel2: rgba(255,255,255,0.06);
-  --stroke: rgba(255,255,255,0.08);
+  --bg: #0f172a;
+
+  --panel: rgba(255,255,255,0.06);
+  --panel2: rgba(255,255,255,0.08);
+  --stroke: rgba(255,255,255,0.10);
 
   --text: rgba(255,255,255,0.95);
-  --muted: rgba(255,255,255,0.72);
-  --muted2: rgba(255,255,255,0.52);
+  --muted: rgba(255,255,255,0.75);
+  --muted2: rgba(255,255,255,0.58);
 
-  --cyan: #ffffff;
-  --violet: #d1d1d1;
-  --teal: #a1a1a1;
+  --cyan: #4285F4;     /* Google Blue */
+  --violet: #34A853;   /* Google Green */
+  --teal: #FBBC05;     /* Google Yellow */
 
-  --shadow: 0 20px 60px rgba(0,0,0,0.55);
-  --shadow2: 0 16px 40px rgba(0,0,0,0.35);
+  --shadow: 0 20px 60px rgba(0,0,0,0.35);
+  --shadow2: 0 16px 40px rgba(0,0,0,0.22);
 
   --radius: 16px;
   --radius2: 22px;
@@ -62,7 +63,11 @@
   margin:0;
   font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   color: var(--text);
-  background: #000000;
+  background:
+    radial-gradient(1200px 700px at 10% 10%, rgba(66,133,244,0.16), transparent 60%),
+    radial-gradient(900px 600px at 90% 20%, rgba(52,168,83,0.14), transparent 55%),
+    radial-gradient(900px 600px at 50% 90%, rgba(251,188,5,0.10), transparent 55%),
+    var(--bg);
   overflow-x:hidden;
 }
 
@@ -163,7 +168,7 @@
     }
     .btn.primary{
       border: 0;
-      background: linear-gradient(90deg, #ffffff, #9f9f9f);
+      background: linear-gradient(90deg, #4285F4, #34A853);
       box-shadow: 0 14px 40px rgba(56,189,248,0.18);
       color: #07101f;
     }
