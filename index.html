@@ -215,14 +215,19 @@
     }
 
     /* ---------------- HERO ---------------- */
-    header.hero{
-      position: relative;
-      min-height: calc(100vh - var(--navH));
-      display:flex;
-      align-items:center;
-      padding: 70px 0 40px;
-      overflow:hidden;
-    }
+    .hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg, rgba(11,17,32,0.72), rgba(11,17,32,0.90)),
+    url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.05) contrast(1.02) brightness(0.55);
+  transform: scale(1.02);
+  z-index:-2;
+}
 
     /* optional image overlay: keep your existing unsplash background but improved */
     .hero::before{
