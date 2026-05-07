@@ -716,11 +716,70 @@ h1{
     }
 
     @media (max-width: 760px){
-      .nav-links, .nav-cta{ display:none; }
-      .menu-btn{ display:flex; }
-      header.hero{ padding: 58px 0 24px; }
-      section{ padding: 64px 0; }
-    }
+
+  .nav-links{
+    display:none;
+  }
+
+  .menu-btn{
+    display:flex;
+  }
+
+  .brand .name{
+    display:none;
+  }
+
+  .nav-inner{
+    gap:10px;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero-card{
+    margin-top:24px;
+  }
+
+  h1{
+    font-size:42px;
+    line-height:1.15;
+  }
+
+  .stat-grid{
+    grid-template-columns:1fr;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .card{
+    grid-column:span 12;
+  }
+
+  .team-wrap,
+  .about-grid,
+  .about-cards,
+  .values-grid{
+    grid-template-columns:1fr;
+  }
+
+  section{
+    padding:64px 0;
+  }
+
+  .menu-panel{
+    background:white;
+  }
+
+  .menu-panel a{
+    color:#111827;
+    background:#f8fafc;
+    border:1px solid rgba(0,0,0,0.06);
+  }
+
+}
 
     /* Reduce motion preference */
     @media (prefers-reduced-motion: reduce){
@@ -790,17 +849,47 @@ h1{
 
     <div class="nav-right">
 
-      <button class="search-btn">
-        🔍
-      </button>
+  <button class="search-btn">
+    🔍
+  </button>
 
-    </div>
+  <button
+    class="menu-btn"
+    id="menuBtn"
+    aria-label="Toggle menu"
+    aria-expanded="false">
+    ☰
+  </button>
+
+</div>
 
   </div>
 </nav>
 
   <!-- Mobile menu panel -->
   <div class="menu-panel" id="menuPanel" aria-hidden="true">
+  <div class="container">
+
+    <a href="#top" class="mLink">Home</a>
+
+    <a href="about.html#who" class="mLink">Who is ABA?</a>
+
+    <a href="about.html#why" class="mLink">Why ABA?</a>
+
+    <a href="about.html#values" class="mLink">Core Values</a>
+
+    <a href="about.html#team" class="mLink">Core Team</a>
+
+    <a href="#services" class="mLink">Services</a>
+
+    <a href="contact.html" class="mLink">Contact</a>
+
+    <a href="contact.html" class="btn primary mLink" style="justify-content:center;">
+      Get a Consultation
+    </a>
+
+  </div>
+</div>
     <div class="container">
       <a href="#services" class="mLink">Services</a>
       <a href="#team" class="mLink">Team</a>
