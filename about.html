@@ -46,23 +46,65 @@
       font-weight:500;
     }
 
-    .hero{
-      padding:100px 20px 60px;
-      text-align:center;
-      background:linear-gradient(135deg,#4285F4,#34A853);
-      color:white;
-    }
+    .about-hero{
+  position:relative;
+  height:90vh;
+  background:url('team.jpg') center center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  padding:0 80px;
+  overflow:hidden;
+}
 
-    .hero h1{
-      font-size:52px;
-      margin-bottom:16px;
-    }
+.about-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.65);
+}
 
-    .hero p{
-      max-width:760px;
-      margin:auto;
-      font-size:18px;
-    }
+.about-content{
+  position:relative;
+  z-index:2;
+  max-width:700px;
+  color:white;
+}
+
+.about-content h1{
+  font-size:72px;
+  line-height:1.1;
+  font-weight:300;
+  margin-bottom:30px;
+}
+
+.hero-line{
+  width:180px;
+  height:6px;
+  background:#FBBC05;
+  margin-bottom:30px;
+}
+
+.about-content p{
+  font-size:26px;
+  line-height:1.7;
+  color:rgba(255,255,255,0.92);
+}
+
+@media(max-width:768px){
+
+  .about-hero{
+    height:auto;
+    padding:120px 24px 80px;
+  }
+
+  .about-content h1{
+    font-size:42px;
+  }
+
+  .about-content p{
+    font-size:18px;
+  }
+
+}
 
     .container{
       max-width:1200px;
@@ -202,11 +244,26 @@
   </div>
 </nav>
 
-<section class="hero">
-  <h1>About ABA Technologies</h1>
-  <p>
-    Empowering businesses through Cloud, Collaboration, Security and AI-driven digital workspace solutions.
-  </p>
+<section class="about-hero">
+
+  <div class="about-overlay"></div>
+
+  <div class="about-content">
+
+    <h1>
+      The language of technology needs a good translator.
+    </h1>
+
+    <div class="hero-line"></div>
+
+    <p>
+      We help businesses simplify cloud, collaboration,
+      security and AI solutions with practical implementation,
+      secure architecture and measurable outcomes.
+    </p>
+
+  </div>
+
 </section>
 
 <div class="container">
