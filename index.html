@@ -385,7 +385,63 @@
     .card p{margin:0 0 12px;color:var(--muted);line-height:1.7;font-size:14.5px;}
     .card ul{margin:0;padding-left:18px;color:var(--muted2);line-height:1.85;font-size:14px;}
     .tagline{margin-top:12px;font-weight:800;color:rgba(168,85,247,0.95);}
+/* INDUSTRIES */
+.industries{
+  background:
+    linear-gradient(rgba(8,15,35,0.92), rgba(8,15,35,0.94)),
+    url('industry-bg.jpg');
+  background-size:cover;
+  background-position:center;
+  position:relative;
+}
 
+.industry-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
+  margin-top:50px;
+}
+
+.industry-card{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:24px;
+  padding:30px;
+  transition:0.3s ease;
+  backdrop-filter:blur(12px);
+  box-shadow:0 10px 40px rgba(0,0,0,0.25);
+}
+
+.industry-card:hover{
+  transform:translateY(-8px);
+  border-color:rgba(66,133,244,0.5);
+  background:rgba(255,255,255,0.08);
+}
+
+.industry-icon{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
+  margin-bottom:20px;
+  background:linear-gradient(135deg,#4285F4,#34A853);
+  box-shadow:0 10px 30px rgba(66,133,244,0.3);
+}
+
+.industry-card h3{
+  font-size:24px;
+  margin-bottom:16px;
+  color:white;
+}
+
+.industry-card p{
+  color:rgba(255,255,255,0.75);
+  line-height:1.9;
+  font-size:15px;
+}
     /* Team section */
     .team-wrap{
       display:grid;
@@ -569,7 +625,7 @@
               <span>Enterprise-grade consulting for modern workplaces</span>
             </div>
 
-            <h1>Transform your business with Cloud, Collaboration &amp; AI Solutions with ABA</h1>
+            <h1>Transform your business with Cloud, Collaboration &amp; AI Solutions with ABA.</h1>
 
             <p>
               ABA Technologies Pvt Ltd helps businesses modernize collaboration, secure cloud environments,
@@ -678,7 +734,88 @@
         </div>
       </div>
     </section>
+<!-- INDUSTRY SOLUTIONS -->
+<section class="industries">
 
+  <div class="container">
+
+    <div class="section-title">
+      <div>
+        <h2>Our Industry Solutions</h2>
+
+        <p class="subhead">
+          Your challenges deserve solutions built for your industry. Let’s simplify complexity, empower teams, and create momentum so you grow faster, not work harder.
+        </p>
+      </div>
+    </div>
+
+    <div class="industry-grid">
+
+      <div class="industry-card">
+        <div class="industry-icon">💻</div>
+
+        <h3>IT / ITES</h3>
+
+        <p>
+          Balancing security, scalability and operational efficiency is critical in modern IT environments. We help organizations simplify operations, automate workflows and strengthen digital collaboration.
+        </p>
+      </div>
+
+      <div class="industry-card">
+        <div class="industry-icon">🛍️</div>
+
+        <h3>Retail</h3>
+
+        <p>
+          Reimagine customer experiences with connected systems, modern collaboration and scalable cloud infrastructure designed for fast-growing retail businesses.
+        </p>
+      </div>
+
+      <div class="industry-card">
+        <div class="industry-icon">🏭</div>
+
+        <h3>Manufacturing</h3>
+
+        <p>
+          Improve production visibility, secure operations and streamline collaboration between teams with modern digital workplace solutions.
+        </p>
+      </div>
+
+      <div class="industry-card">
+        <div class="industry-icon">🏥</div>
+
+        <h3>Healthcare</h3>
+
+        <p>
+          Secure sensitive patient information, improve compliance and simplify communication with reliable cloud and security solutions.
+        </p>
+      </div>
+
+      <div class="industry-card">
+        <div class="industry-icon">🏢</div>
+
+        <h3>Real Estate</h3>
+
+        <p>
+          Centralize operations, automate workflows and improve collaboration between teams, clients and partners.
+        </p>
+      </div>
+
+      <div class="industry-card">
+        <div class="industry-icon">🚀</div>
+
+        <h3>Startups</h3>
+
+        <p>
+          Scale smarter with secure cloud environments, AI-powered productivity and cost-effective digital workplace solutions.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
     <!-- FOOTER -->
     <footer>
       <div class="container footer-inner">
