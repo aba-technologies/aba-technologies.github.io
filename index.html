@@ -890,14 +890,6 @@ h1{
 
   </div>
 </div>
-    <div class="container">
-      <a href="#services" class="mLink">Services</a>
-      <a href="#team" class="mLink">Team</a>
-      <a href="#contact" class="mLink">Contact</a>
-      <a href="#contact" class="btn primary mLink" style="justify-content:center;">Get a Consultation</a>
-    </div>
-  </div>
-
   <main id="top">
     <!-- HERO -->
     <header class="hero" role="banner">
@@ -1061,25 +1053,6 @@ h1{
 
     // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Simple mailto form (GitHub Pages friendly)
-    const form = document.getElementById('contactForm');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = encodeURIComponent(document.getElementById('name').value.trim());
-      const email = encodeURIComponent(document.getElementById('email').value.trim());
-      const message = encodeURIComponent(document.getElementById('message').value.trim());
-
-      const subject = encodeURIComponent(`Website Inquiry - ABA Technologies Pvt Ltd (${decodeURIComponent(name)})`);
-      const body = encodeURIComponent(
-        `Name: ${decodeURIComponent(name)}\nEmail: ${decodeURIComponent(email)}\n\nMessage:\n${decodeURIComponent(message)}`
-      );
-
-      // Update this email address
-      window.location.href = `mailto:your@email.com?subject=${subject}&body=${body}`;
-    });
-  </script>
+    </script>
 </body>
 </html>
-
-
