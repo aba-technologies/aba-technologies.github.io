@@ -387,12 +387,16 @@
     .tagline{margin-top:12px;font-weight:800;color:rgba(168,85,247,0.95);}
 /* INDUSTRIES */
 .industries{
-  background:
-    linear-gradient(rgba(8,15,35,0.92), rgba(8,15,35,0.94)),
-    url('industry-bg.jpg');
-  background-size:cover;
-  background-position:center;
+  background:linear-gradient(to bottom,#ffffff,#f5f9ff);
   position:relative;
+}
+
+.industries h2{
+  color:#111827;
+}
+
+.industries .subhead{
+  color:#4b5563;
 }
 
 .industry-grid{
@@ -403,19 +407,18 @@
 }
 
 .industry-card{
-  background:rgba(255,255,255,0.05);
-  border:1px solid rgba(255,255,255,0.08);
+  background:#ffffff;
+  border:1px solid rgba(0,0,0,0.06);
   border-radius:24px;
   padding:30px;
   transition:0.3s ease;
-  backdrop-filter:blur(12px);
-  box-shadow:0 10px 40px rgba(0,0,0,0.25);
+  box-shadow:0 10px 40px rgba(0,0,0,0.08);
 }
 
 .industry-card:hover{
   transform:translateY(-8px);
-  border-color:rgba(66,133,244,0.5);
-  background:rgba(255,255,255,0.08);
+  border-color:#4285F4;
+  box-shadow:0 20px 50px rgba(66,133,244,0.15);
 }
 
 .industry-icon{
@@ -428,19 +431,20 @@
   font-size:30px;
   margin-bottom:20px;
   background:linear-gradient(135deg,#4285F4,#34A853);
-  box-shadow:0 10px 30px rgba(66,133,244,0.3);
+  box-shadow:0 10px 30px rgba(66,133,244,0.20);
 }
 
 .industry-card h3{
   font-size:24px;
   margin-bottom:16px;
-  color:white;
+  color:#111827;
 }
 
 .industry-card p{
-  color:rgba(255,255,255,0.75);
+  color:#4b5563;
   line-height:1.9;
   font-size:15px;
+}
 }
     /* Team section */
     .team-wrap{
