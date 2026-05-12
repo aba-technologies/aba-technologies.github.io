@@ -52,7 +52,7 @@
   padding:120px 80px;
   overflow:hidden;
   background:
-  linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+  linear-gradient(rgba(255,255,255,0.45), rgba(255,255,255,0.45)),
   url('team.jpg') center center/cover no-repeat;
 }
 
@@ -66,15 +66,20 @@
 .about-content h1{
   font-size:72px;
   line-height:1.1;
-  font-weight:300;
+  font-weight:700;
   margin-bottom:30px;
+
+  background:linear-gradient(90deg,#4285F4,#34A853);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
 }
 
-.hero-line{
-  width:180px;
-  height:6px;
-  background:#FBBC05;
-  margin-bottom:30px;
+.about-content p{
+  font-size:26px;
+  line-height:1.7;
+  color:white;
+  max-width:700px;
 }
 
 .about-content p{
