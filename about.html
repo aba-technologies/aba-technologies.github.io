@@ -226,23 +226,169 @@
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:24px;
   margin-top:40px;
+}/* NAVBAR */
+.nav-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  text-decoration:none;
+}
+
+.brand img{
+  height:58px;
+}
+
+.name{
+  display:flex;
+  flex-direction:column;
+  line-height:1.1;
+}
+
+.name strong{
+  color:#111827;
+  font-size:20px;
+}
+
+.name span{
+  color:#6b7280;
+  font-size:14px;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:26px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#111827;
+  font-weight:500;
+}
+
+.nav-right{
+  display:flex;
+  align-items:center;
+}
+
+.btn.primary{
+  background:linear-gradient(90deg,#4285F4,#34A853);
+  color:white;
+  padding:14px 22px;
+  border-radius:14px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.dropdown{
+  position:relative;
+}
+
+.dropdown-menu{
+  position:absolute;
+  top:100%;
+  left:0;
+  min-width:220px;
+  background:white;
+  border-radius:16px;
+  padding:12px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.08);
+
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(10px);
+
+  transition:0.25s ease;
+}
+
+.dropdown:hover .dropdown-menu{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+
+.dropdown-menu a{
+  display:block;
+  padding:10px 12px;
+  border-radius:10px;
+}
+
+.dropdown-menu a:hover{
+  background:#f3f4f6;
 }
   </style>
 </head>
 <body>
 
-<nav>
-  <div class="logo">
-  <img src="logo.png" alt="ABA Technologies Logo" style="height:60px;">
-</div>
+<!-- NAV -->
+<nav aria-label="Primary">
 
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="#who">Who is ABA?</a>
-    <a href="#why">Why ABA?</a>
-    <a href="#values">Core Values</a>
-    <a href="index.html#team">Core Team</a>
+  <div class="container nav-inner">
+
+    <a class="brand" href="index.html" aria-label="ABA Technologies Pvt Ltd home">
+
+      <img src="logo.png" alt="ABA Technologies Pvt Ltd logo" />
+
+      <div class="name">
+        <strong>ABA Technologies Pvt Ltd</strong>
+        <span>Empowering Digital Workspaces</span>
+      </div>
+
+    </a>
+
+    <div class="nav-links" role="navigation">
+
+      <a href="index.html">Home</a>
+
+      <div class="dropdown">
+
+        <a href="#">About Us ▾</a>
+
+        <div class="dropdown-menu">
+          <a href="#who">Who is ABA?</a>
+          <a href="#why">Why ABA?</a>
+          <a href="#values">Core Values</a>
+          <a href="#team">Core Team</a>
+        </div>
+
+      </div>
+
+      <div class="dropdown">
+
+        <a href="index.html#services">What We Do ▾</a>
+
+        <div class="dropdown-menu">
+          <a href="index.html#services">Digital Workspace</a>
+          <a href="index.html#services">Cloud Migration</a>
+          <a href="index.html#services">AI Solutions</a>
+          <a href="index.html#services">Security</a>
+        </div>
+
+      </div>
+
+      <a href="career.html">Career</a>
+
+      <a href="contact.html">Contact</a>
+
+    </div>
+
+    <div class="nav-right">
+
+      <a class="btn primary" href="contact.html">
+        Get a Consultation
+      </a>
+
+    </div>
+
   </div>
+
 </nav>
 
 <section class="about-hero">
