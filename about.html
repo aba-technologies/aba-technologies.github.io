@@ -245,7 +245,7 @@
 }
 
 .brand img{
-  height:60px;
+  height:50px;
 }
 
 .name{
@@ -276,9 +276,11 @@
   font-weight:500;
 }
 
-.nav-right{
-  display:flex;
-  align-items:center;
+.menu-toggle{
+  display:none;
+  font-size:30px;
+  cursor:pointer;
+  color:#111827;
 }
 
 .btn.primary{
@@ -329,35 +331,48 @@
 
   nav{
     padding:16px 20px;
+    position:relative;
   }
-
 .nav-inner{
-  flex-direction:column;
+  flex-direction:row;
+  justify-content:space-between;
   align-items:center;
 }
-
 .nav-links{
+  display:none;
+  position:absolute;
+  top:90px;
+  left:0;
   width:100%;
-  display:flex;
+  background:white;
   flex-direction:column;
-  align-items:flex-start;
-  gap:0;
-  margin-top:20px;
+  padding:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  z-index:999;
+}
+
+.nav-links.active{
+  display:flex;
 }
 .nav-links a{
   width:100%;
-  padding:14px 0;
+  padding:18px 0;
   border-bottom:1px solid #e5e7eb;
+  font-size:20px;
+  text-align:left;
 }
 .nav-links a{
   font-size:14px;
 }
 
 .btn.primary{
+  display:none;
+}
+
+.menu-toggle{
   display:block;
-  width:100%;
-  text-align:center;
-  margin-top:20px;
+  font-size:34px;
+  font-weight:bold;
 }
 
   .about-hero{
@@ -481,13 +496,17 @@
 
     </div>
 
-    <div class="nav-right">
+<div class="nav-right">
 
-      <a class="btn primary" href="contact.html">
-        Get a Consultation
-      </a>
+  <div class="menu-toggle" onclick="toggleMenu()">
+    ☰
+  </div>
 
-    </div>
+  <a class="btn primary" href="contact.html">
+    Get a Consultation
+  </a>
+
+</div>
 
   </div>
 
@@ -685,9 +704,6 @@
 <footer>
   © 2026 ABA Technologies Pvt Ltd. All rights reserved.
 </footer>
-<footer>
-  © 2026 ABA Technologies Pvt Ltd. All rights reserved.
-</footer>
 
 <script>
 
@@ -708,6 +724,10 @@ document.querySelectorAll('.dropdown > a').forEach(item => {
 });
 
 </script>
-  
+  <script>
+function toggleMenu() {
+  document.querySelector('.nav-links').classList.toggle('active');
+}
+</script>
 </body>
 </html>
