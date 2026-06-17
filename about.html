@@ -89,14 +89,15 @@
 }
 @media(max-width:768px){
 
-  .about-hero{
-    height:auto;
-    padding:120px 24px 80px;
-  }
+.about-hero{
+  min-height:auto;
+  padding:60px 20px;
+}
 
-  .about-content h1{
-    font-size:42px;
-  }
+.about-content h1{
+  font-size:30px;
+  line-height:1.2;
+}
 
   .about-content p{
     font-size:18px;
@@ -337,20 +338,23 @@
 
 .nav-links{
   width:100%;
-  flex-wrap:wrap;
-  gap:14px;
-  margin-top:14px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:12px;
+  margin-top:20px;
 }
 
 .nav-links a{
   font-size:14px;
 }
 
-  .btn.primary{
-    margin-top:14px;
-    width:100%;
-    text-align:center;
-  }
+.btn.primary{
+  display:block;
+  width:100%;
+  text-align:center;
+  margin-top:20px;
+}
 
   .about-hero{
     min-height:auto;
@@ -389,14 +393,7 @@
   }
 
   .dropdown-menu{
-    position:static;
-    opacity:1;
-    visibility:visible;
-    transform:none;
-    box-shadow:none;
-    padding-left:10px;
-  }
-
+  display:none;
 }
   </style>
 </head>
