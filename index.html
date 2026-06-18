@@ -229,13 +229,15 @@
       display:flex; flex-direction:column; gap:10px;
     }
     .menu-panel a{
-      padding:12px 12px;
-      border-radius:12px;
-      background:#f8fafc;
-      border:1px solid rgba(0,0,0,0.06);
+      padding:18px 0;
+      border-radius:0;
+      background:none;
+      border:none;
+      border-bottom:1px solid #e5e7eb;
       color:#111827;
       font-weight:700;
-    }
+      font-size:20px;
+}
 
     /* Prevent content hiding under fixed nav */
     main{padding-top:var(--navH);}
@@ -675,7 +677,9 @@
       .brand .name{display:none;}
     }
 @media (max-width:760px){
-
+.btn.primary{
+   display:none;
+}
   .nav-links{
       display:none;
   }
@@ -799,17 +803,19 @@
 
   <!-- Mobile menu -->
   <div class="menu-panel" id="menuPanel" aria-hidden="true">
-    <div class="container">
-      <a href="index.html#top" class="mLink">Home</a>
-      <a href="about.html#who" class="mLink">Who is ABA?</a>
-      <a href="about.html#why" class="mLink">Why ABA?</a>
-      <a href="about.html#values" class="mLink">Core Values</a>
-      <a href="about.html#team" class="mLink">Core Team</a>
-      <a href="index.html#services" class="mLink">Services</a>
-      <a href="career.html" class="mLink">Career</a>
-      <a href="contact.html" class="mLink">Contact</a>
-      <a href="contact.html" class="btn primary mLink" style="justify-content:center;">Get a Consultation</a>
-    </div>
+<div class="container">
+
+<a href="index.html#top" class="mLink">Home</a>
+
+<a href="about.html" class="mLink">About Us</a>
+
+<a href="index.html#services" class="mLink">Services</a>
+
+<a href="career.html" class="mLink">Career</a>
+
+<a href="contact.html" class="mLink">Contact</a>
+
+</div>
   </div>
 
   <main id="main">
