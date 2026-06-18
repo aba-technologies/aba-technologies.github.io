@@ -10,7 +10,7 @@
   <meta name="author" content="ABA Technologies Pvt Ltd" />
   <meta name="theme-color" content="#0b1120" />
 
-  <!-- Canonical (update domain later) -->
+  <!-- Canonical -->
   <link rel="canonical" href="https://www.abatech.co.in/" />
 
   <!-- Favicon -->
@@ -190,29 +190,29 @@
       font-weight:600;
     }
     .dropdown-menu a:hover{background:#f3f4f6;}
-.mega-menu{
-    width:950px;
-    display:flex;
-    gap:50px;
-    padding:30px;
-    align-items:flex-start;
-}
 
-.mega-column{
-    flex:1;
-}
+    .mega-menu{
+      width:950px;
+      display:flex;
+      gap:50px;
+      padding:30px;
+      align-items:flex-start;
+    }
 
-.mega-column h4{
-    color:#4285F4;
-    margin-bottom:15px;
-    font-size:18px;
-}
+    .mega-column{flex:1;}
 
-.mega-column a{
-    display:block;
-    padding:8px 0;
-    color:#111827;
-}
+    .mega-column h4{
+      color:#4285F4;
+      margin-bottom:15px;
+      font-size:18px;
+    }
+
+    .mega-column a{
+      display:block;
+      padding:8px 0;
+      color:#111827;
+    }
+
     /* Mobile panel */
     .menu-panel{
       position:fixed;
@@ -237,7 +237,7 @@
       color:#111827;
       font-weight:700;
       font-size:20px;
-}
+    }
 
     /* Prevent content hiding under fixed nav */
     main{padding-top:var(--navH);}
@@ -409,84 +409,72 @@
     .card p{margin:0 0 12px;color:var(--muted);line-height:1.7;font-size:14.5px;}
     .card ul{margin:0;padding-left:18px;color:var(--muted2);line-height:1.85;font-size:14px;}
     .tagline{margin-top:12px;font-weight:800;color:rgba(168,85,247,0.95);}
-/* INDUSTRIES */
-.industry-section{
-  padding:80px 0;
-  background:linear-gradient(to bottom,#ffffff,#f5f9ff);
-}
-    
+
+    /* INDUSTRIES */
+    .industry-section{
+      padding:80px 0;
+      background:linear-gradient(to bottom,#ffffff,#f5f9ff);
+    }
+
     .industry-section .container{
-  max-width:1500px;
-}
+      max-width:1500px;
+    }
 
-.industry-section .section-title{
-  color:#111827;
-  text-align:center;
-  display:block;
-  margin-bottom:15px;
-}
+    .industry-section .section-title{
+      color:#111827;
+      text-align:center;
+      display:block;
+      margin-bottom:15px;
+    }
 
-.industry-section .section-subtitle{
-  text-align:center;
-  max-width:800px;
-  margin:0 auto 50px;
-  color:#4b5563;
-  font-size:18px;
-  line-height:1.8;
-}
+    .industry-section .section-subtitle{
+      text-align:center;
+      max-width:800px;
+      margin:0 auto 50px;
+      color:#4b5563;
+      font-size:18px;
+      line-height:1.8;
+    }
 
-.industry-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:30px;
-}
-    @media(max-width:992px){
+    .industry-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:30px;
+    }
 
-  .industry-grid{
-      grid-template-columns:repeat(2,1fr);
-  }
+    .industry-card{
+      background:#ffffff;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
+      transition:0.3s;
+    }
 
-}
+    .industry-card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 20px 50px rgba(66,133,244,0.18);
+    }
 
-@media(max-width:768px){
+    .industry-card img{
+      width:100%;
+      height:260px;
+      object-fit:cover;
+    }
 
-  .industry-grid{
-      grid-template-columns:1fr;
-  }
+    .industry-content{
+      padding:25px;
+    }
 
-}
-.industry-card{
-  background:#ffffff;
-  border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 10px 30px rgba(0,0,0,.08);
-  transition:0.3s;
-}
+    .industry-content h3{
+      color:#111827;
+      margin-bottom:15px;
+    }
 
-.industry-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 20px 50px rgba(66,133,244,0.18);
-}
+    .industry-content p{
+      color:#4b5563;
+      line-height:1.8;
+    }
 
-.industry-card img{
-  width:100%;
-  height:260px;
-  object-fit:cover;
-}
-
-.industry-content{
-  padding:25px;
-}
-
-.industry-content h3{
-  color:#111827;
-  margin-bottom:15px;
-}
-
-.industry-content p{
-  color:#4b5563;
-  line-height:1.8;
-}
     /* Team section */
     .team-wrap{
       display:grid;
@@ -524,120 +512,113 @@
     }
     .team-points h4{margin:0 0 10px;font-size:16px;font-weight:900;color:white;}
     .team-points ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.9;font-size:14px;}
-/* FOOTER TOP */
 
-.footer-top{
-  background:#111827;
-  padding:70px 0;
-}
+    /* FOOTER TOP */
+    .footer-top{
+      background:#111827;
+      padding:70px 0;
+    }
 
-.footer-top-grid{
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr 1fr;
-  gap:50px;
-}
+    .footer-top-grid{
+      display:grid;
+      grid-template-columns:2fr 1fr 1fr 1fr;
+      gap:50px;
+    }
 
-.footer-brand img{
-  width:180px;
-  margin-bottom:25px;
-}
+    .footer-brand img{
+      width:180px;
+      margin-bottom:25px;
+    }
 
-.footer-brand p{
-  color:rgba(255,255,255,0.78);
-  line-height:1.9;
-  font-size:15px;
-  max-width:380px;
-}
+    .footer-brand p{
+      color:rgba(255,255,255,0.78);
+      line-height:1.9;
+      font-size:15px;
+      max-width:380px;
+    }
 
-.footer-links-column h3{
-  color:#ffffff;
-  margin-bottom:24px;
-  font-size:22px;
-  position:relative;
-}
+    .footer-links-column h3{
+      color:#ffffff;
+      margin-bottom:24px;
+      font-size:22px;
+      position:relative;
+    }
 
-.footer-links-column h3::after{
-  content:'';
-  width:100%;
-  height:1px;
-  background:rgba(255,255,255,0.25);
-  position:absolute;
-  left:0;
-  bottom:-10px;
-}
+    .footer-links-column h3::after{
+      content:'';
+      width:100%;
+      height:1px;
+      background:rgba(255,255,255,0.25);
+      position:absolute;
+      left:0;
+      bottom:-10px;
+    }
 
-.footer-links-column a{
-  display:block;
-  color:rgba(255,255,255,0.82);
-  margin-bottom:16px;
-  transition:0.3s ease;
-  font-size:16px;
-}
+    .footer-links-column a{
+      display:block;
+      color:rgba(255,255,255,0.82);
+      margin-bottom:16px;
+      transition:0.3s ease;
+      font-size:16px;
+    }
 
-.footer-links-column a:hover{
-  color:#4285F4;
-  transform:translateX(4px);
-}
+    .footer-links-column a:hover{
+      color:#4285F4;
+      transform:translateX(4px);
+    }
 
-.footer-location{
-  margin-bottom:18px;
-}
+    .footer-location{
+      margin-bottom:18px;
+    }
 
-.footer-location strong{
-  color:#ffffff;
-  margin-right:8px;
-}
+    .footer-location strong{
+      color:#ffffff;
+      margin-right:8px;
+    }
 
-.footer-location span{
-  color:rgba(255,255,255,0.82);
-}
+    .footer-location span{
+      color:rgba(255,255,255,0.82);
+    }
 
-@media(max-width:900px){
+    /* PREMIUM BRAND FOOTER */
+    .premium-footer{
+      background:linear-gradient(135deg,#081226,#0b1730);
+      padding:90px 20px;
+      text-align:center;
+    }
 
-  .footer-top-grid{
-    grid-template-columns:1fr;
-    gap:40px;
-  }
+    .premium-footer-content{
+      max-width:700px;
+      margin:auto;
+    }
 
-}/* PREMIUM BRAND FOOTER */
+    .premium-footer-logo{
+      width:260px;
+      margin:0 auto 35px;
+      filter:drop-shadow(0 10px 30px rgba(66,133,244,0.25));
+    }
 
-.premium-footer{
-  background:linear-gradient(135deg,#081226,#0b1730);
-  padding:90px 20px;
-  text-align:center;
-}
+    .premium-footer-text{
+      color:rgba(255,255,255,0.82);
+      line-height:1.9;
+      font-size:16px;
+      margin-bottom:40px;
+    }
 
-.premium-footer-content{
-  max-width:700px;
-  margin:auto;
-}
+    .premium-locations{
+      display:flex;
+      justify-content:center;
+      gap:40px;
+      flex-wrap:wrap;
+      color:white;
+      font-size:16px;
+      font-weight:500;
+    }
 
-.premium-footer-logo{
-  width:260px;
-  margin:0 auto 35px;
-  filter:drop-shadow(0 10px 30px rgba(66,133,244,0.25));
-}
+    .premium-locations strong{
+      color:#4285F4;
+    }
 
-.premium-footer-text{
-  color:rgba(255,255,255,0.82);
-  line-height:1.9;
-  font-size:16px;
-  margin-bottom:40px;
-}
-
-.premium-locations{
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  flex-wrap:wrap;
-  color:white;
-  font-size:16px;
-  font-weight:500;
-}
-
-.premium-locations strong{
-  color:#4285F4;
-}
     /* Footer */
     footer{
       padding:30px 0 40px;
@@ -668,42 +649,753 @@
       background:rgba(255,255,255,0.06);
     }
 
+    /* =========================================
+       New Premium Enhancements
+       ========================================= */
+
+    /* New Section: Hero visual enhancement */
+    .hero-floating-badges{
+      position:relative;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:28px;
+    }
+
+    .floating-badge{
+      padding:12px 16px;
+      border-radius:16px;
+      background:rgba(255,255,255,0.45);
+      color:#0f172a;
+      border:1px solid rgba(255,255,255,0.4);
+      box-shadow:0 14px 42px rgba(0,0,0,.10);
+      backdrop-filter:blur(10px);
+      font-size:13px;
+      font-weight:700;
+      animation:floatY 4s ease-in-out infinite;
+    }
+
+    .floating-badge:nth-child(2){animation-delay:.6s;}
+    .floating-badge:nth-child(3){animation-delay:1.2s;}
+
+    @keyframes floatY{
+      0%,100%{transform:translateY(0);}
+      50%{transform:translateY(-6px);}
+    }
+
+    /* New Section: Section theme helpers */
+    .section-dark-card{
+      background:var(--panel);
+      border:1px solid var(--stroke);
+      border-radius:22px;
+      box-shadow:var(--shadow2);
+    }
+
+    .section-light{
+      background:linear-gradient(180deg, rgba(255,255,255,0.98), rgba(243,247,255,0.98));
+      color:#111827;
+    }
+
+    .section-light h2,
+    .section-light h3,
+    .section-light h4{
+      color:#111827;
+    }
+
+    .section-light .subhead{
+      color:#4b5563;
+    }
+
+    /* New Section: Achievements / Stats */
+    .achievements{
+      padding-top:20px;
+    }
+
+    .achievement-wrap{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+      margin-top:20px;
+    }
+
+    .achievement-card{
+      padding:28px 22px;
+      border-radius:20px;
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.10);
+      text-align:center;
+      box-shadow:var(--shadow2);
+      transition:transform .25s ease, background .25s ease;
+    }
+
+    .achievement-card:hover{
+      transform:translateY(-4px);
+      background:rgba(255,255,255,0.09);
+    }
+
+    .achievement-number{
+      font-size:clamp(28px,4vw,42px);
+      font-weight:800;
+      line-height:1;
+      margin-bottom:10px;
+      background:linear-gradient(90deg,#4285F4,#34A853,#FBBC05);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .achievement-label{
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.8;
+    }
+
+    /* New Section: Trusted By */
+    .trusted-strip{
+      margin-top:26px;
+      overflow:hidden;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,0.10);
+      background:rgba(255,255,255,0.04);
+      padding:18px 0;
+      position:relative;
+    }
+
+    .trusted-track{
+      display:flex;
+      gap:18px;
+      width:max-content;
+      animation:marquee 28s linear infinite;
+      padding-left:18px;
+    }
+
+    .trusted-pill{
+      min-width:190px;
+      padding:14px 18px;
+      border-radius:14px;
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.10);
+      color:#dbeafe;
+      font-weight:700;
+      text-align:center;
+      letter-spacing:.2px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    @keyframes marquee{
+      from{transform:translateX(0);}
+      to{transform:translateX(-50%);}
+    }
+
+    /* New Section: Why Choose Us */
+    .why-grid{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:18px;
+      margin-top:28px;
+    }
+
+    .why-card{
+      grid-column:span 3;
+      padding:24px;
+      border-radius:20px;
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.10);
+      box-shadow:var(--shadow2);
+      transition:.25s ease;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .why-card::before{
+      content:"";
+      position:absolute;
+      top:-60px;
+      right:-60px;
+      width:140px;
+      height:140px;
+      background:radial-gradient(circle, rgba(66,133,244,0.20), transparent 65%);
+      pointer-events:none;
+    }
+
+    .why-card:hover{
+      transform:translateY(-5px);
+      background:rgba(255,255,255,0.09);
+    }
+
+    .why-badge{
+      width:52px;
+      height:52px;
+      display:grid;
+      place-items:center;
+      border-radius:16px;
+      margin-bottom:16px;
+      background:linear-gradient(135deg, rgba(66,133,244,0.22), rgba(52,168,83,0.18));
+      border:1px solid rgba(255,255,255,0.12);
+      font-size:22px;
+    }
+
+    .why-card h3{
+      margin:0 0 10px;
+      font-size:18px;
+      color:white;
+    }
+
+    .why-card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.8;
+      font-size:14px;
+    }
+
+    /* New Section: Process */
+    .process-wrap{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+      margin-top:28px;
+    }
+
+    .process-card{
+      position:relative;
+      padding:26px 22px;
+      border-radius:20px;
+      background:#ffffff;
+      border:1px solid rgba(17,24,39,0.08);
+      box-shadow:0 16px 40px rgba(0,0,0,0.08);
+      transition:transform .25s ease;
+    }
+
+    .process-card:hover{
+      transform:translateY(-4px);
+    }
+
+    .process-number{
+      display:inline-flex;
+      width:44px;
+      height:44px;
+      align-items:center;
+      justify-content:center;
+      border-radius:999px;
+      font-weight:800;
+      color:#111827;
+      background:linear-gradient(135deg,#4285F4,#34A853);
+      margin-bottom:14px;
+    }
+
+    .process-card p{
+      color:#4b5563;
+      line-height:1.8;
+      margin:0;
+      font-size:14px;
+    }
+
+    /* New Section: Testimonials */
+    .testimonials{
+      position:relative;
+      overflow:hidden;
+    }
+
+    .testimonial-slider{
+      position:relative;
+      margin-top:28px;
+    }
+
+    .testimonial-track{
+      display:flex;
+      transition:transform .6s ease;
+      will-change:transform;
+    }
+
+    .testimonial-slide{
+      min-width:100%;
+      padding:4px;
+    }
+
+    .testimonial-card{
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.10);
+      border-radius:24px;
+      padding:32px;
+      box-shadow:var(--shadow2);
+      display:grid;
+      grid-template-columns:1.4fr .8fr;
+      gap:24px;
+      align-items:center;
+    }
+
+    .testimonial-quote{
+      font-size:17px;
+      line-height:1.9;
+      color:var(--text);
+      margin:0 0 20px;
+    }
+
+    .testimonial-person{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .person-avatar{
+      width:58px;
+      height:58px;
+      border-radius:999px;
+      display:grid;
+      place-items:center;
+      font-weight:800;
+      color:#111827;
+      background:linear-gradient(135deg,#4285F4,#34A853,#FBBC05);
+      box-shadow:0 12px 28px rgba(0,0,0,0.18);
+    }
+
+    .person-meta strong{
+      display:block;
+      color:#fff;
+      font-size:15px;
+      margin-bottom:4px;
+    }
+
+    .person-meta span{
+      color:var(--muted2);
+      font-size:13px;
+    }
+
+    .testimonial-side{
+      border-radius:20px;
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.08);
+      padding:20px;
+    }
+
+    .testimonial-side h4{
+      margin:0 0 10px;
+      color:#fff;
+      font-size:18px;
+    }
+
+    .testimonial-side ul{
+      margin:0;
+      padding-left:18px;
+      color:var(--muted);
+      line-height:1.9;
+      font-size:14px;
+    }
+
+    .testimonial-controls{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:10px;
+      margin-top:22px;
+    }
+
+    .testimonial-btn{
+      width:44px;
+      height:44px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,0.12);
+      background:rgba(255,255,255,0.06);
+      color:#fff;
+      cursor:pointer;
+      transition:.2s ease;
+      font-size:16px;
+    }
+
+    .testimonial-btn:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,0.10);
+    }
+
+    .testimonial-dots{
+      display:flex;
+      gap:10px;
+    }
+
+    .testimonial-dot{
+      width:10px;
+      height:10px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.25);
+      border:none;
+      cursor:pointer;
+      padding:0;
+      transition:.2s ease;
+    }
+
+    .testimonial-dot.active{
+      width:28px;
+      background:linear-gradient(90deg,#4285F4,#34A853);
+    }
+
+    /* New Section: FAQ */
+    .faq-wrap{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin-top:28px;
+    }
+
+    .faq-item{
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.10);
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:var(--shadow2);
+    }
+
+    .faq-question{
+      width:100%;
+      text-align:left;
+      background:transparent;
+      border:none;
+      color:#fff;
+      padding:20px 22px;
+      cursor:pointer;
+      font-family:inherit;
+      font-size:16px;
+      font-weight:700;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+
+    .faq-question span:last-child{
+      font-size:20px;
+      color:#9cc1ff;
+      transition:transform .25s ease;
+    }
+
+    .faq-item.active .faq-question span:last-child{
+      transform:rotate(45deg);
+    }
+
+    .faq-answer{
+      max-height:0;
+      overflow:hidden;
+      transition:max-height .35s ease;
+      padding:0 22px;
+    }
+
+    .faq-answer p{
+      margin:0;
+      padding:0 0 20px;
+      color:var(--muted);
+      line-height:1.9;
+      font-size:14px;
+    }
+
+    /* New Section: CTA Banner */
+    .cta-banner{
+      margin-top:14px;
+    }
+
+    .cta-panel{
+      position:relative;
+      overflow:hidden;
+      border-radius:28px;
+      padding:34px 30px;
+      background:linear-gradient(135deg, rgba(66,133,244,0.18), rgba(52,168,83,0.15), rgba(251,188,5,0.12));
+      border:1px solid rgba(255,255,255,0.14);
+      box-shadow:0 20px 60px rgba(0,0,0,0.18);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+    }
+
+    .cta-panel::before{
+      content:"";
+      position:absolute;
+      inset:auto -90px -90px auto;
+      width:220px;
+      height:220px;
+      background:radial-gradient(circle, rgba(255,255,255,0.15), transparent 70%);
+    }
+
+    .cta-copy h2{
+      margin-bottom:10px;
+    }
+
+    .cta-copy p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.8;
+      max-width:70ch;
+    }
+
+    .cta-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      flex-shrink:0;
+    }
+
+    /* New Section: Contact / Newsletter Form */
+    .contact-upgrade{
+      padding-top:30px;
+    }
+
+    .contact-upgrade-wrap{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+      margin-top:28px;
+      align-items:start;
+    }
+
+    .contact-info-card,
+    .contact-form-card{
+      padding:28px;
+      border-radius:24px;
+      box-shadow:var(--shadow2);
+    }
+
+    .contact-info-card{
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.10);
+    }
+
+    .contact-point{
+      display:flex;
+      gap:14px;
+      margin-bottom:20px;
+    }
+
+    .contact-point:last-child{
+      margin-bottom:0;
+    }
+
+    .contact-icon{
+      width:46px;
+      height:46px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg, rgba(66,133,244,0.18), rgba(52,168,83,0.15));
+      border:1px solid rgba(255,255,255,0.12);
+      flex-shrink:0;
+    }
+
+    .contact-point h4{
+      margin:0 0 6px;
+      color:#fff;
+      font-size:16px;
+    }
+
+    .contact-point p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.8;
+      font-size:14px;
+    }
+
+    .contact-form-card{
+      background:#ffffff;
+      border:1px solid rgba(17,24,39,0.08);
+      color:#111827;
+    }
+
+    .contact-form-card h3{
+      margin:0 0 10px;
+      font-size:24px;
+      color:#111827;
+    }
+
+    .contact-form-card p{
+      margin:0 0 22px;
+      color:#4b5563;
+      line-height:1.8;
+      font-size:14px;
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
+    .field{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+
+    .field.full{
+      grid-column:1 / -1;
+    }
+
+    .field label{
+      font-size:13px;
+      font-weight:700;
+      color:#111827;
+    }
+
+    .field input,
+    .field textarea{
+      width:100%;
+      border:1px solid #d1d5db;
+      border-radius:14px;
+      padding:14px 14px;
+      font-family:inherit;
+      font-size:14px;
+      outline:none;
+      transition:border-color .2s ease, box-shadow .2s ease;
+      background:#f9fafb;
+    }
+
+    .field input:focus,
+    .field textarea:focus{
+      border-color:#4285F4;
+      box-shadow:0 0 0 4px rgba(66,133,244,0.12);
+      background:#fff;
+    }
+
+    .field textarea{
+      resize:vertical;
+      min-height:130px;
+    }
+
+    .form-submit{
+      margin-top:16px;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .submit-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 18px;
+      border:none;
+      border-radius:14px;
+      font-family:inherit;
+      font-size:14px;
+      font-weight:800;
+      cursor:pointer;
+      background:linear-gradient(90deg,#4285F4,#34A853);
+      color:#07101f;
+      box-shadow:0 14px 30px rgba(66,133,244,0.18);
+      transition:transform .2s ease, filter .2s ease;
+    }
+
+    .submit-btn:hover{
+      transform:translateY(-2px);
+      filter:brightness(1.03);
+    }
+
+    .form-note{
+      color:#6b7280;
+      font-size:13px;
+    }
+
+    .success-message{
+      margin-top:16px;
+      padding:14px 16px;
+      border-radius:14px;
+      background:#ecfdf5;
+      border:1px solid #a7f3d0;
+      color:#065f46;
+      display:none;
+      font-size:14px;
+      font-weight:600;
+    }
+
+    /* New Section: Scroll reveal */
+    .reveal{
+      opacity:0;
+      transform:translateY(26px);
+      transition:opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.show{
+      opacity:1;
+      transform:translateY(0);
+    }
+
     /* Responsive */
+    @media (max-width:1180px){
+      .why-card{grid-column:span 6;}
+      .process-wrap{grid-template-columns:repeat(2,1fr);}
+      .achievement-wrap{grid-template-columns:repeat(2,1fr);}
+      .testimonial-card{grid-template-columns:1fr;}
+    }
+
+    @media (max-width:992px){
+      .industry-grid{grid-template-columns:repeat(2,1fr);}
+    }
+
     @media (max-width:980px){
       .hero-grid{grid-template-columns:1fr;}
       .hero-card{order:2;margin-top:22px;}
       .card{grid-column:span 12;}
       .team-wrap{grid-template-columns:1fr;}
       .brand .name{display:none;}
+      .faq-wrap{grid-template-columns:1fr;}
+      .contact-upgrade-wrap{grid-template-columns:1fr;}
+      .cta-panel{flex-direction:column;align-items:flex-start;}
     }
-@media (max-width:760px){
-.btn.primary{
-   display:none;
-}
-  .nav-links{
-      display:none;
-  }
 
-  .menu-btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-  }
+    @media (max-width:760px){
+      .btn.primary{
+        display:none;
+      }
+      .nav-links{
+        display:none;
+      }
+      .menu-btn{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .stat-grid{
+        grid-template-columns:1fr;
+      }
+      .mega-menu{
+        width:100%;
+        flex-direction:column;
+        gap:10px;
+      }
+      .why-card{grid-column:span 12;}
+      .achievement-wrap{grid-template-columns:1fr;}
+      .process-wrap{grid-template-columns:1fr;}
+      .industry-grid{grid-template-columns:1fr;}
+      .form-grid{grid-template-columns:1fr;}
+      .trusted-pill{min-width:160px;}
+      .testimonial-card{padding:24px;}
+      .cta-panel{padding:26px 22px;}
+      .premium-footer-logo{width:220px;}
+    }
 
-  .stat-grid{
-      grid-template-columns:1fr;
-  }
+    @media(max-width:900px){
+      .footer-top-grid{
+        grid-template-columns:1fr;
+        gap:40px;
+      }
+    }
 
-  .mega-menu{
-      width:100%;
-      flex-direction:column;
-      gap:10px;
-  }
+    @media(max-width:768px){
+      .industry-grid{
+        grid-template-columns:1fr;
+      }
+    }
 
-}
+    @media(max-width:992px){
+      .industry-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
     @media (prefers-reduced-motion:reduce){
       html{scroll-behavior:auto;}
-      .card,.btn{transition:none!important;}
+      .card,.btn,.achievement-card,.why-card,.process-card,.floating-badge,
+      .trusted-track,.testimonial-track,.reveal{
+        transition:none!important;
+        animation:none!important;
+      }
     }
   </style>
 
@@ -738,55 +1430,50 @@
         <a href="index.html#top">Home</a>
 
         <div class="dropdown">
-          
           <a href="about.html" class="dropbtn">
             About Us ▾
           </a>
-          
+
           <div class="dropdown-menu" role="menu">
             <a href="about.html#who" role="menuitem">Who is ABA?</a>
             <a href="about.html#why" role="menuitem">Why ABA?</a>
             <a href="about.html#values" role="menuitem">Core Values</a>
             <a href="about.html#team" role="menuitem">Core Team</a>
           </div>
-          
         </div>
 
         <div class="dropdown">
           <button class="dropbtn" type="button" aria-expanded="false">
             What We Do ▾
           </button>
-<div class="dropdown-menu mega-menu">
 
-<div class="mega-column">
-<h4>Digital Workspace</h4>
+          <div class="dropdown-menu mega-menu">
+            <div class="mega-column">
+              <h4>Digital Workspace</h4>
+              <a href="#services">Microsoft 365 Consulting</a>
+              <a href="#services">Google Workspace</a>
+              <a href="#services">Email Migration</a>
+              <a href="#services">Collaboration Solutions</a>
+            </div>
 
-<a href="#services">Microsoft 365 Consulting</a>
-<a href="#services">Google Workspace</a>
-<a href="#services">Email Migration</a>
-<a href="#services">Collaboration Solutions</a>
-</div>
+            <div class="mega-column">
+              <h4>Cloud Migration Services</h4>
+              <a href="#services">Google → M365</a>
+              <a href="#services">Zoho → M365</a>
+              <a href="#services">Tenant Migration</a>
+              <a href="#services">Cutover Planning</a>
+            </div>
 
-<div class="mega-column">
-<h4>Cloud Migration Services</h4>
+            <div class="mega-column">
+              <h4>AI & Security Solutions</h4>
+              <a href="#services">Microsoft Copilot</a>
+              <a href="#services">Gemini AI</a>
+              <a href="#services">Intune</a>
+              <a href="#services">Zero Trust Security</a>
+            </div>
+          </div>
+        </div>
 
-<a href="#services">Google → M365</a>
-<a href="#services">Zoho → M365</a>
-<a href="#services">Tenant Migration</a>
-<a href="#services">Cutover Planning</a>
-</div>
-
-<div class="mega-column">
-<h4>AI & Security Solutions</h4>
-
-<a href="#services">Microsoft Copilot</a>
-<a href="#services">Gemini AI</a>
-<a href="#services">Intune</a>
-<a href="#services">Zero Trust Security</a>
-</div>
-
-</div>
-</div>
         <a href="career.html">Career</a>
         <a href="contact.html">Contact</a>
       </div>
@@ -803,19 +1490,13 @@
 
   <!-- Mobile menu -->
   <div class="menu-panel" id="menuPanel" aria-hidden="true">
-<div class="container">
-
-<a href="index.html#top" class="mLink">Home</a>
-
-<a href="about.html" class="mLink">About Us</a>
-
-<a href="index.html#services" class="mLink">Services</a>
-
-<a href="career.html" class="mLink">Career</a>
-
-<a href="contact.html" class="mLink">Contact</a>
-
-</div>
+    <div class="container">
+      <a href="index.html#top" class="mLink">Home</a>
+      <a href="about.html" class="mLink">About Us</a>
+      <a href="index.html#services" class="mLink">Services</a>
+      <a href="career.html" class="mLink">Career</a>
+      <a href="contact.html" class="mLink">Contact</a>
+    </div>
   </div>
 
   <main id="main">
@@ -848,6 +1529,13 @@
               <span class="pill"><span class="check">✓</span> Security-first architecture</span>
               <span class="pill"><span class="check">✓</span> AI readiness &amp; workflow automation</span>
             </div>
+
+            <!-- New Section: Hero Enhancement Badges -->
+            <div class="hero-floating-badges">
+              <div class="floating-badge">Microsoft 365 Expertise</div>
+              <div class="floating-badge">Cloud Migration Specialists</div>
+              <div class="floating-badge">Security &amp; AI Transformation</div>
+            </div>
           </div>
 
           <aside class="hero-card" aria-label="Highlights">
@@ -870,13 +1558,89 @@
               </div>
             </div>
           </aside>
-
         </div>
       </div>
     </header>
 
+    <!-- New Section: Achievements -->
+    <section class="achievements reveal" id="achievements">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>Measured outcomes that reflect execution quality</h2>
+            <p class="subhead">
+              Built to communicate trust, scale and delivery strength for a modern consulting brand.
+            </p>
+          </div>
+        </div>
+
+        <div class="achievement-wrap">
+          <div class="achievement-card">
+            <div class="achievement-number counter" data-target="250" data-suffix="+">0</div>
+            <div class="achievement-label">Consultations, solution discussions and transformation-led engagements supported.</div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-number counter" data-target="12" data-suffix="+">0</div>
+            <div class="achievement-label">Years of combined hands-on experience across cloud, security and collaboration projects.</div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-number counter" data-target="99" data-suffix="%">0</div>
+            <div class="achievement-label">Focus on continuity, planning accuracy and structured delivery during migration programs.</div>
+          </div>
+
+          <div class="achievement-card">
+            <div class="achievement-number counter" data-target="24" data-suffix="/7">0</div>
+            <div class="achievement-label">Business-first mindset for modern workplace enablement, readiness and support coordination.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Section: Trusted By -->
+    <section class="reveal">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>Trusted across modern workplace and transformation initiatives</h2>
+            <p class="subhead">
+              A premium visual band to strengthen brand confidence and enterprise positioning.
+            </p>
+          </div>
+        </div>
+
+        <div class="trusted-strip" aria-label="Trusted by brands and platforms">
+          <div class="trusted-track">
+            <div class="trusted-pill">Microsoft 365</div>
+            <div class="trusted-pill">Google Workspace</div>
+            <div class="trusted-pill">SharePoint</div>
+            <div class="trusted-pill">Microsoft Teams</div>
+            <div class="trusted-pill">Entra ID</div>
+            <div class="trusted-pill">Intune</div>
+            <div class="trusted-pill">Copilot</div>
+            <div class="trusted-pill">Cloud Security</div>
+            <div class="trusted-pill">Migration Programs</div>
+            <div class="trusted-pill">Digital Productivity</div>
+
+            <!-- Duplicate set for seamless marquee -->
+            <div class="trusted-pill">Microsoft 365</div>
+            <div class="trusted-pill">Google Workspace</div>
+            <div class="trusted-pill">SharePoint</div>
+            <div class="trusted-pill">Microsoft Teams</div>
+            <div class="trusted-pill">Entra ID</div>
+            <div class="trusted-pill">Intune</div>
+            <div class="trusted-pill">Copilot</div>
+            <div class="trusted-pill">Cloud Security</div>
+            <div class="trusted-pill">Migration Programs</div>
+            <div class="trusted-pill">Digital Productivity</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- SERVICES -->
-    <section id="services">
+    <section id="services" class="reveal">
       <div class="container">
         <div class="section-title">
           <div>
@@ -940,133 +1704,513 @@
         </div>
       </div>
     </section>
-<!-- INDUSTRY SOLUTIONS -->
-<section class="industry-section">
-    <div class="container">
 
-<h2 class="section-title">
-  Your Industry, <span style="color:#4285F4;">Our Expertise</span>
-</h2>
+    <!-- New Section: Why Choose Us -->
+    <section class="reveal">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>Why organizations choose ABA for transformation programs</h2>
+            <p class="subhead">
+              Added as a premium trust-building section without changing your existing service content.
+            </p>
+          </div>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-badge">🎯</div>
+            <h3>Strategy-led delivery</h3>
+            <p>Clear planning, practical execution and business-aligned recommendations for modern workplace initiatives.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-badge">🔐</div>
+            <h3>Security-first thinking</h3>
+            <p>Identity, access, compliance and endpoint considerations are embedded into every engagement approach.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-badge">⚙️</div>
+            <h3>Change with continuity</h3>
+            <p>Structured migration and adoption guidance with focus on minimizing disruption and preserving user productivity.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-badge">📈</div>
+            <h3>Modern growth enablement</h3>
+            <p>Microsoft 365, AI and cloud capabilities aligned to long-term efficiency, governance and operational maturity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Section: Engagement Process -->
+    <section class="section-light reveal">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>Simple engagement journey with enterprise-grade execution</h2>
+            <p class="subhead">
+              A clean process section improves user flow and helps visitors understand how your team works.
+            </p>
+          </div>
+        </div>
+
+        <div class="process-wrap">
+          <div class="process-card">
+            <div class="process-number">1</div>
+            <h3>Assess</h3>
+            <p>Understand business goals, existing environment, risks, dependencies and readiness requirements.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">2</div>
+            <h3>Plan</h3>
+            <p>Define scope, architecture, migration path, security posture and adoption priorities with clarity.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">3</div>
+            <h3>Execute</h3>
+            <p>Implement, migrate and coordinate cutover with structured delivery and continuity in mind.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">4</div>
+            <h3>Optimize</h3>
+            <p>Improve governance, user adoption, automation and platform value after rollout.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDUSTRY SOLUTIONS -->
+    <section class="industry-section reveal">
+      <div class="container">
+        <h2 class="section-title">
+          Your Industry, <span style="color:#4285F4;">Our Expertise</span>
+        </h2>
 
         <p class="section-subtitle">
-            Your challenges deserve solutions built for your industry.
-            We help organizations modernize collaboration, strengthen security,
-            automate workflows and accelerate digital transformation.
+          Your challenges deserve solutions built for your industry.
+          We help organizations modernize collaboration, strengthen security,
+          automate workflows and accelerate digital transformation.
         </p>
 
         <div class="industry-grid">
-
-            <!-- IT -->
-            <div class="industry-card">
-                <img src="it.jpg" alt="IT & Technology">
-                <div class="industry-content">
-                    <h3>IT & Technology</h3>
-                    <p>
-                        Modernize collaboration, secure digital workplaces and streamline
-                        IT operations with Microsoft 365, Google Workspace and AI solutions.
-                    </p>
-                </div>
+          <!-- IT -->
+          <div class="industry-card">
+            <img src="it.jpg" alt="IT & Technology">
+            <div class="industry-content">
+              <h3>IT & Technology</h3>
+              <p>
+                Modernize collaboration, secure digital workplaces and streamline
+                IT operations with Microsoft 365, Google Workspace and AI solutions.
+              </p>
             </div>
+          </div>
 
-            <!-- Retail -->
-            <div class="industry-card">
-                <img src="retail.jpg" alt="Retail">
-                <div class="industry-content">
-                    <h3>Retail & E-Commerce</h3>
-                    <p>
-                        Improve customer experiences, enhance team productivity and
-                        support business growth with secure cloud solutions.
-                    </p>
-                </div>
+          <!-- Retail -->
+          <div class="industry-card">
+            <img src="retail.jpg" alt="Retail">
+            <div class="industry-content">
+              <h3>Retail & E-Commerce</h3>
+              <p>
+                Improve customer experiences, enhance team productivity and
+                support business growth with secure cloud solutions.
+              </p>
             </div>
+          </div>
 
-            <!-- Healthcare -->
-            <div class="industry-card">
-                <img src="healthcare.jpg" alt="Healthcare">
-                <div class="industry-content">
-                    <h3>Healthcare</h3>
-                    <p>
-                        Protect sensitive information, improve compliance and enable
-                        secure collaboration across healthcare teams.
-                    </p>
-                </div>
+          <!-- Healthcare -->
+          <div class="industry-card">
+            <img src="healthcare.jpg" alt="Healthcare">
+            <div class="industry-content">
+              <h3>Healthcare</h3>
+              <p>
+                Protect sensitive information, improve compliance and enable
+                secure collaboration across healthcare teams.
+              </p>
             </div>
+          </div>
 
-            <!-- Manufacturing -->
-            <div class="industry-card">
-                <img src="manufacturing.jpg" alt="Manufacturing">
-                <div class="industry-content">
-                    <h3>Manufacturing</h3>
-                    <p>
-                        Improve operational efficiency, secure production environments
-                        and streamline communication across locations.
-                    </p>
-                </div>
+          <!-- Manufacturing -->
+          <div class="industry-card">
+            <img src="manufacturing.jpg" alt="Manufacturing">
+            <div class="industry-content">
+              <h3>Manufacturing</h3>
+              <p>
+                Improve operational efficiency, secure production environments
+                and streamline communication across locations.
+              </p>
             </div>
+          </div>
 
-            <!-- Real Estate -->
-            <div class="industry-card">
-                <img src="realestate.jpg" alt="Real Estate">
-                <div class="industry-content">
-                    <h3>Real Estate</h3>
-                    <p>
-                        Centralize document management, automate workflows and improve
-                        collaboration between agents and clients.
-                    </p>
-                </div>
+          <!-- Real Estate -->
+          <div class="industry-card">
+            <img src="realestate.jpg" alt="Real Estate">
+            <div class="industry-content">
+              <h3>Real Estate</h3>
+              <p>
+                Centralize document management, automate workflows and improve
+                collaboration between agents and clients.
+              </p>
             </div>
+          </div>
 
-            <!-- Finance -->
-            <div class="industry-card">
-                <img src="finance.jpg" alt="Financial Services">
-                <div class="industry-content">
-                    <h3>Financial Services</h3>
-                    <p>
-                        Strengthen security, compliance and productivity with modern
-                        workplace solutions built for regulated industries.
-                    </p>
-                </div>
+          <!-- Finance -->
+          <div class="industry-card">
+            <img src="finance.jpg" alt="Financial Services">
+            <div class="industry-content">
+              <h3>Financial Services</h3>
+              <p>
+                Strengthen security, compliance and productivity with modern
+                workplace solutions built for regulated industries.
+              </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- New Section: Testimonials -->
+    <section class="testimonials reveal" id="testimonials">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>What a premium customer trust section can look like</h2>
+            <p class="subhead">
+              This section adds strong visual credibility and includes automatic sliding functionality using JavaScript.
+            </p>
+          </div>
         </div>
 
-</div>
-</section>
+        <div class="testimonial-slider" aria-label="Testimonials slider">
+          <div class="testimonial-track" id="testimonialTrack">
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div>
+                  <p class="testimonial-quote">
+                    “ABA Technologies brought structure, clarity and confidence into our workplace modernization discussions.
+                    Their approach to cloud, security and migration planning felt practical, premium and business-focused.”
+                  </p>
 
-<!-- FOOTER TOP SECTION -->
-<!-- PREMIUM BRAND FOOTER -->
+                  <div class="testimonial-person">
+                    <div class="person-avatar">A</div>
+                    <div class="person-meta">
+                      <strong>Operations Head</strong>
+                      <span>Modern Workplace Transformation</span>
+                    </div>
+                  </div>
+                </div>
 
-<section class="premium-footer">
+                <div class="testimonial-side">
+                  <h4>Highlights</h4>
+                  <ul>
+                    <li>Clear planning approach</li>
+                    <li>Business-first communication</li>
+                    <li>Security and continuity focus</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
-  <div class="container premium-footer-content">
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div>
+                  <p class="testimonial-quote">
+                    “The overall engagement style reflected strong expertise across Microsoft 365, collaboration and migration readiness.
+                    The recommendations were thoughtful, organized and aligned to enterprise needs.”
+                  </p>
 
-    <!-- LOGO -->
+                  <div class="testimonial-person">
+                    <div class="person-avatar">B</div>
+                    <div class="person-meta">
+                      <strong>IT Manager</strong>
+                      <span>Cloud Migration &amp; Security</span>
+                    </div>
+                  </div>
+                </div>
 
-    <img src="logo.png" alt="ABA Technologies Logo" class="premium-footer-logo">
+                <div class="testimonial-side">
+                  <h4>Highlights</h4>
+                  <ul>
+                    <li>Migration-focused thinking</li>
+                    <li>Professional consulting flow</li>
+                    <li>Premium page credibility</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
-    <!-- DESCRIPTION -->
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div>
+                  <p class="testimonial-quote">
+                    “ABA’s positioning around AI, collaboration and cloud transformation creates a strong impression for decision makers.
+                    The page experience feels modern, professional and built for serious business conversations.”
+                  </p>
 
-    <p class="premium-footer-text">
-      ABA Technologies helps organizations modernize collaboration,
-      secure cloud environments, automate workflows and adopt AI-powered
-      workplace solutions with confidence.
-    </p>
+                  <div class="testimonial-person">
+                    <div class="person-avatar">C</div>
+                    <div class="person-meta">
+                      <strong>Business Consultant</strong>
+                      <span>Digital Transformation Advisory</span>
+                    </div>
+                  </div>
+                </div>
 
-    <!-- LOCATIONS -->
+                <div class="testimonial-side">
+                  <h4>Highlights</h4>
+                  <ul>
+                    <li>Modern premium layout</li>
+                    <li>Clear service communication</li>
+                    <li>Enterprise-ready presentation</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    <div class="premium-locations">
+          <div class="testimonial-controls">
+            <button class="testimonial-btn" id="prevTestimonial" aria-label="Previous testimonial">←</button>
 
-<div><strong>India</strong></div>
-<div><strong>Serving UAE & KSA Clients</strong></div>
+            <div class="testimonial-dots" id="testimonialDots">
+              <button class="testimonial-dot active" data-index="0" aria-label="Go to testimonial 1"></button>
+              <button class="testimonial-dot" data-index="1" aria-label="Go to testimonial 2"></button>
+              <button class="testimonial-dot" data-index="2" aria-label="Go to testimonial 3"></button>
+            </div>
 
-    </div>
+            <button class="testimonial-btn" id="nextTestimonial" aria-label="Next testimonial">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  </div>
+    <!-- New Section: FAQ -->
+    <section class="reveal" id="faq">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>Frequently asked questions</h2>
+            <p class="subhead">
+              Added to make the homepage more complete, informative and conversion-friendly.
+            </p>
+          </div>
+        </div>
 
-</section>
-    
-<!-- FOOTER -->
-<footer>
+        <div class="faq-wrap">
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Do you support Microsoft 365 consulting and migration planning?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes. The page already communicates Microsoft 365 consulting, migration planning, security and AI-related service strengths.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Can organizations engage ABA for cloud transformation initiatives?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes. The overall positioning supports consulting-led engagements for collaboration, security, migration and modernization programs.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Do you help with AI adoption and Microsoft Copilot readiness?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes. Your original page already includes Copilot / AI solutions, readiness, governance and adoption-related messaging.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Is security part of the consulting approach?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes. Identity security, MFA, Conditional Access, endpoint management and governance are already reflected in your services.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Will the website work on mobile devices?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes. This upgraded version includes responsive styles for mobile, tablet and desktop screens.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Can this code be used directly as a homepage file?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes. Save this as an HTML file and keep your existing image files in the same folder so the page can render correctly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Section: CTA Banner -->
+    <section class="cta-banner reveal">
+      <div class="container">
+        <div class="cta-panel">
+          <div class="cta-copy">
+            <h2>Ready to modernize collaboration, cloud and security with confidence?</h2>
+            <p>
+              Use this premium call-to-action band to push visitors toward consultation, contact or service exploration.
+            </p>
+          </div>
+
+          <div class="cta-actions">
+            <a class="btn primary" href="contact.html">Get Started</a>
+            <a class="btn" href="contact.html">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Section: Newsletter / Contact Form -->
+    <section class="contact-upgrade section-light reveal" id="contact-upgrade">
+      <div class="container">
+        <div class="section-title">
+          <div>
+            <h2>Start the conversation</h2>
+            <p class="subhead">
+              A clean premium contact block helps convert visitors even if you later connect it to a backend or email service.
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-upgrade-wrap">
+          <div class="contact-info-card">
+            <div class="contact-point">
+              <div class="contact-icon">📞</div>
+              <div>
+                <h4>Consultation Focus</h4>
+                <p>Discuss Microsoft 365, cloud migration, AI adoption and security modernization priorities.</p>
+              </div>
+            </div>
+
+            <div class="contact-point">
+              <div class="contact-icon">☁️</div>
+              <div>
+                <h4>Transformation Scope</h4>
+                <p>Engagements can support workplace strategy, migration planning, collaboration and governance.</p>
+              </div>
+            </div>
+
+            <div class="contact-point">
+              <div class="contact-icon">🛡️</div>
+              <div>
+                <h4>Security View</h4>
+                <p>Approaches can include identity protection, endpoint readiness, compliance and secure adoption planning.</p>
+              </div>
+            </div>
+
+            <div class="contact-point">
+              <div class="contact-icon">🤝</div>
+              <div>
+                <h4>Business Outcome</h4>
+                <p>Designed to support a premium first impression and encourage serious business discussions.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-card">
+            <h3>Request a consultation</h3>
+            <p>Frontend-only example form with simple JavaScript success feedback.</p>
+
+            <form id="premiumContactForm">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="fullName">Full Name</label>
+                  <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required />
+                </div>
+
+                <div class="field">
+                  <label for="companyName">Company Name</label>
+                  <input type="text" id="companyName" name="companyName" placeholder="Enter your company name" required />
+                </div>
+
+                <div class="field">
+                  <label for="emailAddress">Email Address</label>
+                  <input type="email" id="emailAddress" name="emailAddress" placeholder="Enter your email" required />
+                </div>
+
+                <div class="field">
+                  <label for="phoneNumber">Phone Number</label>
+                  <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" />
+                </div>
+
+                <div class="field full">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" placeholder="Tell us what you are looking for..." required></textarea>
+                </div>
+              </div>
+
+              <div class="form-submit">
+                <button class="submit-btn" type="submit">Send Request</button>
+                <span class="form-note">You can later connect this form to email, PHP, Formspree or any backend service.</span>
+              </div>
+
+              <div class="success-message" id="formSuccessMessage">
+                Thanks! Your request has been captured successfully. You can now connect this form to your preferred backend/email workflow.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREMIUM BRAND FOOTER -->
+    <section class="premium-footer">
+      <div class="container premium-footer-content">
+        <!-- LOGO -->
+        <img src="logo.png" alt="ABA Technologies Logo" class="premium-footer-logo">
+
+        <!-- DESCRIPTION -->
+        <p class="premium-footer-text">
+          ABA Technologies helps organizations modernize collaboration,
+          secure cloud environments, automate workflows and adopt AI-powered
+          workplace solutions with confidence.
+        </p>
+
+        <!-- LOCATIONS -->
+        <div class="premium-locations">
+          <div><strong>India</strong></div>
+          <div><strong>Serving UAE & KSA Clients</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
       <div class="container footer-inner">
         <div>
           © <span id="year"></span> <strong>ABA Technologies Pvt Ltd</strong>. All rights reserved.
@@ -1081,10 +2225,14 @@
   </main>
 
   <script>
+    /* =========================================
+       Existing functionality
+       ========================================= */
+
     // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Mobile menu toggle (class-based)
+    // Mobile menu toggle
     const menuBtn = document.getElementById('menuBtn');
     const menuPanel = document.getElementById('menuPanel');
     const mobileLinks = document.querySelectorAll('.mLink');
@@ -1095,6 +2243,7 @@
       menuBtn.setAttribute('aria-expanded', 'true');
       menuBtn.textContent = '✕';
     }
+
     function closeMenu(){
       menuPanel.classList.remove('open');
       menuPanel.setAttribute('aria-hidden', 'true');
@@ -1120,19 +2269,21 @@
       if (!clickInsideMenu) closeMenu();
     });
 
-    // Dropdown click support (desktop)
+    // Dropdown click support (safe version)
     const dropdowns = document.querySelectorAll('.dropdown');
 
     dropdowns.forEach(dd => {
       const btn = dd.querySelector('button');
+      if (!btn) return; // Keeps anchor-based dropdown working via hover only
+
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
-        // Close other dropdowns
+
         dropdowns.forEach(other => {
           if (other !== dd) {
             other.classList.remove('open');
-            const b = other.querySelector('button');
-            if (b) b.setAttribute('aria-expanded', 'false');
+            const otherBtn = other.querySelector('button');
+            if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
           }
         });
 
@@ -1149,6 +2300,185 @@
         if (b) b.setAttribute('aria-expanded', 'false');
       });
     });
+
+    /* =========================================
+       New Section: Counter Animation
+       ========================================= */
+    const counters = document.querySelectorAll('.counter');
+    let countersStarted = false;
+
+    function animateCounter(counter){
+      const target = +counter.getAttribute('data-target');
+      const suffix = counter.getAttribute('data-suffix') || '';
+      let current = 0;
+      const duration = 1600;
+      const increment = Math.max(1, Math.ceil(target / (duration / 16)));
+
+      function update(){
+        current += increment;
+        if(current >= target){
+          counter.textContent = target + suffix;
+        } else {
+          counter.textContent = current + suffix;
+          requestAnimationFrame(update);
+        }
+      }
+      update();
+    }
+
+    function startCounters(){
+      if(countersStarted) return;
+      countersStarted = true;
+      counters.forEach(counter => animateCounter(counter));
+    }
+
+    /* =========================================
+       New Section: Scroll Reveal
+       ========================================= */
+    const revealEls = document.querySelectorAll('.reveal');
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    /* =========================================
+       New Section: Start counters when visible
+       ========================================= */
+    const achievementSection = document.querySelector('.achievements');
+
+    if (achievementSection) {
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            startCounters();
+            counterObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+
+      counterObserver.observe(achievementSection);
+    }
+
+    /* =========================================
+       New Section: FAQ Accordion
+       ========================================= */
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const button = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+
+      button.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+
+        faqItems.forEach(other => {
+          other.classList.remove('active');
+          const otherAnswer = other.querySelector('.faq-answer');
+          otherAnswer.style.maxHeight = null;
+        });
+
+        if(!isActive){
+          item.classList.add('active');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
+
+    /* =========================================
+       New Section: Testimonials Slider
+       ========================================= */
+    const testimonialTrack = document.getElementById('testimonialTrack');
+    const testimonialDots = document.querySelectorAll('.testimonial-dot');
+    const prevTestimonial = document.getElementById('prevTestimonial');
+    const nextTestimonial = document.getElementById('nextTestimonial');
+
+    let testimonialIndex = 0;
+    const totalTestimonials = testimonialDots.length;
+    let testimonialInterval;
+
+    function updateTestimonials(){
+      testimonialTrack.style.transform = `translateX(-${testimonialIndex * 100}%)`;
+
+      testimonialDots.forEach(dot => dot.classList.remove('active'));
+      testimonialDots[testimonialIndex].classList.add('active');
+    }
+
+    function goToTestimonial(index){
+      testimonialIndex = index;
+      if(testimonialIndex < 0) testimonialIndex = totalTestimonials - 1;
+      if(testimonialIndex >= totalTestimonials) testimonialIndex = 0;
+      updateTestimonials();
+    }
+
+    function startTestimonialAutoSlide(){
+      testimonialInterval = setInterval(() => {
+        goToTestimonial(testimonialIndex + 1);
+      }, 4500);
+    }
+
+    function resetTestimonialAutoSlide(){
+      clearInterval(testimonialInterval);
+      startTestimonialAutoSlide();
+    }
+
+    if(prevTestimonial && nextTestimonial){
+      prevTestimonial.addEventListener('click', () => {
+        goToTestimonial(testimonialIndex - 1);
+        resetTestimonialAutoSlide();
+      });
+
+      nextTestimonial.addEventListener('click', () => {
+        goToTestimonial(testimonialIndex + 1);
+        resetTestimonialAutoSlide();
+      });
+    }
+
+    testimonialDots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const index = Number(dot.getAttribute('data-index'));
+        goToTestimonial(index);
+        resetTestimonialAutoSlide();
+      });
+    });
+
+    updateTestimonials();
+    startTestimonialAutoSlide();
+
+    /* =========================================
+       New Section: Frontend form success demo
+       ========================================= */
+    const premiumContactForm = document.getElementById('premiumContactForm');
+    const formSuccessMessage = document.getElementById('formSuccessMessage');
+
+    if (premiumContactForm) {
+      premiumContactForm.addEventListener('submit', function(e){
+        e.preventDefault();
+
+        const formData = new FormData(premiumContactForm);
+        const fullName = formData.get('fullName')?.trim();
+        const companyName = formData.get('companyName')?.trim();
+        const emailAddress = formData.get('emailAddress')?.trim();
+        const message = formData.get('message')?.trim();
+
+        if(!fullName || !companyName || !emailAddress || !message){
+          alert('Please fill in all required fields.');
+          return;
+        }
+
+        formSuccessMessage.style.display = 'block';
+        premiumContactForm.reset();
+
+        setTimeout(() => {
+          formSuccessMessage.style.display = 'none';
+        }, 5000);
+      });
+    }
   </script>
 </body>
 </html>
