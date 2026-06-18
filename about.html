@@ -8,39 +8,105 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 body{
   font-family:'Poppins',sans-serif;
   background:#f8fafc;
   color:#111827;
-  line-height:1.8;
-  overflow-x:hidden;
 }
 
-/* NAV */
+/* NAVBAR */
 nav{
   background:white;
-  padding:18px 20px;
+  padding:16px 40px;
   box-shadow:0 4px 20px rgba(0,0,0,0.05);
 }
 
 .nav-inner{
   display:flex;
-  justify-content:space-between;
   align-items:center;
+  justify-content:space-between;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+}
+
+.brand img{
+  height:48px;
+}
+
+.name strong{
+  font-size:16px;
+  color:#111827;
+}
+
+.name span{
+  font-size:12px;
+  color:#6b7280;
 }
 
 .nav-links{
   display:flex;
-  gap:20px;
+  align-items:center;
+  gap:32px;
 }
 
 .nav-links a{
   text-decoration:none;
   color:#111827;
+  font-weight:500;
 }
 
+/* DROPDOWN */
+.dropdown{
+  position:relative;
+}
+
+.dropdown-menu{
+  position:absolute;
+  top:100%;
+  left:0;
+  background:white;
+  border-radius:12px;
+  padding:10px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  display:none;
+}
+
+.dropdown:hover .dropdown-menu{
+  display:block;
+}
+
+.dropdown-menu a{
+  display:block;
+  padding:8px 12px;
+}
+
+/* RIGHT */
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.btn{
+  background:linear-gradient(90deg,#4285F4,#34A853);
+  color:white;
+  padding:10px 18px;
+  border-radius:20px;
+  text-decoration:none;
+}
+
+/* MOBILE */
 .menu-toggle{
   display:none;
   font-size:28px;
@@ -48,45 +114,41 @@ nav{
 }
 
 @media(max-width:768px){
+
+  nav{
+    padding:16px 20px;
+  }
+
   .nav-links{
     display:none;
     flex-direction:column;
+    position:absolute;
+    top:80px;
+    left:0;
     width:100%;
     background:white;
-    position:absolute;
-    top:70px;
-    left:0;
     padding:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
   }
-  .nav-links.active{display:flex;}
-  .menu-toggle{display:block;}
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .btn{
+    display:none;
+  }
 }
 
-/* HERO */
-.about-hero{
-  min-height:80vh;
-  display:flex;
-  align-items:center;
-  padding:80px 20px;
-  background:
-  linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),
-  url('team.jpg') center/cover no-repeat;
-}
-
-.about-content h1{
-  font-size:42px;
-  background:linear-gradient(90deg,#4285F4,#34A853);
-  -webkit-background-clip:text;
-  color:transparent;
-}
-
-.about-content p{font-size:18px;}
-
-/* GENERAL */
+/* SECTIONS */
 .container{
-  max-width:1200px;
+  max-width:1100px;
   margin:auto;
-  padding:20px;
+  padding:40px 20px;
 }
 
 .grid{
@@ -99,12 +161,24 @@ nav{
   .grid{grid-template-columns:1fr;}
 }
 
-/* CARD */
 .card{
   background:linear-gradient(135deg,#071226,#0b1d3a);
   color:white;
   padding:20px;
   border-radius:16px;
+}
+
+/* HERO */
+.about-hero{
+  padding:80px 40px;
+  background:linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url('team.jpg') center/cover no-repeat;
+}
+
+.about-content h1{
+  font-size:42px;
+  background:linear-gradient(90deg,#4285F4,#34A853);
+  -webkit-background-clip:text;
+  color:transparent;
 }
 
 /* TEAM */
@@ -138,55 +212,79 @@ nav{
   border-radius:16px;
 }
 
-footer{text-align:center;padding:30px;color:#6b7280;}
+footer{
+  text-align:center;
+  padding:30px;
+  color:#6b7280;
+}
 </style>
 </head>
 
 <body>
 
+<!-- ✅ NAVBAR -->
 <nav>
-<div class="nav-inner">
-<div>ABA Technologies</div>
+  <div class="nav-inner">
 
-<div class="nav-links">
-<a href="index.html">Home</a>
-<a href="#who">Who</a>
-<a href="#why">Why</a>
-<a href="#values">Values</a>
-<a href="#team">Team</a>
-</div>
+    <a class="brand" href="index.html">
+      <img src="logo.png" alt="ABA Logo">
+      <div class="name">
+        <strong>ABA Technologies Pvt Ltd</strong>
+        <span>Empowering Digital Workspaces</span>
+      </div>
+    </a>
 
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-</div>
+    <div class="nav-links">
+
+      <a href="index.html">Home</a>
+
+      <div class="dropdown">
+        <a href="#">About Us ▾</a>
+        <div class="dropdown-menu">
+          <a href="#who">Who is ABA?</a>
+          <a href="#why">Why ABA?</a>
+          <a href="#values">Core Values</a>
+          <a href="#team">Core Team</a>
+        </div>
+      </div>
+
+      <a href="index.html#services">What We Do</a>
+      <a href="career.html">Career</a>
+      <a href="contact.html">Contact</a>
+
+    </div>
+
+    <div class="nav-right">
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <a class="btn" href="contact.html">Get a Consultation</a>
+    </div>
+
+  </div>
 </nav>
 
+<!-- HERO -->
 <section class="about-hero">
-<div class="about-content">
-<h1>Technology works best when simplified for people.</h1>
-<p>
-We help businesses simplify cloud, collaboration,
-security and AI solutions with practical implementation,
-secure architecture and measurable outcomes.
-</p>
-</div>
+  <div class="about-content">
+    <h1>Technology works best when simplified for people.</h1>
+    <p>
+      We help businesses simplify cloud, collaboration,
+      security and AI solutions with practical implementation.
+    </p>
+  </div>
 </section>
 
 <div class="container">
 
 <section id="who">
 <h2>Who is ABA?</h2>
-
-<p>
-ABA Technologies Pvt Ltd is a modern technology consulting company focused on helping businesses simplify collaboration, strengthen security and adopt cloud-first solutions with confidence.
-</p>
-
+<p>ABA Technologies Pvt Ltd is a modern tech consulting company.</p>
 <br>
 
 <div class="grid">
-<div class="card"><h3>Go-to problem solvers</h3></div>
-<div class="card"><h3>Experienced consulting approach</h3></div>
+<div class="card"><h3>Problem solvers</h3></div>
+<div class="card"><h3>Consulting approach</h3></div>
 <div class="card"><h3>Technology specialists</h3></div>
-<div class="card"><h3>Long-term partnerships</h3></div>
+<div class="card"><h3>Partnerships</h3></div>
 </div>
 </section>
 
@@ -194,12 +292,11 @@ ABA Technologies Pvt Ltd is a modern technology consulting company focused on he
 
 <section id="why">
 <h2>Why ABA?</h2>
-
 <div class="grid">
-<div class="card"><h3>Business-focused solutions</h3></div>
-<div class="card"><h3>Security-first mindset</h3></div>
-<div class="card"><h3>Multi-platform expertise</h3></div>
-<div class="card"><h3>Practical implementation</h3></div>
+<div class="card"><h3>Business-focused</h3></div>
+<div class="card"><h3>Security-first</h3></div>
+<div class="card"><h3>Multi-platform</h3></div>
+<div class="card"><h3>Implementation</h3></div>
 </div>
 </section>
 
@@ -207,7 +304,6 @@ ABA Technologies Pvt Ltd is a modern technology consulting company focused on he
 
 <section id="values">
 <h2>Core Values</h2>
-
 <div class="grid">
 <div class="card"><h3>Innovation</h3></div>
 <div class="card"><h3>Trust</h3></div>
