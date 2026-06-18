@@ -840,7 +840,13 @@
       font-size:18px;
       color:white;
     }
-
+.why-image{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:14px;
+    margin-bottom:18px;
+}
     .why-card p{
       margin:0;
       color:var(--muted);
@@ -1368,6 +1374,10 @@
       .testimonial-card{padding:24px;}
       .cta-panel{padding:26px 22px;}
       .premium-footer-logo{width:220px;}
+
+      .why-image{
+        height:200px;
+        }
     }
 
     @media(max-width:900px){
@@ -1717,29 +1727,44 @@
           </div>
         </div>
 
-        <div class="why-grid">
-          <div class="why-card">
-            <div class="why-badge">🎯</div>
-            <h3>Strategy-led delivery</h3>
-            <p>Clear planning, practical execution and business-aligned recommendations for modern workplace initiatives.</p>
-          </div>
+<div class="why-card">
+    <img src="strategy.jpg" class="why-image" alt="Strategy-led delivery">
+
+    <h3>Strategy-led delivery</h3>
+
+    <p>
+        Clear planning, practical execution and business-aligned recommendations for modern workplace initiatives.
+    </p>
+</div>
 
           <div class="why-card">
-            <div class="why-badge">🔐</div>
+            <img src="security.jpg" class="why-image" alt="Security-first thinking">
+            
             <h3>Security-first thinking</h3>
-            <p>Identity, access, compliance and endpoint considerations are embedded into every engagement approach.</p>
+            
+            <p>
+              Identity, access, compliance and endpoint considerations are embedded into every engagement approach.
+              </p>
           </div>
 
           <div class="why-card">
-            <div class="why-badge">⚙️</div>
+            <img src="migration.jpg" class="why-image" alt="Change with continuity">
+            
             <h3>Change with continuity</h3>
-            <p>Structured migration and adoption guidance with focus on minimizing disruption and preserving user productivity.</p>
+
+            <p>
+              Structured migration and adoption guidance with focus on minimizing disruption and preserving user productivity.
+            </p>
           </div>
 
           <div class="why-card">
-            <div class="why-badge">📈</div>
+            <img src="growth.jpg" class="why-image" alt="Modern growth enablement">
+            
             <h3>Modern growth enablement</h3>
-            <p>Microsoft 365, AI and cloud capabilities aligned to long-term efficiency, governance and operational maturity.</p>
+
+            <p>
+            Microsoft 365, AI and cloud capabilities aligned to long-term efficiency, governance and operational maturity.
+            </p>
           </div>
         </div>
       </div>
