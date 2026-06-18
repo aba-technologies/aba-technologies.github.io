@@ -190,7 +190,28 @@
       font-weight:600;
     }
     .dropdown-menu a:hover{background:#f3f4f6;}
+.mega-menu{
+    width:900px;
+    display:flex;
+    gap:40px;
+    padding:25px;
+}
 
+.mega-column{
+    flex:1;
+}
+
+.mega-column h4{
+    color:#4285F4;
+    margin-bottom:15px;
+    font-size:18px;
+}
+
+.mega-column a{
+    display:block;
+    padding:8px 0;
+    color:#111827;
+}
     /* Mobile panel */
     .menu-panel{
       position:fixed;
@@ -652,11 +673,29 @@
       .team-wrap{grid-template-columns:1fr;}
       .brand .name{display:none;}
     }
-    @media (max-width:760px){
-      .nav-links{display:none;}
-      .menu-btn{display:inline-flex;align-items:center;justify-content:center;}
-      .stat-grid{grid-template-columns:1fr;}
-    }
+@media (max-width:760px){
+
+  .nav-links{
+      display:none;
+  }
+
+  .menu-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+  }
+
+  .stat-grid{
+      grid-template-columns:1fr;
+  }
+
+  .mega-menu{
+      width:100%;
+      flex-direction:column;
+      gap:10px;
+  }
+
+}
     @media (prefers-reduced-motion:reduce){
       html{scroll-behavior:auto;}
       .card,.btn{transition:none!important;}
@@ -712,14 +751,37 @@
           <button class="dropbtn" type="button" aria-expanded="false">
             What We Do ▾
           </button>
-          <div class="dropdown-menu" role="menu">
-            <a href="index.html#services" role="menuitem">Digital Workspace</a>
-            <a href="index.html#services" role="menuitem">Cloud Migration</a>
-            <a href="index.html#services" role="menuitem">AI Solutions</a>
-            <a href="index.html#services" role="menuitem">Security</a>
-          </div>
-        </div>
+<div class="dropdown-menu mega-menu">
 
+<div class="mega-column">
+<h4>Digital Workspace</h4>
+
+<a href="#services">Microsoft 365 Consulting</a>
+<a href="#services">Google Workspace</a>
+<a href="#services">Email Migration</a>
+<a href="#services">Collaboration Solutions</a>
+</div>
+
+<div class="mega-column">
+<h4>Cloud Migration</h4>
+
+<a href="#services">Google → M365</a>
+<a href="#services">Zoho → M365</a>
+<a href="#services">Tenant Migration</a>
+<a href="#services">Cutover Planning</a>
+</div>
+
+<div class="mega-column">
+<h4>AI & Security</h4>
+
+<a href="#services">Microsoft Copilot</a>
+<a href="#services">Gemini AI</a>
+<a href="#services">Intune</a>
+<a href="#services">Zero Trust Security</a>
+</div>
+
+</div>
+</div>
         <a href="career.html">Career</a>
         <a href="contact.html">Contact</a>
       </div>
