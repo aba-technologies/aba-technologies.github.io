@@ -1,354 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Contact Us | ABA Technologies Pvt Ltd</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- FIX: Correct Google Fonts link -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
 
   <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    body{
-      font-family:'Poppins',sans-serif;
-      background:#f8fafc;
-      color:#111827;
-      overflow-x:hidden;
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f8fafc;
+      color: #111827;
+      overflow-x: hidden;
     }
-    
-nav{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  height:78px;
-  background:white;
-  z-index:1000;
-  box-shadow:0 4px 20px rgba(0,0,0,0.05);
-}
 
-.nav-inner{
-  height:100%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 78px;
+      background: white;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
 
-.brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
+    /* FIX 1:
+       Override the generic .container padding inside navbar.
+       The original .container has padding:80px 20px, which breaks navbar layout.
+    */
+    nav .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+      height: 100%;
+    }
 
-.brand img{
-  height:60px;
-}
+    .nav-inner {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
 
-.name strong{
-  color:#111827;
-  font-size:14px;
-}
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
 
-.name span{
-  color:#6b7280;
-  font-size:12px;
-}
+      /* FIX 2: Remove default anchor underline/color from logo area */
+      text-decoration: none;
+      color: inherit;
+      flex-shrink: 0;
+    }
 
-.nav-links{
-  display:flex;
-  gap:20px;
-}
+    .brand img {
+      height: 60px;
+      display: block;
+    }
 
-.nav-links a{
-  text-decoration:none;
-  color:#111827;
-  font-weight:600;
-}
-.dropdown{
-  position:relative;
-}
+    /* FIX 3:
+       Stack brand name and tagline vertically instead of inline
+    */
+    .name {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
 
-.dropdown-menu{
-  display:none;
-  position:absolute;
-  top:100%;
-  left:0;
-  background:white;
-  min-width:220px;
-  border-radius:12px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.1);
-  padding:10px;
-}
+    .name strong {
+      color: #111827;
+      font-size: 14px;
+    }
 
-.dropdown:hover .dropdown-menu{
-  display:block;
-}
+    .name span {
+      color: #6b7280;
+      font-size: 12px;
+    }
 
-.dropdown-menu a{
-  display:block;
-  padding:10px;
-  color:#111827;
-}
-.btn.primary{
-  background:linear-gradient(135deg,#4285F4,#34A853);
-  color:white;
-  padding:12px 20px;
-  border-radius:14px;
-  text-decoration:none;
-  font-weight:600;
-}
-    .hero{
-      padding:170px 20px 80px;
-      text-align:center;
+    .nav-links {
+      display: flex;
+      gap: 20px;
+
+      /* FIX 4: Ensure links/dropdown align vertically */
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #111827;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    /* Keeps About Us + arrow aligned properly */
+    .dropdown > a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 0;
+      background: white;
+      min-width: 220px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px;
+      color: #111827;
+    }
+
+    /* FIX 5: Explicit alignment for consultation button block */
+    .nav-right {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .btn.primary {
+      background: linear-gradient(135deg, #4285F4, #34A853);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .hero {
+      padding: 170px 20px 80px;
+      text-align: center;
       background:
-      linear-gradient(
-      rgba(255,255,255,0.78),
-      rgba(255,255,255,0.72)
-      ),
-      url('hero-bg.jpg');
-
-      background-size:cover;
-      background-position:center;
+        linear-gradient(
+          rgba(255, 255, 255, 0.78),
+          rgba(255, 255, 255, 0.72)
+        ),
+        url('hero-bg.jpg');
+      background-size: cover;
+      background-position: center;
     }
 
-    .hero h1{
-      font-size:56px;
-      margin-bottom:18px;
-      background:linear-gradient(90deg,#4285F4,#34A853);
-      -webkit-background-clip:text;
-      color:transparent;
+    .hero h1 {
+      font-size: 56px;
+      margin-bottom: 18px;
+      background: linear-gradient(90deg, #4285F4, #34A853);
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
-    .hero p{
-      max-width:760px;
-      margin:auto;
-      color:#374151;
-      line-height:1.9;
-      font-size:18px;
+    .hero p {
+      max-width: 760px;
+      margin: auto;
+      color: #374151;
+      line-height: 1.9;
+      font-size: 18px;
     }
 
-    .container{
-      max-width:1200px;
-      margin:auto;
-      padding:80px 20px;
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 20px;
     }
 
-    .contact-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:30px;
-      margin-top:50px;
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-top: 50px;
     }
 
-    .card{
-      background:white;
-      border-radius:28px;
-      padding:32px;
-      box-shadow:0 20px 60px rgba(0,0,0,0.06);
+    .card {
+      background: white;
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
     }
 
-    .card h2{
-      margin-bottom:24px;
-      font-size:30px;
+    .card h2 {
+      margin-bottom: 24px;
+      font-size: 30px;
     }
 
-    .contact-item{
-      margin-bottom:24px;
+    .contact-item {
+      margin-bottom: 24px;
     }
 
-    .contact-item h3{
-      margin-bottom:8px;
-      color:#4285F4;
-      font-size:18px;
+    .contact-item h3 {
+      margin-bottom: 8px;
+      color: #4285F4;
+      font-size: 18px;
     }
 
     .contact-item p,
-    .contact-item a{
-      color:#4b5563;
-      line-height:1.8;
-      text-decoration:none;
+    .contact-item a {
+      color: #4b5563;
+      line-height: 1.8;
+      text-decoration: none;
     }
 
-    form{
-      display:flex;
-      flex-direction:column;
-      gap:18px;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
     }
 
     input,
-    textarea{
-      border:1px solid #d1d5db;
-      border-radius:16px;
-      padding:14px 16px;
-      font-family:inherit;
-      font-size:15px;
-      outline:none;
+    textarea {
+      border: 1px solid #d1d5db;
+      border-radius: 16px;
+      padding: 14px 16px;
+      font-family: inherit;
+      font-size: 15px;
+      outline: none;
     }
 
-    textarea{
-      min-height:140px;
-      resize:vertical;
+    textarea {
+      min-height: 140px;
+      resize: vertical;
     }
 
-    button{
-      border:none;
-      background:linear-gradient(90deg,#4285F4,#34A853);
-      color:white;
-      padding:16px;
-      border-radius:16px;
-      font-size:16px;
-      font-weight:600;
-      cursor:pointer;
+    button {
+      border: none;
+      background: linear-gradient(90deg, #4285F4, #34A853);
+      color: white;
+      padding: 16px;
+      border-radius: 16px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
     }
 
-    footer{
-      padding:40px 20px;
-      text-align:center;
-      color:#6b7280;
+    footer {
+      padding: 40px 20px;
+      text-align: center;
+      color: #6b7280;
     }
 
-    @media(max-width:900px){
-
-      .contact-grid{
-        grid-template-columns:1fr;
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
       }
 
-      nav{
-        padding:18px 20px;
+      .hero h1 {
+        font-size: 42px;
       }
 
-      .hero h1{
-        font-size:42px;
+      /* Optional minimal mobile safety:
+         allows nav links/button to behave better without redesigning the UI
+      */
+      nav {
+        height: auto;
+        min-height: 78px;
       }
 
+      nav .container {
+        padding: 12px 20px;
+      }
+
+      .nav-inner {
+        flex-wrap: wrap;
+        row-gap: 12px;
+      }
     }
-
   </style>
 </head>
 
 <body>
 
-<nav aria-label="Primary">
-  <div class="container nav-inner">
+  <nav aria-label="Primary">
+    <div class="container nav-inner">
 
-    <a class="brand" href="index.html">
-      <img src="logo.png" alt="ABA Technologies logo" />
-      <div class="name">
-        <strong>ABA Technologies</strong>
-        <span>Empowering Digital Workspaces</span>
+      <a class="brand" href="index.html">
+        <img src="logo.png" alt="ABA Technologies logo" />
+        <div class="name">
+          <strong>ABA Technologies</strong>
+          <span>Empowering Digital Workspaces</span>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+
+        <div class="dropdown">
+          <a href="about.html">About Us ▾</a>
+          <div class="dropdown-menu">
+            <a href="about.html#who">Who is ABA?</a>
+            <a href="about.html#why">Why ABA?</a>
+            <a href="about.html#values">Core Values</a>
+          </div>
+        </div>
+
+        <a href="index.html#services">What We Do</a>
+        <a href="career.html">Career</a>
+        <a href="contact.html">Contact</a>
       </div>
-    </a>
 
-    <div class="nav-links">
-
-      <a href="index.html">Home</a>
-
-      <div class="dropdown">
-        <a href="about.html">
-          About Us ▾
+      <div class="nav-right">
+        <a class="btn primary" href="contact.html">
+          Get a Consultation
         </a>
+      </div>
 
-        <div class="dropdown-menu">
-          <a href="about.html#who">Who is ABA?</a>
-          <a href="about.html#why">Why ABA?</a>
-          <a href="about.html#values">Core Values</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Contact Us</h1>
+    <p>
+      Let’s discuss how ABA Technologies can help modernize your digital workspace with secure cloud, collaboration and AI-driven solutions.
+    </p>
+  </section>
+
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="card">
+        <h2>Get in touch</h2>
+
+        <div class="contact-item">
+          <h3>Email</h3>
+          <a href="mailto:support@abatech.co.in">
+            support@abatech.co.in
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <h3>Services</h3>
+          <p>
+            Digital Workspace • Cloud Migration • Security • AI Solutions
+          </p>
+        </div>
+
+        <div class="contact-item">
+          <h3>Availability</h3>
+          <p>
+            Remote, hybrid & onsite consulting services available globally.
+          </p>
         </div>
       </div>
 
-      <a href="index.html#services">What We Do</a>
+      <div class="card">
+        <h2>Send a message</h2>
 
-      <a href="career.html">Career</a>
-
-      <a href="contact.html">Contact</a>
-
-    </div>
-
-    <div class="nav-right">
-      <a class="btn primary" href="contact.html">
-        Get a Consultation
-      </a>
-    </div>
-
-  </div>
-</nav>
-
-<section class="hero">
-
-  <h1>Contact Us</h1>
-
-  <p>
-    Let’s discuss how ABA Technologies can help modernize your digital workspace with secure cloud, collaboration and AI-driven solutions.
-  </p>
-
-</section>
-
-<div class="container">
-
-  <div class="contact-grid">
-
-    <div class="card">
-
-      <h2>Get in touch</h2>
-
-      <div class="contact-item">
-        <h3>Email</h3>
-        <a href="mailto:support@abatech.co.in">
-          support@abatech.co.in
-        </a>
-      </div>
-
-      <div class="contact-item">
-        <h3>Services</h3>
-
-        <p>
-          Digital Workspace • Cloud Migration • Security • AI Solutions
-        </p>
-      </div>
-
-      <div class="contact-item">
-        <h3>Availability</h3>
-
-        <p>
-          Remote, hybrid & onsite consulting services available globally.
-        </p>
+        <form>
+          <input type="text" placeholder="Your name" />
+          <input type="email" placeholder="Your email" />
+          <textarea placeholder="Tell us about your requirement"></textarea>
+          <button type="submit">Send Message</button>
+        </form>
       </div>
 
     </div>
-
-    <div class="card">
-
-      <h2>Send a message</h2>
-
-      <form>
-
-        <input type="text" placeholder="Your name">
-
-        <input type="email" placeholder="Your email">
-
-        <textarea placeholder="Tell us about your requirement"></textarea>
-
-        <button type="submit">
-          Send Message
-        </button>
-
-      </form>
-
-    </div>
-
   </div>
 
-</div>
-
-<footer>
-  © 2026 ABA Technologies Pvt Ltd. All rights reserved.
-</footer>
+  <footer>
+    © 2026 ABA Technologies Pvt Ltd. All rights reserved.
+  </footer>
 
 </body>
 </html>
+``
