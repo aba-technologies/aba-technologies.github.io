@@ -409,15 +409,14 @@
 
     /* ================= CAREER HERO ================= */
 
-    .career-hero{
-      position:relative;
-      min-height:calc(100vh - var(--navH));
-      display:flex;
-      align-items:center;
-      padding:92px 0 76px;
-      overflow:hidden;
-      isolation:isolate;
-    }
+ .career-hero{
+    position:relative;
+    min-height:calc(100vh - var(--navH));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:92px 0 76px;
+}
 
     .career-hero::before{
       content:"";
@@ -442,11 +441,12 @@
     }
 
     .hero-grid{
-      display:grid;
-      grid-template-columns:minmax(0,1.12fr) minmax(330px,.88fr);
-      gap:44px;
-      align-items:center;
-    }
+    display:grid;
+    grid-template-columns:1fr;
+    gap:44px;
+    align-items:center;
+    max-width:850px;
+}
 
     .eyebrow{
       display:inline-flex;
@@ -1552,31 +1552,6 @@
             </div>
           </div>
 
-          <aside class="hero-career-card float-soft" aria-label="Career image and highlights">
-            <div class="career-image-box">
-              <!-- CUSTOMIZE: Replace careers-hero.jpg with your own career/team image -->
-              <img src="careers-hero.jpg" alt="ABA Technologies careers and team culture" />
-              <div class="career-image-overlay">
-                <strong>Build meaningful technology careers</strong>
-                <span>Work on cloud, collaboration, security, automation, AI and digital transformation initiatives.</span>
-              </div>
-            </div>
-
-            <div class="mini-stats">
-              <div class="mini-stat">
-                <strong>Cloud</strong>
-                <span>Projects</span>
-              </div>
-              <div class="mini-stat">
-                <strong>AI</strong>
-                <span>Innovation</span>
-              </div>
-              <div class="mini-stat">
-                <strong>Team</strong>
-                <span>Growth</span>
-              </div>
-            </div>
-          </aside>
         </div>
       </div>
     </header>
