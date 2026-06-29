@@ -302,14 +302,15 @@
     }
 
     .mega-menu{
-      width:min(920px,calc(100vw - 44px));
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:28px;
-      padding:26px;
-      left:50%;
-      transform:translate(-50%,10px);
-    }
+    width:min(1200px,calc(100vw - 80px));
+    display:grid;
+    grid-template-columns:280px 1fr 1fr 1fr;
+    gap:40px;
+    padding:40px;
+    left:50%;
+    transform:translate(-50%,10px);
+    border-radius:28px;
+}
 
     .dropdown:hover .mega-menu,
     .dropdown.open .mega-menu,
@@ -327,7 +328,40 @@
       padding:9px 0;
       color:#334155;
     }
+.mega-side{
+    background:#f8fbff;
+    border-radius:20px;
+    padding:25px;
+}
 
+.mega-side h3{
+    color:#2563eb;
+    font-size:28px;
+    line-height:1.3;
+    margin:0 0 20px;
+}
+
+.mega-side p{
+    color:#555;
+    line-height:1.8;
+    font-size:15px;
+    margin-bottom:25px;
+}
+
+.mega-btn{
+    display:inline-block;
+    background:#2563eb;
+    color:#fff;
+    padding:12px 24px;
+    border-radius:10px;
+    font-weight:600;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.mega-btn:hover{
+    background:#1d4ed8;
+}
     /* Mobile panel */
     .menu-panel{
       position:fixed;
@@ -1740,6 +1774,19 @@
           </button>
 
           <div class="dropdown-menu mega-menu">
+            <div class="mega-side">
+    <h3>Build Modern Digital Businesses</h3>
+
+    <p>
+        We help organizations modernize their digital workplace,
+        migrate workloads securely, build custom applications,
+        strengthen cybersecurity and adopt AI solutions.
+    </p>
+
+    <a href="contact.html" class="mega-btn">
+        Get Consultation →
+    </a>
+</div>
             <div class="mega-column">
               <h4>Digital Workspace</h4>
               <a href="#services">Microsoft 365 Consulting</a>
