@@ -1449,97 +1449,85 @@
       font-size:14px;
       font-weight:650;
     }
-/* ================= NEW PREMIUM FOOTER ================= */
 
-.footer{
-    background:#081426;
-    padding:70px 0 25px;
-    color:#dbe4f3;
-}
+    /* ================= FOOTER ================= */
 
-.footer-grid{
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr 1.3fr;
-    gap:50px;
-}
+    .premium-footer{
+      background:
+        radial-gradient(520px 320px at 50% 0%, rgba(66,133,244,0.18), transparent 70%),
+        linear-gradient(135deg,#081226,#0b1730);
+      padding:90px 20px;
+      text-align:center;
+    }
 
-.footer-logo{
-    width:220px;
-    margin-bottom:20px;
-}
+    .premium-footer-content{
+      max-width:720px;
+      margin:auto;
+    }
 
-.footer-text{
-    color:#b7c4d8;
-    line-height:1.8;
-    margin-bottom:20px;
-}
+    .premium-footer-logo{
+      width:250px;
+      margin:0 auto 34px;
+      filter:drop-shadow(0 14px 34px rgba(66,133,244,0.26));
+    }
 
-.footer-global{
-    color:#8fb8ff;
-    font-weight:600;
-    margin-bottom:15px;
-}
+    .premium-footer-text{
+      color:rgba(255,255,255,0.82);
+      line-height:1.9;
+      font-size:16px;
+      margin:0 0 38px;
+    }
 
-.footer-email{
-    color:#ffffff;
-    font-weight:600;
-}
+    .premium-locations{
+      display:flex;
+      justify-content:center;
+      gap:36px;
+      flex-wrap:wrap;
+      color:white;
+      font-size:16px;
+      font-weight:500;
+    }
 
-.footer h3{
-    color:#ffffff;
-    margin-bottom:20px;
-    font-size:20px;
-}
+    .premium-locations strong{
+      color:#9cc1ff;
+    }
 
-.footer ul{
-    list-style:none;
-    padding:0;
-    margin:0;
-}
+    footer{
+      padding:30px 0 40px;
+      border-top:1px solid rgba(255,255,255,0.08);
+      background:rgba(0,0,0,0.18);
+    }
 
-.footer ul li{
-    margin-bottom:12px;
-}
+    .footer-inner{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      gap:16px;
+      align-items:center;
+      color:var(--muted2);
+      font-size:13px;
+    }
 
-.footer a{
-    color:#dbe4f3;
-    text-decoration:none;
-    transition:.3s;
-}
+    .footer-links{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
 
-.footer a:hover{
-    color:#4285F4;
-}
+    .footer-links a{
+      color:var(--muted2);
+      padding:8px 10px;
+      border-radius:10px;
+      border:1px solid transparent;
+      transition:.2s ease;
+    }
 
-.footer p{
-    line-height:1.8;
-    margin:0;
-}
+    .footer-links a:hover{
+      color:white;
+      border-color:rgba(255,255,255,0.12);
+      background:rgba(255,255,255,0.07);
+    }
 
-.footer-bottom{
-    margin-top:50px;
-    padding-top:25px;
-    border-top:1px solid rgba(255,255,255,.1);
-    text-align:center;
-    color:#94a3b8;
-}
-
-@media (max-width:900px){
-
-.footer-grid{
-    grid-template-columns:1fr;
-    gap:35px;
-}
-
-.footer{
-    text-align:center;
-}
-
-.footer-logo{
-    margin:0 auto 20px;
-}
-
-}
     /* ================= ANIMATIONS ================= */
 
     .reveal{
@@ -2616,106 +2604,37 @@
       </div>
     </section>
 
-<!-- PREMIUM FOOTER -->
+    <!-- PREMIUM BRAND FOOTER -->
+    <section class="premium-footer">
+      <div class="container premium-footer-content">
+        <img src="logo.png" alt="ABA Technologies Logo" class="premium-footer-logo">
 
-<footer class="footer">
+        <p class="premium-footer-text">
+          ABA Technologies helps organizations modernize collaboration,
+          secure cloud environments, automate workflows and adopt AI-powered
+          workplace solutions with confidence.
+        </p>
 
-  <div class="container footer-grid">
+        <div class="premium-locations">
+          <div><strong>India</strong></div>
+          <div><strong>Serving UAE & KSA Clients</strong></div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Column 1 -->
-    <div>
-
-      <img src="logo.png" alt="ABA Technologies Logo" class="footer-logo">
-
-      <p class="footer-text">
-        ABA Technologies helps organizations modernize collaboration,
-        secure cloud environments, automate workflows and adopt AI-powered
-        workplace solutions with confidence.
-      </p>
-
-      <p class="footer-global">
-        🌍 Serving clients remotely across Saudi Arabia, UAE, India and Worldwide.
-      </p>
-
-      <p class="footer-email">
-        ✉️ sales@abatech.co.in
-      </p>
-
-    </div>
-
-    <!-- Column 2 -->
-
-    <div>
-
-      <h3>Useful Links</h3>
-
-      <ul>
-
-        <li><a href="index.html">Home</a></li>
-
-        <li><a href="about.html">About Us</a></li>
-
-        <li><a href="#services">What We Do</a></li>
-
-        <li><a href="career.html">Career</a></li>
-
-        <li><a href="contact.html">Contact</a></li>
-
-      </ul>
-
-    </div>
-
-    <!-- Column 3 -->
-
-    <div>
-
-      <h3>Services</h3>
-
-      <ul>
-
-        <li>Microsoft 365</li>
-
-        <li>Google Workspace</li>
-
-        <li>Cloud Migration</li>
-
-        <li>Security Solutions</li>
-
-        <li>Copilot & AI</li>
-
-        <li>Application Development</li>
-
-      </ul>
-
-    </div>
-
-    <!-- Column 4 -->
-
-    <div>
-
-      <h3>Global Presence</h3>
-
-      <p><strong>🇸🇦 Saudi Arabia</strong><br>+966 54 105 0786</p>
-
-      <br>
-
-      <p><strong>🇦🇪 UAE</strong><br>+971 55 625 9327</p>
-
-      <br>
-
-      <p><strong>🇮🇳 India</strong><br>+91 7207521183</p>
-
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-
-      © 2026 <strong>ABA Technologies</strong>. All Rights Reserved.
-
-  </div>
-
-</footer>
+    <!-- FOOTER -->
+    <footer>
+      <div class="container footer-inner">
+        <div>
+          © <span id="year"></span> <strong>ABA Technologies</strong>. All rights reserved.
+        </div>
+        <div class="footer-links">
+          <a href="index.html#services">Services</a>
+          <a href="contact.html">Contact</a>
+          <a href="index.html#top">Back to top ↑</a>
+        </div>
+      </div>
+    </footer>
   </main>
 
   <script>
