@@ -2346,6 +2346,17 @@
           formMessage.textContent =
             "Thank you. Your consultation request has been sent successfully. Our team will contact you shortly.";
 
+          /* Google Analytics lead tracking */
+          if (typeof gtag === "function") {
+            gtag("event", "generate_lead", {
+              form_name: "Consultation Request Form",
+              service_requested:
+                document.getElementById("service").value || "Not selected",
+              visitor_region:
+                document.getElementById("region").value || "Not selected"
+            });
+          }
+
           contactForm.reset();
         } else {
           let result = {};
