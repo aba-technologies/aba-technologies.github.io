@@ -3,7 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | ABA Technologies</title>
+  <title>About ABA Technologies | Cloud, Security, Collaboration & AI Consulting</title>
+  <meta name="description" content="Learn about ABA Technologies, a cloud and digital workplace consulting company helping businesses simplify collaboration, strengthen security, modernize platforms and adopt AI solutions." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://www.abatech.co.in/about.html" />
+  <meta property="og:title" content="About ABA Technologies" />
+  <meta property="og:description" content="Practical cloud, collaboration, security and AI consulting built around secure implementation and measurable outcomes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.abatech.co.in/about.html" />
+  <meta property="og:image" content="https://www.abatech.co.in/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <style>
     /* =========================================================
@@ -1457,10 +1469,358 @@
         font-size:38px;
       }
     }
+  
+    /* =========================================================
+       PREMIUM VISUAL POLISH — preserves all existing content/images
+       ========================================================= */
+
+    body{
+      background:
+        radial-gradient(circle at 8% 8%, rgba(66,133,244,.07), transparent 24%),
+        linear-gradient(180deg,#f8fafc 0%,#ffffff 42%,#f8fafc 100%);
+    }
+
+    nav{
+      min-height:82px;
+      display:flex;
+      align-items:center;
+    }
+
+    .nav-inner{
+      width:100%;
+    }
+
+    .nav-links a{
+      position:relative;
+    }
+
+    .nav-links > a::after,
+    .nav-links > .dropdown > a::after{
+      content:"";
+      position:absolute;
+      left:50%;
+      right:50%;
+      bottom:5px;
+      height:2px;
+      background:var(--gradient);
+      border-radius:999px;
+      transition:left .25s ease,right .25s ease;
+    }
+
+    .nav-links > a:hover::after,
+    .nav-links > .dropdown > a:hover::after{
+      left:16px;
+      right:16px;
+    }
+
+    .about-hero{
+      min-height:82vh;
+      border-radius:0 0 42px 42px;
+      box-shadow:0 24px 70px rgba(2,6,23,.14);
+    }
+
+    .about-content{
+      margin-left:max(20px,calc((100vw - var(--container))/2));
+      margin-right:auto;
+    }
+
+    .about-content::before{
+      content:"ABOUT ABA TECHNOLOGIES";
+      display:inline-flex;
+      padding:9px 14px;
+      margin-bottom:22px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.2);
+      background:rgba(255,255,255,.10);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+      color:#dbeafe;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.15em;
+    }
+
+    .about-content h1{
+      max-width:760px;
+      text-shadow:0 14px 36px rgba(0,0,0,.20);
+    }
+
+    .about-content p{
+      max-width:760px;
+      text-shadow:0 6px 22px rgba(0,0,0,.22);
+    }
+
+    #who,
+    #why,
+    #values{
+      position:relative;
+      scroll-margin-top:110px;
+    }
+
+    #who::before,
+    #why::before,
+    #values::before{
+      content:"";
+      position:absolute;
+      inset:-34px -30px;
+      border-radius:32px;
+      background:rgba(255,255,255,.72);
+      border:1px solid rgba(226,232,240,.8);
+      box-shadow:0 18px 50px rgba(15,23,42,.06);
+      z-index:-1;
+    }
+
+    .about-image{
+      height:430px;
+      max-height:none;
+      transition:transform .5s ease, box-shadow .5s ease;
+    }
+
+    .about-image:hover{
+      transform:scale(1.008);
+      box-shadow:0 30px 80px rgba(15,23,42,.16);
+    }
+
+    .grid{
+      gap:22px;
+    }
+
+    .card{
+      min-height:230px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      padding:34px;
+    }
+
+    .card h3{
+      font-size:23px;
+    }
+
+    .card p{
+      font-size:16px;
+    }
+
+    #team{
+      margin-top:80px !important;
+      border-top:1px solid rgba(226,232,240,.9);
+      border-bottom:1px solid rgba(226,232,240,.9);
+    }
+
+    .profile-card{
+      background:
+        radial-gradient(circle at top left,rgba(66,133,244,.08),transparent 30%),
+        #fff;
+    }
+
+    .profile-img{
+      width:168px;
+      height:168px;
+    }
+
+    .team-points li{
+      position:relative;
+      padding-left:48px;
+      transition:transform .22s ease, border-color .22s ease, background .22s ease;
+    }
+
+    .team-points li::before{
+      content:"✓";
+      position:absolute;
+      left:16px;
+      top:14px;
+      width:24px;
+      height:24px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      color:#fff;
+      background:var(--gradient);
+      font-size:12px;
+      font-weight:800;
+    }
+
+    .team-points li:hover{
+      transform:translateX(4px);
+      border-color:rgba(37,99,235,.20);
+      background:#f1f7ff;
+    }
+
+    .premium-section{
+      border-top:1px solid rgba(226,232,240,.72);
+    }
+
+    .premium-soft{
+      background:
+        radial-gradient(circle at 10% 10%,rgba(66,133,244,.09),transparent 25%),
+        radial-gradient(circle at 90% 85%,rgba(52,168,83,.08),transparent 25%),
+        linear-gradient(180deg,#ffffff,#f8fbff);
+    }
+
+    .timeline-item{
+      transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+    }
+
+    .timeline-item:hover{
+      transform:translateX(7px);
+      box-shadow:0 22px 56px rgba(15,23,42,.09);
+      border-color:rgba(37,99,235,.18);
+    }
+
+    .premium-card,
+    .stack-card,
+    .leadership-card,
+    .testimonial-card,
+    .trust-badge{
+      box-shadow:0 14px 38px rgba(15,23,42,.08);
+    }
+
+    .stats-shell .stat-card{
+      min-height:225px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .trust-badge{
+      position:relative;
+      overflow:hidden;
+    }
+
+    .trust-badge::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(135deg,rgba(66,133,244,.08),rgba(52,168,83,.06));
+      opacity:0;
+      transition:opacity .25s ease;
+    }
+
+    .trust-badge:hover::before{
+      opacity:1;
+    }
+
+    .faq-item.active{
+      border-color:rgba(37,99,235,.28);
+      box-shadow:0 18px 46px rgba(15,23,42,.10);
+    }
+
+    .cta-box{
+      padding:58px;
+    }
+
+    footer{
+      background:
+        radial-gradient(circle at 20% 0%,rgba(66,133,244,.12),transparent 30%),
+        #071226;
+      color:rgba(255,255,255,.72);
+      border-top:1px solid rgba(255,255,255,.08);
+      padding:28px 20px;
+    }
+
+    .footer-shell{
+      width:min(100% - 40px,var(--container));
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .footer-brand-line{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      text-align:left;
+    }
+
+    .footer-logo{
+      width:94px;
+      height:auto;
+      filter:brightness(0) invert(1);
+      opacity:.95;
+    }
+
+    .footer-top-link{
+      color:#dbeafe;
+      text-decoration:none;
+      font-weight:700;
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.05);
+    }
+
+    .footer-top-link:hover{
+      background:rgba(255,255,255,.10);
+      transform:translateY(-2px);
+    }
+
+    @media(max-width:768px){
+      .about-hero{
+        border-radius:0 0 28px 28px;
+      }
+
+      .about-content{
+        margin-left:auto;
+      }
+
+      #who::before,
+      #why::before,
+      #values::before{
+        inset:-20px -10px;
+        border-radius:24px;
+      }
+
+      .about-image{
+        height:260px;
+      }
+
+      .profile-img{
+        width:142px;
+        height:142px;
+      }
+
+      .cta-box{
+        padding:34px 24px;
+      }
+
+      .footer-shell,
+      .footer-brand-line{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      .footer-logo{
+        width:118px;
+      }
+
+      .footer-top-link{
+        width:100%;
+      }
+    }
+
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"AboutPage",
+    "name":"About ABA Technologies",
+    "url":"https://www.abatech.co.in/about.html",
+    "mainEntity":{
+      "@type":"Organization",
+      "name":"ABA Technologies",
+      "url":"https://www.abatech.co.in/",
+      "logo":"https://www.abatech.co.in/logo.png",
+      "description":"Cloud, collaboration, security and AI consulting with practical implementation, secure architecture and measurable outcomes."
+    }
+  }
+  </script>
+
 </head>
 
-<body>
+<body id="top">
 
 <!-- NAV -->
 <nav aria-label="Primary">
@@ -1512,9 +1872,10 @@
   </div>
 </nav>
 
-<section class="about-hero">
+<main>
+<section class="about-hero" aria-labelledby="about-hero-title">
   <div class="about-content">
-    <h1>
+    <h1 id="about-hero-title">
       Technology works best when simplified for people.
     </h1>
 
@@ -1650,7 +2011,7 @@
 
     <div class="team-wrap">
       <div class="profile-card">
-        <img class="profile-img" src="profile.jpeg" alt="Abdulla Bin Aqueel - Founder &Director" />
+        <img class="profile-img" src="profile.jpeg" alt="Abdulla Bin Aqueel - Founder &amp; CEO" />
 
         <div class="profile-meta">
           <h3>Abdulla Bin Aqueel</h3>
@@ -1987,8 +2348,16 @@
   </div>
 </section>
 
+</main>
+
 <footer>
-  © 2026 ABA Technologies. All rights reserved.
+  <div class="footer-shell">
+    <div class="footer-brand-line">
+      <img src="logo.png" alt="ABA Technologies logo" class="footer-logo" />
+      <span>© 2026 ABA Technologies. All rights reserved.</span>
+    </div>
+    <a href="#top" class="footer-top-link" aria-label="Back to top">Back to top ↑</a>
+  </div>
 </footer>
 
 <script>
