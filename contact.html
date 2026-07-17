@@ -9,20 +9,36 @@
   >
 
   <title>
-    Contact ABA Technologies | Microsoft 365 & Cloud Consulting
+    Contact ABA Technologies | Cloud, Collaboration, Security & AI Consulting
   </title>
 
   <meta
     name="description"
-    content="Contact ABA Technologies for Microsoft 365 consulting, cloud migration, Google Workspace migration, Intune, security and AI solutions across the USA, UAE, Saudi Arabia and Europe."
+    content="Contact ABA Technologies for Microsoft 365, Google Workspace, cloud migration, identity, endpoint security, collaboration, managed support and AI consulting across the USA, UAE, Saudi Arabia and Europe."
   >
 
   <meta
     name="keywords"
-    content="Microsoft 365 consulting, cloud migration, Microsoft Intune, Microsoft 365 security, Google Workspace migration, ABA Technologies"
+    content="Microsoft 365 consulting, Google Workspace consulting, cloud migration, Microsoft Intune, Entra ID, cloud security, Exchange Online, SharePoint, Teams, Copilot, AI solutions, ABA Technologies"
   >
 
   <meta name="author" content="ABA Technologies">
+
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <link rel="canonical" href="https://abatech.co.in/contact.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact ABA Technologies | Cloud, Collaboration, Security & AI Consulting">
+  <meta property="og:description" content="Talk to ABA Technologies about Microsoft 365, Google Workspace, cloud migration, security, identity, collaboration, managed support and AI solutions.">
+  <meta property="og:url" content="https://abatech.co.in/contact.html">
+  <meta property="og:image" content="https://abatech.co.in/logo.png">
+  <meta property="og:site_name" content="ABA Technologies">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact ABA Technologies | Cloud, Collaboration, Security & AI Consulting">
+  <meta name="twitter:description" content="Connect with ABA Technologies for Microsoft 365, Google Workspace, cloud migration, security and AI consulting.">
+  <meta name="twitter:image" content="https://abatech.co.in/logo.png">
 
   <link rel="icon" href="logo.png" type="image/png">
 
@@ -1448,6 +1464,36 @@
       }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "ABA Technologies",
+    "url": "https://abatech.co.in/",
+    "logo": "https://abatech.co.in/logo.png",
+    "email": "abdulla@abatech.co.in",
+    "telephone": "+91-72075-21183",
+    "areaServed": [
+      "United States",
+      "United Arab Emirates",
+      "Saudi Arabia",
+      "Europe",
+      "India"
+    ],
+    "serviceType": [
+      "Microsoft 365 Consulting",
+      "Google Workspace Consulting",
+      "Cloud Migration",
+      "Microsoft Intune",
+      "Identity and Security",
+      "Collaboration Solutions",
+      "AI Solutions",
+      "Managed Support"
+    ]
+  }
+  </script>
+
 </head>
 
 <body>
@@ -1557,7 +1603,7 @@
 
       <div class="eyebrow">
         <span class="eyebrow-dot"></span>
-        Microsoft 365 & Cloud Consulting
+        Cloud, Collaboration, Security & AI Consulting
       </div>
 
       <h1>
@@ -1568,9 +1614,9 @@
       </h1>
 
       <p>
-        Connect with ABA Technologies for Microsoft 365 consulting,
-        cloud migration, identity, endpoint security and AI-powered
-        workplace solutions designed around your business goals.
+        Connect with ABA Technologies for Microsoft 365, Google Workspace,
+        cloud migration, identity, endpoint security, collaboration and
+        AI-powered workplace solutions designed around your business goals.
       </p>
 
       <div class="hero-actions">
@@ -1622,10 +1668,10 @@
           </h2>
 
           <p>
-            Whether you are planning a Microsoft 365 migration,
-            strengthening your security posture or modernizing your
-            digital workplace, our team is ready to help you move
-            forward with clarity.
+            Whether you are planning a Microsoft 365 or Google Workspace migration,
+            strengthening your security posture, improving collaboration or
+            modernizing your digital workplace, our team is ready to help you
+            move forward with clarity.
           </p>
         </div>
 
@@ -1653,7 +1699,7 @@
 
                 <a
                   class="contact-method"
-                  href="mailto:sales@abatech.co.in"
+                  href="mailto:abdulla@abatech.co.in"
                 >
                   <span class="contact-icon" aria-hidden="true">
                     ✉
@@ -1754,6 +1800,21 @@
               method="POST"
               novalidate
             >
+
+              <input
+                type="hidden"
+                name="_subject"
+                value="New consultation request from ABA Technologies website"
+              >
+
+              <input
+                type="text"
+                name="_gotcha"
+                tabindex="-1"
+                autocomplete="off"
+                aria-hidden="true"
+                style="position:absolute;left:-9999px;opacity:0;pointer-events:none;"
+              >
 
               <div class="form-row">
 
@@ -1887,8 +1948,16 @@
                       Microsoft 365 Consulting
                     </option>
 
+                    <option value="Google Workspace Consulting">
+                      Google Workspace Consulting
+                    </option>
+
                     <option value="Cloud Migration">
                       Cloud Migration
+                    </option>
+
+                    <option value="Email and Collaboration Migration">
+                      Email & Collaboration Migration
                     </option>
 
                     <option value="Microsoft Intune">
@@ -1899,12 +1968,12 @@
                       Security & Identity
                     </option>
 
-                    <option value="Google Workspace">
-                      Google Workspace Consulting
+                    <option value="Exchange Online SharePoint Teams">
+                      Exchange Online, SharePoint & Teams
                     </option>
 
-                    <option value="Copilot AI">
-                      Copilot & AI Solutions
+                    <option value="Copilot Gemini AI">
+                      Copilot, Gemini & AI Solutions
                     </option>
 
                     <option value="Managed Support">
@@ -2232,103 +2301,75 @@
       }
     });
 
-    /* Contact form */
+    /* Contact form submission through Formspree */
 
-    contactForm.addEventListener(
-      "submit",
-      function (event) {
-        event.preventDefault();
+    contactForm.addEventListener("submit", async function (event) {
+      event.preventDefault();
 
-        const name =
-          document.getElementById("name").value.trim();
+      formMessage.className = "form-message";
+      formMessage.textContent = "";
 
-        const company =
-          document.getElementById("company").value.trim();
-
-        const email =
-          document.getElementById("email").value.trim();
-
-        const phone =
-          document.getElementById("phone").value.trim();
-
-        const region =
-          document.getElementById("region").value;
-
-        const service =
-          document.getElementById("service").value;
-
-        const message =
-          document.getElementById("message").value.trim();
-
-        formMessage.className = "form-message";
-        formMessage.textContent = "";
-
-        if (!name || !email || !message) {
-          formMessage.className =
-            "form-message error";
-
-          formMessage.textContent =
-            "Please complete your name, work email and requirement before submitting.";
-
-          return;
-        }
-
-        const emailPattern =
-          /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        if (!emailPattern.test(email)) {
-          formMessage.className =
-            "form-message error";
-
-          formMessage.textContent =
-            "Please enter a valid email address.";
-
-          return;
-        }
-
-        submitButton.disabled = true;
-        submitButton.textContent =
-          "Preparing your email...";
-
-        const subject =
-          "Consultation Request from " + name;
-
-        const emailBody =
-          "Hello ABA Technologies,\n\n" +
-          "I would like to discuss a consulting requirement.\n\n" +
-          "Name: " + name + "\n" +
-          "Company: " + (company || "Not provided") + "\n" +
-          "Email: " + email + "\n" +
-          "Phone: " + (phone || "Not provided") + "\n" +
-          "Region: " + (region || "Not selected") + "\n" +
-          "Service: " + (service || "Not selected") + "\n\n" +
-          "Requirement:\n" + message + "\n\n" +
-          "Regards,\n" +
-          name;
-
-        const mailtoLink =
-          "mailto:abdulla@abatech.co.in" +
-          "?subject=" +
-          encodeURIComponent(subject) +
-          "&body=" +
-          encodeURIComponent(emailBody);
-
-        formMessage.className =
-          "form-message success";
-
+      if (!contactForm.checkValidity()) {
+        formMessage.className = "form-message error";
         formMessage.textContent =
-          "Your email application will now open with your enquiry details. Please review it and click Send.";
+          "Please complete all required fields correctly.";
 
-        window.location.href = mailtoLink;
-
-        setTimeout(function () {
-          submitButton.disabled = false;
-
-          submitButton.innerHTML =
-            'Send consultation request <span aria-hidden="true">→</span>';
-        }, 1500);
+        contactForm.reportValidity();
+        return;
       }
-    );
+
+      submitButton.disabled = true;
+      submitButton.textContent = "Sending your request...";
+
+      const formData = new FormData(contactForm);
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json"
+          }
+        });
+
+        if (response.ok) {
+          formMessage.className = "form-message success";
+          formMessage.textContent =
+            "Thank you. Your consultation request has been sent successfully. Our team will contact you shortly.";
+
+          contactForm.reset();
+        } else {
+          let result = {};
+
+          try {
+            result = await response.json();
+          } catch (error) {
+            result = {};
+          }
+
+          formMessage.className = "form-message error";
+
+          if (result.errors && result.errors.length) {
+            formMessage.textContent = result.errors
+              .map(function (error) {
+                return error.message;
+              })
+              .join(", ");
+          } else {
+            formMessage.textContent =
+              "We could not send your request. Please try again or email abdulla@abatech.co.in.";
+          }
+        }
+      } catch (error) {
+        formMessage.className = "form-message error";
+        formMessage.textContent =
+          "A connection error occurred. Please try again or email abdulla@abatech.co.in.";
+      } finally {
+        submitButton.disabled = false;
+        submitButton.innerHTML =
+          'Send consultation request <span aria-hidden="true">→</span>';
+      }
+    });
   </script>
 
 </body>
