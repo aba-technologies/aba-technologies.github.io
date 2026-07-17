@@ -4,26 +4,34 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>ABA Technologies | Microsoft 365, Cloud Migration, Copilot & Security</title>
-  <meta name="description" content="ABA Technologies provides Microsoft 365 consulting, cloud migrations, Copilot/AI adoption, and security solutions (Entra ID, Intune) for modern businesses." />
-  <meta name="keywords" content="Microsoft 365 consulting, cloud migration, Google Workspace to Microsoft 365, Copilot adoption, Entra ID, Intune, security, SharePoint, Teams" />
+  <title>ABA Technologies | Cloud, Digital Workspace, Security, AI & Application Development</title>
+  <meta name="description" content="ABA Technologies provides Microsoft 365, Google Workspace and Zoho consulting, cloud migration, security and compliance, Copilot and AI solutions, managed security services, and application development." />
+  <meta name="keywords" content="ABA Technologies, Microsoft 365 consulting, Google Workspace consulting, Zoho consulting, cloud migration, email migration, cloud security, Microsoft Intune, Entra ID, Microsoft Defender, Microsoft Purview, Copilot AI, application development, Power Platform, API development" />
   <meta name="author" content="ABA Technologies" />
   <meta name="theme-color" content="#0b1120" />
 
   <!-- Canonical -->
-  <link rel="canonical" href="https://www.abatech.co.in/" />
+  <link rel="canonical" href="https://abatech.co.in/" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="ABA Technologies" />
-  <meta property="og:description" content="Enterprise-grade Microsoft 365 consulting, cloud migrations, Copilot/AI adoption, and security (Entra ID, Intune)." />
+  <meta property="og:title" content="ABA Technologies | Cloud, Digital Workspace, Security, AI & Application Development" />
+  <meta property="og:description" content="Consulting and implementation across Microsoft 365, Google Workspace, Zoho, cloud migration, security, AI, managed services and application development." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.abatech.co.in/" />
-  <meta property="og:image" content="https://www.abatech.co.in/logo.png" />
+  <meta property="og:url" content="https://abatech.co.in/" />
+  <meta property="og:site_name" content="ABA Technologies" />
+  <meta property="og:image" content="https://abatech.co.in/logo.png" />
+  <meta property="og:image:alt" content="ABA Technologies logo" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ABA Technologies | Cloud, Security, AI & Digital Workspace" />
+  <meta name="twitter:description" content="Microsoft 365, Google Workspace, Zoho, cloud migration, security, AI and application development services." />
+  <meta name="twitter:image" content="https://abatech.co.in/logo.png" />
+
+  <link rel="preload" as="image" href="hero-bg.jpg" fetchpriority="high" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -1725,15 +1733,50 @@
     }
   </style>
 
-  <!-- Organization schema -->
+  <!-- Structured data for search engines -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "ABA Technologies",
-    "url": "https://www.abatech.co.in/",
-    "logo": "https://www.abatech.co.in/logo.png",
-    "description": "Microsoft 365 consulting, cloud migrations, Copilot/AI adoption, and security solutions (Entra ID, Intune)."
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://abatech.co.in/#organization",
+        "name": "ABA Technologies",
+        "url": "https://abatech.co.in/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://abatech.co.in/logo.png"
+        },
+        "email": "abdulla@abatech.co.in",
+        "telephone": "+91-72075-21183",
+        "description": "ABA Technologies provides digital workspace consulting, cloud migration, security and compliance, AI solutions, managed security services and application development.",
+        "areaServed": ["India", "United States", "United Arab Emirates", "Saudi Arabia", "Europe"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://abatech.co.in/#website",
+        "url": "https://abatech.co.in/",
+        "name": "ABA Technologies",
+        "publisher": {"@id": "https://abatech.co.in/#organization"}
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://abatech.co.in/#service",
+        "name": "ABA Technologies",
+        "url": "https://abatech.co.in/",
+        "provider": {"@id": "https://abatech.co.in/#organization"},
+        "serviceType": [
+          "Microsoft 365 Consulting",
+          "Google Workspace Consulting",
+          "Zoho Consulting",
+          "Cloud Migration Services",
+          "Cloud Security and Compliance",
+          "Managed Security Services",
+          "Copilot and AI Solutions",
+          "Application Development"
+        ]
+      }
+    ]
   }
   </script>
 </head>
@@ -1745,7 +1788,7 @@
   <nav aria-label="Primary">
     <div class="container nav-inner">
       <a class="brand" href="index.html#top" aria-label="ABA Technologies home">
-        <img src="logo.png" alt="ABA Technologies logo" />
+        <img src="logo.png" alt="ABA Technologies logo" decoding="async" fetchpriority="high" />
         <div class="name">
           <strong>ABA Technologies</strong>
           <span>Empowering Digital Workspaces</span>
@@ -2133,7 +2176,7 @@
         <!-- Design improvement: fixed broken structure and converted items into equal premium cards -->
         <div class="why-grid">
           <div class="why-card">
-            <img src="strategy.jpg" class="why-image" alt="Strategy-led delivery">
+            <img src="strategy.jpg" loading="lazy" decoding="async" class="why-image" alt="Strategy-led delivery">
             <h3>Strategy-led delivery</h3>
             <p>
               Clear planning, practical execution and business-aligned recommendations for modern workplace initiatives.
@@ -2141,7 +2184,7 @@
           </div>
 
           <div class="why-card">
-            <img src="security.jpg" class="why-image" alt="Security-first thinking">
+            <img src="security.jpg" loading="lazy" decoding="async" class="why-image" alt="Security-first thinking">
             <h3>Security-first thinking</h3>
             <p>
               Identity, access, compliance and endpoint considerations are embedded into every engagement approach.
@@ -2149,7 +2192,7 @@
           </div>
 
           <div class="why-card">
-            <img src="migration.jpg" class="why-image" alt="Change with continuity">
+            <img src="migration.jpg" loading="lazy" decoding="async" class="why-image" alt="Change with continuity">
             <h3>Change with continuity</h3>
             <p>
               Structured migration and adoption guidance with focus on minimizing disruption and preserving user productivity.
@@ -2157,7 +2200,7 @@
           </div>
 
           <div class="why-card">
-            <img src="growth.jpg" class="why-image" alt="Modern growth enablement">
+            <img src="growth.jpg" loading="lazy" decoding="async" class="why-image" alt="Modern growth enablement">
             <h3>Modern growth enablement</h3>
             <p>
               Microsoft 365, AI and cloud capabilities aligned to long-term efficiency, governance and operational maturity.
@@ -2222,7 +2265,7 @@
 
         <div class="industry-grid">
           <div class="industry-card">
-            <img src="it.jpg" alt="IT & Technology">
+            <img src="it.jpg" loading="lazy" decoding="async" alt="IT & Technology">
             <div class="industry-content">
               <h3>IT & Technology</h3>
               <p>
@@ -2233,7 +2276,7 @@
           </div>
 
           <div class="industry-card">
-            <img src="retail.jpg" alt="Retail">
+            <img src="retail.jpg" loading="lazy" decoding="async" alt="Retail">
             <div class="industry-content">
               <h3>Retail & E-Commerce</h3>
               <p>
@@ -2244,7 +2287,7 @@
           </div>
 
           <div class="industry-card">
-            <img src="healthcare.jpg" alt="Healthcare">
+            <img src="healthcare.jpg" loading="lazy" decoding="async" alt="Healthcare">
             <div class="industry-content">
               <h3>Healthcare</h3>
               <p>
@@ -2255,7 +2298,7 @@
           </div>
 
           <div class="industry-card">
-            <img src="manufacturing.jpg" alt="Manufacturing">
+            <img src="manufacturing.jpg" loading="lazy" decoding="async" alt="Manufacturing">
             <div class="industry-content">
               <h3>Manufacturing</h3>
               <p>
@@ -2266,7 +2309,7 @@
           </div>
 
           <div class="industry-card">
-            <img src="realestate.jpg" alt="Real Estate">
+            <img src="realestate.jpg" loading="lazy" decoding="async" alt="Real Estate">
             <div class="industry-content">
               <h3>Real Estate</h3>
               <p>
@@ -2277,7 +2320,7 @@
           </div>
 
           <div class="industry-card">
-            <img src="finance.jpg" alt="Financial Services">
+            <img src="finance.jpg" loading="lazy" decoding="async" alt="Financial Services">
             <div class="industry-content">
               <h3>Financial Services</h3>
               <p>
@@ -2562,7 +2605,9 @@
             <h3>Request a consultation</h3>
             <p>Frontend-only example form with simple JavaScript success feedback.</p>
 
-            <form id="premiumContactForm">
+            <form id="premiumContactForm" action="https://formspree.io/f/xeeyapgn" method="POST" novalidate>
+              <input type="hidden" name="_subject" value="New enquiry from ABA Technologies home page">
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;">
               <div class="form-grid">
                 <div class="field">
                   <label for="fullName">Full Name</label>
@@ -2607,7 +2652,7 @@
     <!-- PREMIUM BRAND FOOTER -->
     <section class="premium-footer">
       <div class="container premium-footer-content">
-        <img src="logo.png" alt="ABA Technologies Logo" class="premium-footer-logo">
+        <img src="logo.png" alt="ABA Technologies Logo" class="premium-footer-logo" loading="lazy" decoding="async">
 
         <p class="premium-footer-text">
           ABA Technologies helps organizations modernize collaboration,
@@ -2789,6 +2834,8 @@
       const button = item.querySelector('.faq-question');
       const answer = item.querySelector('.faq-answer');
 
+      button.setAttribute('aria-expanded', 'false');
+
       button.addEventListener('click', () => {
         const isActive = item.classList.contains('active');
 
@@ -2796,11 +2843,14 @@
           other.classList.remove('active');
           const otherAnswer = other.querySelector('.faq-answer');
           otherAnswer.style.maxHeight = null;
+          const otherButton = other.querySelector('.faq-question');
+          if (otherButton) otherButton.setAttribute('aria-expanded', 'false');
         });
 
         if(!isActive){
           item.classList.add('active');
           answer.style.maxHeight = answer.scrollHeight + 'px';
+          button.setAttribute('aria-expanded', 'true');
         }
       });
     });
@@ -2866,31 +2916,62 @@
     updateTestimonials();
     startTestimonialAutoSlide();
 
-    // Frontend form success demo
+    // Home-page enquiry form powered by Formspree
     const premiumContactForm = document.getElementById('premiumContactForm');
     const formSuccessMessage = document.getElementById('formSuccessMessage');
 
     if (premiumContactForm) {
-      premiumContactForm.addEventListener('submit', function(e){
+      const homeSubmitButton = premiumContactForm.querySelector('button[type="submit"]');
+
+      premiumContactForm.addEventListener('submit', async function(e){
         e.preventDefault();
 
-        const formData = new FormData(premiumContactForm);
-        const fullName = formData.get('fullName')?.trim();
-        const companyName = formData.get('companyName')?.trim();
-        const emailAddress = formData.get('emailAddress')?.trim();
-        const message = formData.get('message')?.trim();
-
-        if(!fullName || !companyName || !emailAddress || !message){
-          alert('Please fill in all required fields.');
+        if (!premiumContactForm.checkValidity()) {
+          premiumContactForm.reportValidity();
           return;
         }
 
-        formSuccessMessage.style.display = 'block';
-        premiumContactForm.reset();
+        const originalButtonText = homeSubmitButton ? homeSubmitButton.innerHTML : '';
 
-        setTimeout(() => {
-          formSuccessMessage.style.display = 'none';
-        }, 5000);
+        if (homeSubmitButton) {
+          homeSubmitButton.disabled = true;
+          homeSubmitButton.textContent = 'Sending...';
+        }
+
+        formSuccessMessage.style.display = 'none';
+
+        try {
+          const response = await fetch(premiumContactForm.action, {
+            method: 'POST',
+            body: new FormData(premiumContactForm),
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          if (!response.ok) {
+            throw new Error('Form submission failed');
+          }
+
+          formSuccessMessage.style.display = 'block';
+          formSuccessMessage.textContent = 'Thank you. Your enquiry has been sent successfully. Our team will contact you shortly.';
+          premiumContactForm.reset();
+
+          setTimeout(() => {
+            formSuccessMessage.style.display = 'none';
+          }, 6000);
+        } catch (error) {
+          formSuccessMessage.style.display = 'block';
+          formSuccessMessage.style.background = '#fef2f2';
+          formSuccessMessage.style.borderColor = '#fecaca';
+          formSuccessMessage.style.color = '#991b1b';
+          formSuccessMessage.textContent = 'We could not send your enquiry. Please try again or email abdulla@abatech.co.in.';
+        } finally {
+          if (homeSubmitButton) {
+            homeSubmitButton.disabled = false;
+            homeSubmitButton.innerHTML = originalButtonText;
+          }
+        }
       });
     }
   </script>
