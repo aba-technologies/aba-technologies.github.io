@@ -1800,6 +1800,590 @@
       }
     }
 
+  
+    /* =========================================================
+       FINAL PREMIUM UX/UI — ABOUT PAGE
+       ========================================================= */
+
+    .navbar{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      min-height:82px;
+      padding:0;
+      display:flex;
+      align-items:center;
+      background:rgba(255,255,255,.94);
+      border-bottom:1px solid rgba(226,232,240,.9);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+      box-shadow:0 8px 30px rgba(15,23,42,.05);
+    }
+
+    .navbar.scrolled{
+      box-shadow:0 16px 40px rgba(15,23,42,.10);
+    }
+
+    .brand-copy{
+      display:flex;
+      flex-direction:column;
+      gap:3px;
+      line-height:1.15;
+    }
+
+    .brand-copy strong{
+      color:var(--text);
+      font-size:15px;
+      font-weight:800;
+    }
+
+    .brand-copy span{
+      color:var(--light-muted);
+      font-size:11px;
+      white-space:nowrap;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:6px;
+    }
+
+    .nav-link{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:6px;
+      padding:11px 13px;
+      border:0;
+      border-radius:12px;
+      background:transparent;
+      color:#334155;
+      text-decoration:none;
+      font-family:inherit;
+      font-size:14px;
+      font-weight:650;
+      cursor:pointer;
+      transition:background .25s ease,color .25s ease,transform .25s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active{
+      color:var(--primary);
+      background:rgba(37,99,235,.08);
+    }
+
+    .nav-link:hover{
+      transform:translateY(-1px);
+    }
+
+    .dropdown-toggle{
+      border:none;
+    }
+
+    .dropdown-arrow{
+      font-size:10px;
+      transition:transform .25s ease;
+    }
+
+    .dropdown:hover .dropdown-arrow,
+    .dropdown.open .dropdown-arrow{
+      transform:rotate(180deg);
+    }
+
+    .dropdown:hover .dropdown-menu,
+    .dropdown.open .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu{
+      opacity:1;
+      visibility:visible;
+      transform:translateY(0);
+    }
+
+    .nav-actions{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      flex-shrink:0;
+    }
+
+    .primary-button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      padding:13px 19px;
+      border-radius:14px;
+      color:#fff;
+      text-decoration:none;
+      font-size:14px;
+      font-weight:750;
+      background:linear-gradient(135deg,#2563eb 0%,#3b82f6 48%,#16a34a 100%);
+      box-shadow:0 12px 30px rgba(37,99,235,.24);
+      transition:transform .25s ease,box-shadow .25s ease;
+    }
+
+    .primary-button:hover{
+      transform:translateY(-2px);
+      box-shadow:0 18px 40px rgba(37,99,235,.30);
+    }
+
+    .menu-button{
+      display:none;
+      width:44px;
+      height:44px;
+      border:1px solid var(--border);
+      border-radius:13px;
+      background:#fff;
+      cursor:pointer;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      gap:5px;
+    }
+
+    .menu-button span{
+      display:block;
+      width:20px;
+      height:2px;
+      border-radius:10px;
+      background:var(--text);
+      transition:transform .25s ease,opacity .25s ease;
+    }
+
+    .menu-button.active span:nth-child(1){
+      transform:translateY(7px) rotate(45deg);
+    }
+
+    .menu-button.active span:nth-child(2){
+      opacity:0;
+    }
+
+    .menu-button.active span:nth-child(3){
+      transform:translateY(-7px) rotate(-45deg);
+    }
+
+    #team{
+      margin-top:0 !important;
+      padding:100px 0;
+      background:
+        radial-gradient(circle at 10% 10%,rgba(66,133,244,.10),transparent 26%),
+        radial-gradient(circle at 90% 85%,rgba(52,168,83,.09),transparent 26%),
+        linear-gradient(180deg,#ffffff,#f5f9ff);
+      border-top:1px solid rgba(226,232,240,.9);
+      border-bottom:1px solid rgba(226,232,240,.9);
+      scroll-margin-top:105px;
+    }
+
+    .core-team-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:26px;
+      margin-top:42px;
+    }
+
+    .core-profile-card{
+      position:relative;
+      overflow:hidden;
+      display:grid;
+      grid-template-columns:150px 1fr;
+      align-items:center;
+      gap:26px;
+      min-height:275px;
+      padding:34px;
+      border:1px solid rgba(226,232,240,.95);
+      border-radius:30px;
+      background:
+        radial-gradient(circle at top right,rgba(66,133,244,.10),transparent 34%),
+        #fff;
+      box-shadow:0 18px 52px rgba(15,23,42,.09);
+      transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
+    }
+
+    .core-profile-card::after{
+      content:"";
+      position:absolute;
+      right:-80px;
+      bottom:-90px;
+      width:220px;
+      height:220px;
+      border-radius:50%;
+      background:radial-gradient(circle,rgba(52,168,83,.13),transparent 68%);
+      pointer-events:none;
+    }
+
+    .core-profile-card:hover{
+      transform:translateY(-7px);
+      border-color:rgba(37,99,235,.22);
+      box-shadow:0 28px 72px rgba(15,23,42,.14);
+    }
+
+    .core-profile-img{
+      width:150px;
+      height:150px;
+      object-fit:cover;
+      border-radius:28px;
+      border:5px solid #fff;
+      outline:3px solid rgba(66,133,244,.25);
+      box-shadow:0 18px 38px rgba(37,99,235,.18);
+      position:relative;
+      z-index:2;
+    }
+
+    .core-profile-content{
+      position:relative;
+      z-index:2;
+    }
+
+    .core-role{
+      display:inline-flex;
+      padding:8px 12px;
+      margin-bottom:13px;
+      border-radius:999px;
+      color:var(--primary);
+      background:#eff6ff;
+      border:1px solid #dbeafe;
+      font-size:12px;
+      font-weight:800;
+      line-height:1.4;
+    }
+
+    .core-profile-content h3{
+      margin:0 0 12px;
+      color:var(--text);
+      font-size:27px;
+      line-height:1.2;
+      letter-spacing:-.03em;
+    }
+
+    .core-profile-content p{
+      margin:0;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.85;
+    }
+
+    .how-we-work-panel{
+      margin-top:28px;
+      padding:38px;
+      border-radius:32px;
+      color:#fff;
+      background:
+        radial-gradient(circle at 10% 0%,rgba(66,133,244,.27),transparent 30%),
+        radial-gradient(circle at 92% 100%,rgba(52,168,83,.22),transparent 30%),
+        linear-gradient(135deg,#071226,#0b1d3a);
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow:0 24px 70px rgba(2,6,23,.18);
+    }
+
+    .how-we-work-heading{
+      max-width:780px;
+      margin-bottom:28px;
+    }
+
+    .how-we-work-heading .mini-label{
+      color:#bfdbfe;
+    }
+
+    .how-we-work-heading h3{
+      margin:0 0 10px;
+      font-size:30px;
+      color:#fff;
+    }
+
+    .how-we-work-heading p{
+      color:rgba(255,255,255,.70);
+      line-height:1.8;
+    }
+
+    .how-we-work-grid{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:14px;
+    }
+
+    .work-step{
+      min-height:180px;
+      padding:22px;
+      border-radius:22px;
+      background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.10);
+      backdrop-filter:blur(8px);
+      -webkit-backdrop-filter:blur(8px);
+      transition:transform .25s ease,background .25s ease;
+    }
+
+    .work-step:hover{
+      transform:translateY(-5px);
+      background:rgba(255,255,255,.11);
+    }
+
+    .work-step > span{
+      display:inline-grid;
+      place-items:center;
+      width:42px;
+      height:42px;
+      margin-bottom:17px;
+      border-radius:14px;
+      color:#fff;
+      background:linear-gradient(135deg,#4285F4,#34A853);
+      font-size:13px;
+      font-weight:800;
+    }
+
+    .work-step h4{
+      margin:0 0 8px;
+      color:#fff;
+      font-size:17px;
+    }
+
+    .work-step p{
+      margin:0;
+      color:rgba(255,255,255,.68);
+      font-size:13px;
+      line-height:1.75;
+    }
+
+    .footer{
+      position:relative;
+      overflow:hidden;
+      padding:75px 0 28px;
+      background:
+        radial-gradient(500px 300px at 50% 0%,rgba(37,99,235,.20),transparent 70%),
+        linear-gradient(145deg,#071224,#0b1730 55%,#0f2450);
+      color:#fff;
+    }
+
+    .footer::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+      background-size:40px 40px;
+      pointer-events:none;
+    }
+
+    .footer-content{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:1.25fr .75fr .75fr;
+      gap:50px;
+      padding-bottom:48px;
+      text-align:left;
+    }
+
+    .footer-brand img{
+      width:auto;
+      height:74px;
+      margin-bottom:18px;
+      filter:brightness(0) invert(1);
+    }
+
+    .footer-brand p{
+      max-width:440px;
+      margin:0;
+      color:rgba(255,255,255,.64);
+      font-size:14px;
+      line-height:1.8;
+    }
+
+    .footer-column h4{
+      margin:0 0 18px;
+      color:#fff;
+      font-size:14px;
+    }
+
+    .footer-links{
+      display:grid;
+      gap:12px;
+    }
+
+    .footer-links a{
+      width:fit-content;
+      color:rgba(255,255,255,.63);
+      text-decoration:none;
+      font-size:13px;
+      transition:color .2s ease,transform .2s ease;
+    }
+
+    .footer-links a:hover{
+      color:#fff;
+      transform:translateX(3px);
+    }
+
+    .footer-bottom{
+      position:relative;
+      z-index:2;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+      padding-top:25px;
+      border-top:1px solid rgba(255,255,255,.09);
+      color:rgba(255,255,255,.48);
+      font-size:12px;
+      text-align:left;
+    }
+
+    @media(max-width:1080px){
+      .brand-copy{
+        display:none;
+      }
+
+      .core-team-grid{
+        grid-template-columns:1fr;
+      }
+
+      .how-we-work-grid{
+        grid-template-columns:repeat(3,1fr);
+      }
+
+      .footer-content{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .footer-brand{
+        grid-column:1 / -1;
+      }
+    }
+
+    @media(max-width:860px){
+      .navbar{
+        min-height:76px;
+      }
+
+      .brand img{
+        height:52px;
+      }
+
+      .menu-button{
+        display:inline-flex;
+      }
+
+      .nav-actions .primary-button{
+        display:none;
+      }
+
+      .nav-links{
+        position:absolute;
+        top:calc(100% + 8px);
+        left:20px;
+        right:20px;
+        display:none;
+        flex-direction:column;
+        align-items:stretch;
+        gap:5px;
+        padding:14px;
+        border:1px solid rgba(226,232,240,.95);
+        border-radius:20px;
+        background:rgba(255,255,255,.98);
+        box-shadow:0 22px 60px rgba(15,23,42,.16);
+      }
+
+      .nav-links.active{
+        display:flex;
+      }
+
+      .nav-link{
+        width:100%;
+        justify-content:space-between;
+        padding:13px 14px;
+      }
+
+      .dropdown{
+        width:100%;
+      }
+
+      .dropdown-menu{
+        position:static;
+        display:none;
+        min-width:100%;
+        margin-top:5px;
+        padding:6px;
+        opacity:1;
+        visibility:visible;
+        transform:none;
+        border-radius:14px;
+        box-shadow:none;
+        background:#f8fafc;
+      }
+
+      .dropdown:hover .dropdown-menu,
+      .dropdown:focus-within .dropdown-menu{
+        display:none;
+      }
+
+      .dropdown.open .dropdown-menu{
+        display:block;
+      }
+
+      .core-profile-card{
+        grid-template-columns:125px 1fr;
+        padding:28px;
+      }
+
+      .core-profile-img{
+        width:125px;
+        height:125px;
+      }
+
+      .how-we-work-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    @media(max-width:640px){
+      #team{
+        padding:72px 0;
+      }
+
+      .core-profile-card{
+        grid-template-columns:1fr;
+        text-align:center;
+        padding:26px 22px;
+      }
+
+      .core-profile-img{
+        width:142px;
+        height:142px;
+        margin:0 auto;
+      }
+
+      .core-role{
+        justify-content:center;
+      }
+
+      .how-we-work-panel{
+        padding:28px 20px;
+      }
+
+      .how-we-work-grid{
+        grid-template-columns:1fr;
+      }
+
+      .work-step{
+        min-height:auto;
+      }
+
+      .footer-content{
+        grid-template-columns:1fr;
+        gap:34px;
+      }
+
+      .footer-brand{
+        grid-column:auto;
+      }
+
+      .footer-bottom{
+        flex-direction:column;
+        text-align:center;
+        align-items:center;
+      }
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -1823,22 +2407,35 @@
 <body id="top">
 
 <!-- NAV -->
-<nav aria-label="Primary">
+<nav class="navbar" id="navbar" aria-label="Primary navigation">
   <div class="container nav-inner">
+
     <a class="brand" href="index.html" aria-label="ABA Technologies home">
-      <img src="logo.png" alt="ABA Technologies logo" />
-      <div class="name">
+      <img src="logo.png" alt="ABA Technologies logo">
+
+      <div class="brand-copy">
         <strong>ABA Technologies</strong>
         <span>Empowering Digital Workspaces</span>
       </div>
     </a>
 
-    <div class="nav-links" role="navigation">
-      <a href="index.html">Home</a>
+    <div class="nav-links" id="navLinks">
 
-      <div class="dropdown">
-        <a href="#">About Us ▾</a>
-        <div class="dropdown-menu">
+      <a class="nav-link" href="index.html">Home</a>
+
+      <div class="dropdown open-desktop" id="aboutDropdown">
+        <button
+          class="nav-link dropdown-toggle active"
+          id="aboutDropdownButton"
+          type="button"
+          aria-expanded="false"
+          aria-controls="aboutDropdownMenu"
+        >
+          About Us
+          <span class="dropdown-arrow">▼</span>
+        </button>
+
+        <div class="dropdown-menu" id="aboutDropdownMenu">
           <a href="#who">Who is ABA?</a>
           <a href="#why">Why ABA?</a>
           <a href="#values">Core Values</a>
@@ -1846,29 +2443,31 @@
         </div>
       </div>
 
-      <div class="dropdown">
-        <a href="index.html#services">What We Do ▾</a>
-        <div class="dropdown-menu">
-          <a href="index.html#services">Digital Workspace</a>
-          <a href="index.html#services">Cloud Migration</a>
-          <a href="index.html#services">AI Solutions</a>
-          <a href="index.html#services">Security</a>
-        </div>
-      </div>
-
-      <a href="career.html">Career</a>
-      <a href="contact.html">Contact</a>
+      <a class="nav-link" href="index.html#services">What We Do</a>
+      <a class="nav-link" href="career.html">Careers</a>
+      <a class="nav-link" href="contact.html">Contact</a>
     </div>
 
-    <div class="nav-right">
-      <div class="menu-toggle" onclick="toggleMenu()">
-        ☰
-      </div>
-
-      <a class="btn primary" href="contact.html">
+    <div class="nav-actions">
+      <a class="primary-button" href="contact.html">
         Get a Consultation
+        <span aria-hidden="true">→</span>
       </a>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
+
   </div>
 </nav>
 
@@ -2000,42 +2599,91 @@
 </div>
 
 <!-- TEAM -->
-<section id="team" style="margin-top:40px;">
+<section id="team">
   <div class="container">
-    <div class="section-title">
+    <div class="section-title reveal">
+      <span class="mini-label">Leadership Team</span>
       <h2>Core Team</h2>
       <p class="subhead">
-        Hands-on leadership with a delivery-first mindset — focused on secure implementation, user adoption, and measurable impact.
+        Hands-on leadership with a delivery-first mindset — focused on secure implementation, user adoption and measurable impact.
       </p>
     </div>
 
-    <div class="team-wrap">
-      <div class="profile-card">
-        <img class="profile-img" src="profile.jpeg" alt="Abdulla Bin Aqueel - Founder &amp; CEO" />
+    <div class="core-team-grid">
+      <article class="core-profile-card reveal">
+        <img class="core-profile-img" src="profile.jpeg" alt="Abdulla Bin Aqueel - Founder and CEO">
 
-        <div class="profile-meta">
+        <div class="core-profile-content">
+          <span class="core-role">Founder &amp; CEO</span>
           <h3>Abdulla Bin Aqueel</h3>
-
-          <div class="designation">
-            Founder & CEO
-          </div>
-
           <p>
             Founder passionate about building secure, scalable and modern digital workplace solutions for growing businesses.
           </p>
         </div>
+      </article>
+
+      <article class="core-profile-card reveal">
+        <img class="core-profile-img" src="security-lead.jpg" alt="Aqib Bin Aqueel - Director and Security and Identity Lead">
+
+        <div class="core-profile-content">
+          <span class="core-role">Director &amp; Security &amp; Identity Lead</span>
+          <h3>Aqib Bin Aqueel</h3>
+          <p>
+            Leads identity security, governance, access protection and security-first architecture across modern cloud and digital workplace environments.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <div class="how-we-work-panel reveal">
+      <div class="how-we-work-heading">
+        <span class="mini-label">Our Delivery Approach</span>
+        <h3>How we work</h3>
+        <p>
+          A structured engagement model designed to keep every project clear, secure and aligned with measurable business outcomes.
+        </p>
       </div>
 
-      <div class="team-points">
-        <h4>How we work</h4>
+      <div class="how-we-work-grid">
+        <div class="work-step">
+          <span>01</span>
+          <div>
+            <h4>Assess</h4>
+            <p>Understand your current environment, risks and goals.</p>
+          </div>
+        </div>
 
-        <ul>
-          <li><strong>Assess:</strong> Understand your current environment, risks, and goals.</li>
-          <li><strong>Plan:</strong> Define scope, timeline, and success criteria with clear deliverables.</li>
-          <li><strong>Implement:</strong> Execute migrations and deployments with security-first controls.</li>
-          <li><strong>Enable:</strong> Train users and teams to maximize adoption and ROI.</li>
-          <li><strong>Support:</strong> Post-go-live stabilization and continuous improvement.</li>
-        </ul>
+        <div class="work-step">
+          <span>02</span>
+          <div>
+            <h4>Plan</h4>
+            <p>Define scope, timeline, architecture and success criteria.</p>
+          </div>
+        </div>
+
+        <div class="work-step">
+          <span>03</span>
+          <div>
+            <h4>Implement</h4>
+            <p>Execute migrations and deployments with security-first controls.</p>
+          </div>
+        </div>
+
+        <div class="work-step">
+          <span>04</span>
+          <div>
+            <h4>Enable</h4>
+            <p>Support users and teams with adoption and knowledge transfer.</p>
+          </div>
+        </div>
+
+        <div class="work-step">
+          <span>05</span>
+          <div>
+            <h4>Support</h4>
+            <p>Provide post-go-live stabilization and continuous improvement.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -2168,47 +2816,6 @@
       <div class="stat-card reveal">
         <h3><span class="counter" data-target="24">0</span>/7</h3>
         <p>Long-term partnership mindset with stabilization support, advisory continuity and improvement planning.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- New Section: Leadership / Extended Team -->
-<section class="premium-section premium-soft">
-  <div class="container">
-    <div class="section-title reveal">
-      <span class="mini-label">Leadership</span>
-      <h2>A growing team with specialist capabilities</h2>
-      <p class="premium-lead">
-      </p>
-    </div>
-
-    <div class="premium-grid-3" style="margin-top:40px;">
-      <div class="leadership-card reveal">
-        <div class="avatar-initial">CS</div>
-        <h3>Cloud Solutions Lead</h3>
-        <span class="leadership-role">Architecture & Modern Workplace</span>
-        <p>
-          Drives solution design, tenant readiness, deployment planning and platform alignment across collaboration and cloud-first transformation initiatives.
-        </p>
-      </div>
-
-      <div class="leadership-card reveal">
-        <img src="security-lead.jpg" class="leadership-photo" alt="Security & Identity Lead">
-        <h3>Security & Identity Lead</h3>
-        <span class="leadership-role">Governance, Access & Protection</span>
-        <p>
-          Focuses on identity hardening, governance policies, security baselines and protecting modern workplace environments from operational and compliance risks.
-        </p>
-      </div>
-
-      <div class="leadership-card reveal">
-        <div class="avatar-initial">AE</div>
-        <h3>Adoption & Enablement Lead</h3>
-        <span class="leadership-role">Training, Change Management & ROI</span>
-        <p>
-          Helps users and business teams adapt successfully through onboarding, knowledge transfer, adoption planning and post-implementation enablement.
-        </p>
       </div>
     </div>
   </div>
@@ -2350,99 +2957,189 @@
 
 </main>
 
-<footer>
-  <div class="footer-shell">
-    <div class="footer-brand-line">
-      <img src="logo.png" alt="ABA Technologies logo" class="footer-logo" />
-      <span>© 2026 ABA Technologies. All rights reserved.</span>
+<footer class="footer">
+  <div class="container">
+
+    <div class="footer-content">
+
+      <div class="footer-brand">
+        <img src="logo.png" alt="ABA Technologies">
+
+        <p>
+          ABA Technologies helps businesses simplify cloud,
+          collaboration, security and AI solutions through practical
+          implementation, secure architecture and measurable outcomes.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Company</h4>
+
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="index.html#services">Services</a>
+          <a href="career.html">Careers</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contact</h4>
+
+        <div class="footer-links">
+          <a href="mailto:abdulla@abatech.co.in">abdulla@abatech.co.in</a>
+          <a href="tel:+917207521183">+91 72075 21183</a>
+          <a href="https://wa.me/917207521183" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+      </div>
+
     </div>
-    <a href="#top" class="footer-top-link" aria-label="Back to top">Back to top ↑</a>
+
+    <div class="footer-bottom">
+      <span>
+        © <span id="currentYear"></span> ABA Technologies. All rights reserved.
+      </span>
+
+      <span>
+        Microsoft 365 • Google Workspace • Cloud • Security • AI
+      </span>
+    </div>
+
   </div>
 </footer>
 
 <script>
-  /*
-    Mobile dropdown improvement:
-    Keeps desktop hover behavior, while allowing dropdowns to open properly on mobile.
-  */
-  document.querySelectorAll('.dropdown > a').forEach(item => {
-    item.addEventListener('click', function(e){
-      if(window.innerWidth <= 768){
-        e.preventDefault();
-        this.parentElement.classList.toggle('active');
+  const navbar = document.getElementById("navbar");
+  const menuButton = document.getElementById("menuButton");
+  const navLinks = document.getElementById("navLinks");
+  const aboutDropdown = document.getElementById("aboutDropdown");
+  const aboutDropdownButton = document.getElementById("aboutDropdownButton");
+  const currentYear = document.getElementById("currentYear");
+
+  currentYear.textContent = new Date().getFullYear();
+
+  window.addEventListener("scroll", function () {
+    navbar.classList.toggle("scrolled", window.scrollY > 15);
+  });
+
+  menuButton.addEventListener("click", function () {
+    const isOpen = navLinks.classList.toggle("active");
+    menuButton.classList.toggle("active", isOpen);
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  aboutDropdownButton.addEventListener("click", function () {
+    if (window.innerWidth <= 860) {
+      const isOpen = aboutDropdown.classList.toggle("open");
+      aboutDropdownButton.setAttribute("aria-expanded", String(isOpen));
+    } else {
+      window.location.href = "about.html";
+    }
+  });
+
+  document.querySelectorAll(".nav-links a").forEach(function (link) {
+    link.addEventListener("click", function () {
+      navLinks.classList.remove("active");
+      menuButton.classList.remove("active");
+      menuButton.setAttribute("aria-expanded", "false");
+      aboutDropdown.classList.remove("open");
+      aboutDropdownButton.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  document.addEventListener("click", function (event) {
+    if (!navbar.contains(event.target)) {
+      navLinks.classList.remove("active");
+      menuButton.classList.remove("active");
+      menuButton.setAttribute("aria-expanded", "false");
+      aboutDropdown.classList.remove("open");
+      aboutDropdownButton.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 860) {
+      navLinks.classList.remove("active");
+      menuButton.classList.remove("active");
+      menuButton.setAttribute("aria-expanded", "false");
+      aboutDropdown.classList.remove("open");
+      aboutDropdownButton.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  document.querySelectorAll(".faq-question").forEach(function (button) {
+    button.addEventListener("click", function () {
+      const item = button.parentElement;
+      const wasActive = item.classList.contains("active");
+
+      document.querySelectorAll(".faq-item").forEach(function (faq) {
+        faq.classList.remove("active");
+      });
+
+      if (!wasActive) {
+        item.classList.add("active");
       }
     });
   });
 
-  /*
-    Mobile menu toggle:
-    Opens and closes the responsive navigation menu.
-  */
-  function toggleMenu() {
-    document.querySelector('.nav-links').classList.toggle('active');
+  const revealItems = document.querySelectorAll(".reveal");
+
+  if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealItems.forEach(function (item) {
+      revealObserver.observe(item);
+    });
+  } else {
+    revealItems.forEach(function (item) {
+      item.classList.add("active");
+    });
   }
 
-  /*
-    FAQ accordion:
-    Allows each FAQ item to expand/collapse without changing content.
-  */
-  document.querySelectorAll('.faq-question').forEach(button => {
-    button.addEventListener('click', () => {
-      const item = button.parentElement;
-      item.classList.toggle('active');
-    });
-  });
+  const counters = document.querySelectorAll(".counter");
 
-  /*
-    Scroll reveal animation:
-    Adds subtle modern motion when sections enter the viewport.
-  */
-  const revealItems = document.querySelectorAll('.reveal');
+  if ("IntersectionObserver" in window) {
+    const counterObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
 
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('active');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-
-  revealItems.forEach(item => revealObserver.observe(item));
-
-  /*
-    Counter animation:
-    Animates existing statistic numbers when visible.
-  */
-  const counters = document.querySelectorAll('.counter');
-
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
         const counter = entry.target;
-        const target = +counter.getAttribute('data-target');
+        const target = Number(counter.getAttribute("data-target")) || 0;
         let count = 0;
-        const duration = 1200;
-        const stepTime = Math.max(20, Math.floor(duration / target));
+        const increment = Math.max(1, Math.ceil(target / 40));
 
-        const updateCounter = () => {
-          count += Math.ceil(target / 40);
+        function updateCounter() {
+          count += increment;
 
-          if(count >= target){
-            counter.innerText = target;
+          if (count >= target) {
+            counter.textContent = target;
           } else {
-            counter.innerText = count;
-            setTimeout(updateCounter, stepTime);
+            counter.textContent = count;
+            window.setTimeout(updateCounter, 28);
           }
-        };
+        }
 
         updateCounter();
         counterObserver.unobserve(counter);
-      }
-    });
-  }, { threshold: 0.5 });
+      });
+    }, { threshold: 0.5 });
 
-  counters.forEach(counter => counterObserver.observe(counter));
+    counters.forEach(function (counter) {
+      counterObserver.observe(counter);
+    });
+  } else {
+    counters.forEach(function (counter) {
+      counter.textContent = counter.getAttribute("data-target");
+    });
+  }
 </script>
 
 </body>
