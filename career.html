@@ -1396,6 +1396,269 @@
         animation:none!important;
       }
     }
+  
+    /* FINAL PREMIUM CAREER PAGE POLISH */
+
+    .navbar{
+      position:fixed;
+      top:0;
+      left:0;
+      right:0;
+      min-height:82px;
+      z-index:1000;
+      display:flex;
+      align-items:center;
+      background:rgba(255,255,255,.94);
+      border-bottom:1px solid rgba(226,232,240,.9);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+      box-shadow:0 8px 30px rgba(15,23,42,.05);
+    }
+
+    .navbar.scrolled{box-shadow:0 16px 40px rgba(15,23,42,.10);}
+
+    .brand-copy{
+      display:flex;
+      flex-direction:column;
+      gap:3px;
+      line-height:1.15;
+    }
+
+    .brand-copy strong{color:#111827;font-size:15px;font-weight:800;}
+    .brand-copy span{color:#64748b;font-size:11px;white-space:nowrap;}
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:6px;
+      flex:1;
+    }
+
+    .nav-link{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:11px 13px;
+      border-radius:12px;
+      color:#334155;
+      font-size:14px;
+      font-weight:650;
+      transition:background .25s ease,color .25s ease,transform .25s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active{
+      color:#2563eb;
+      background:rgba(37,99,235,.08);
+    }
+
+    .nav-link:hover{transform:translateY(-1px);}
+
+    .nav-actions{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      flex-shrink:0;
+    }
+
+    .primary-button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      padding:13px 19px;
+      border-radius:14px;
+      color:#fff;
+      font-size:14px;
+      font-weight:750;
+      background:linear-gradient(135deg,#2563eb 0%,#3b82f6 48%,#16a34a 100%);
+      box-shadow:0 12px 30px rgba(37,99,235,.24);
+      transition:transform .25s ease,box-shadow .25s ease;
+    }
+
+    .primary-button:hover{
+      transform:translateY(-2px);
+      box-shadow:0 18px 40px rgba(37,99,235,.30);
+    }
+
+    .menu-button{
+      display:none;
+      width:44px;
+      height:44px;
+      border:1px solid rgba(15,23,42,.10);
+      border-radius:13px;
+      background:#fff;
+      cursor:pointer;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      gap:5px;
+    }
+
+    .menu-button span{
+      display:block;
+      width:20px;
+      height:2px;
+      border-radius:10px;
+      background:#111827;
+      transition:transform .25s ease,opacity .25s ease;
+    }
+
+    .menu-button.active span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .menu-button.active span:nth-child(2){opacity:0;}
+    .menu-button.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+    .career-hero::after{
+      background:linear-gradient(90deg,rgba(255,255,255,.82),rgba(255,255,255,.62),rgba(255,255,255,.44));
+    }
+
+    .hero-grid{padding:42px 0;}
+
+    .hero-grid > div{
+      max-width:820px;
+      padding:36px;
+      border-radius:30px;
+      background:rgba(255,255,255,.54);
+      border:1px solid rgba(255,255,255,.62);
+      box-shadow:0 30px 80px rgba(15,23,42,.16);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+    }
+
+    .job-card,
+    .culture-card{box-shadow:0 18px 48px rgba(0,0,0,.18);}
+
+    .application-info,
+    .application-form-card{box-shadow:0 24px 60px rgba(15,23,42,.14);}
+
+    .footer{
+      position:relative;
+      overflow:hidden;
+      padding:75px 0 28px;
+      background:
+        radial-gradient(500px 300px at 50% 0%,rgba(37,99,235,.20),transparent 70%),
+        linear-gradient(145deg,#071224,#0b1730 55%,#0f2450);
+      color:#fff;
+      border-top:1px solid rgba(255,255,255,.08);
+    }
+
+    .footer::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+      background-size:40px 40px;
+      pointer-events:none;
+    }
+
+    .footer-content{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:1.25fr .75fr .75fr;
+      gap:50px;
+      padding-bottom:48px;
+    }
+
+    .footer-brand img{
+      width:auto;
+      height:74px;
+      margin-bottom:18px;
+      filter:brightness(0) invert(1);
+    }
+
+    .footer-brand p{
+      max-width:440px;
+      margin:0;
+      color:rgba(255,255,255,.64);
+      font-size:14px;
+      line-height:1.8;
+    }
+
+    .footer-column h4{margin:0 0 18px;color:#fff;font-size:14px;}
+
+    .footer-links{display:grid;gap:12px;}
+
+    .footer-links a{
+      width:fit-content;
+      padding:0;
+      border:0;
+      color:rgba(255,255,255,.63);
+      font-size:13px;
+      transition:color .2s ease,transform .2s ease;
+    }
+
+    .footer-links a:hover{
+      color:#fff;
+      transform:translateX(3px);
+      background:transparent;
+      border:0;
+    }
+
+    .footer-bottom{
+      position:relative;
+      z-index:2;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+      padding-top:25px;
+      border-top:1px solid rgba(255,255,255,.09);
+      color:rgba(255,255,255,.48);
+      font-size:12px;
+    }
+
+    @media(max-width:1080px){
+      .brand-copy{display:none;}
+      .footer-content{grid-template-columns:1fr 1fr;}
+      .footer-brand{grid-column:1 / -1;}
+    }
+
+    @media(max-width:860px){
+      .navbar{min-height:76px;}
+      .brand img{height:52px;}
+      .menu-button{display:inline-flex;}
+      .nav-actions .primary-button{display:none;}
+
+      .nav-links{
+        position:absolute;
+        top:calc(100% + 8px);
+        left:20px;
+        right:20px;
+        display:none;
+        flex-direction:column;
+        align-items:stretch;
+        gap:5px;
+        padding:14px;
+        border:1px solid rgba(226,232,240,.95);
+        border-radius:20px;
+        background:rgba(255,255,255,.98);
+        box-shadow:0 22px 60px rgba(15,23,42,.16);
+      }
+
+      .nav-links.active{display:flex;}
+
+      .nav-link{
+        width:100%;
+        justify-content:space-between;
+        padding:13px 14px;
+      }
+
+      .hero-grid > div{
+        padding:26px 22px;
+        border-radius:24px;
+      }
+    }
+
+    @media(max-width:640px){
+      .footer-content{grid-template-columns:1fr;gap:34px;}
+      .footer-brand{grid-column:auto;}
+      .footer-bottom{flex-direction:column;text-align:center;align-items:center;}
+    }
+
   </style>
 
   <script type="application/ld+json">
@@ -1414,104 +1677,48 @@
   <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- NAV -->
-  <nav aria-label="Primary">
-    <div class="container nav-inner">
-      <a class="brand" href="index.html#top" aria-label="ABA Technologies home">
-        <img src="logo.png" alt="ABA Technologies logo" />
-        <div class="name">
-          <strong>ABA Technologies</strong>
-          <span>Empowering Digital Workspaces</span>
-        </div>
+<nav class="navbar" id="navbar" aria-label="Primary navigation">
+  <div class="container nav-inner">
+
+    <a class="brand" href="index.html" aria-label="ABA Technologies home">
+      <img src="logo.png" alt="ABA Technologies logo">
+
+      <div class="brand-copy">
+        <strong>ABA Technologies</strong>
+        <span>Empowering Digital Workspaces</span>
+      </div>
+    </a>
+
+    <div class="nav-links" id="navLinks">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="about.html">About Us</a>
+      <a class="nav-link" href="index.html#services">What We Do</a>
+      <a class="nav-link active" href="career.html">Careers</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <a class="primary-button" href="contact.html">
+        Get a Consultation
+        <span aria-hidden="true">→</span>
       </a>
 
-      <div class="nav-links" role="navigation" aria-label="Main menu">
-        <a href="index.html#top">Home</a>
-
-        <div class="dropdown">
-          <a href="about.html" class="dropbtn">About Us ▾</a>
-
-          <div class="dropdown-menu" role="menu">
-            <a href="about.html#who" role="menuitem">Who is ABA?</a>
-            <a href="about.html#why" role="menuitem">Why ABA?</a>
-            <a href="about.html#values" role="menuitem">Core Values</a>
-            <a href="about.html#team" role="menuitem">Core Team</a>
-          </div>
-        </div>
-
-        <div class="dropdown">
-          <button class="dropbtn" type="button" aria-expanded="false">What We Do ▾</button>
-
-          <div class="dropdown-menu mega-menu">
-            <div class="mega-side">
-              <h3>Build Modern Digital Businesses</h3>
-              <p>
-                We help organizations modernize their digital workplace,
-                migrate workloads securely, build custom applications,
-                strengthen cybersecurity and adopt AI solutions.
-              </p>
-              <a href="contact.html" class="mega-btn">Get Consultation →</a>
-            </div>
-
-            <div class="mega-column">
-              <h4>Digital Workspace</h4>
-              <a href="index.html#services">Microsoft 365 Consulting</a>
-              <a href="index.html#services">Google Workspace</a>
-              <a href="index.html#services">Email Migration</a>
-              <a href="index.html#services">Collaboration Solutions</a>
-            </div>
-
-            <div class="mega-column">
-              <h4>Cloud Migration Services</h4>
-              <a href="index.html#services">Google → M365</a>
-              <a href="index.html#services">Zoho → M365</a>
-              <a href="index.html#services">Tenant Migration</a>
-              <a href="index.html#services">Cutover Planning</a>
-            </div>
-
-            <div class="mega-column">
-              <h4>Security & AI Solutions</h4>
-              <a href="index.html#services">Microsoft Security</a>
-              <a href="index.html#services">Google Workspace Security</a>
-              <a href="index.html#services">Cloud Security</a>
-              <a href="index.html#services">Copilot & AI</a>
-            </div>
-
-            <div class="mega-column">
-              <h4>Development & AI</h4>
-              <a href="index.html#services">Application Development</a>
-              <a href="index.html#services">Web Development</a>
-              <a href="index.html#services">Power Platform</a>
-              <a href="index.html#services">API Development</a>
-              <a href="index.html#services">Cloud Applications</a>
-              <a href="index.html#services">Copilot Automation</a>
-            </div>
-          </div>
-        </div>
-
-        <a href="career.html" class="active">Career</a>
-        <a href="contact.html">Contact</a>
-      </div>
-
-      <div class="nav-right">
-        <a class="btn primary" href="contact.html">Get a Consultation</a>
-
-        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
-          ☰
-        </button>
-      </div>
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-  </nav>
 
-  <!-- Mobile menu -->
-  <div class="menu-panel" id="menuPanel" aria-hidden="true">
-    <div class="container">
-      <a href="index.html#top" class="mLink">Home</a>
-      <a href="about.html" class="mLink">About Us</a>
-      <a href="index.html#services" class="mLink">Services</a>
-      <a href="career.html" class="mLink">Career</a>
-      <a href="contact.html" class="mLink">Contact</a>
-    </div>
   </div>
+</nav>
 
   <main id="main">
     <div id="top"></div>
@@ -1797,269 +2004,240 @@
       </div>
     </section>
 
-    <!-- PREMIUM BRAND FOOTER -->
-    <section class="premium-footer">
-      <div class="container premium-footer-content">
-        <img src="logo.png" alt="ABA Technologies Logo" class="premium-footer-logo">
+    <!-- PREMIUM FOOTER -->
+<footer class="footer">
+  <div class="container">
 
-        <p class="premium-footer-text">
-          ABA Technologies helps organizations modernize collaboration,
-          secure cloud environments, automate workflows and adopt AI-powered
-          workplace solutions with confidence.
+    <div class="footer-content">
+
+      <div class="footer-brand">
+        <img src="logo.png" alt="ABA Technologies">
+
+        <p>
+          ABA Technologies helps businesses simplify cloud,
+          collaboration, security and AI solutions through practical
+          implementation, secure architecture and measurable outcomes.
         </p>
-
-        <div class="premium-locations">
-          <div><strong>India</strong></div>
-          <div><strong>Serving UAE & KSA Clients</strong></div>
-        </div>
       </div>
-    </section>
 
-    <!-- FOOTER -->
-    <footer>
-      <div class="container footer-inner">
-        <div>
-          © <span id="year"></span> <strong>ABA Technologies</strong>. All rights reserved.
-        </div>
+      <div class="footer-column">
+        <h4>Company</h4>
+
         <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
           <a href="index.html#services">Services</a>
+          <a href="career.html">Careers</a>
           <a href="contact.html">Contact</a>
-          <a href="#top">Back to top ↑</a>
         </div>
       </div>
-    </footer>
+
+      <div class="footer-column">
+        <h4>Contact</h4>
+
+        <div class="footer-links">
+          <a href="mailto:abdulla@abatech.co.in">abdulla@abatech.co.in</a>
+          <a href="tel:+917207521183">+91 72075 21183</a>
+          <a href="https://wa.me/917207521183" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>
+        © <span id="year"></span> ABA Technologies. All rights reserved.
+      </span>
+
+      <span>
+        Microsoft 365 • Google Workspace • Cloud • Security • AI
+      </span>
+    </div>
+
+  </div>
+</footer>
   </main>
 
   <script>
-    /* =====================================================
-       Career Page JavaScript
-       - Footer year
-       - Mobile menu toggle
-       - Dropdown click support
-       - Scroll reveal animation
-       - Apply button role auto-selection
-       - Form validation and success message
-       ===================================================== */
+    const navbar = document.getElementById("navbar");
+    const menuButton = document.getElementById("menuButton");
+    const navLinks = document.getElementById("navLinks");
+    const yearElement = document.getElementById("year");
 
-    // Footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
+    yearElement.textContent = new Date().getFullYear();
 
-    // Mobile menu toggle
-    const menuBtn = document.getElementById('menuBtn');
-    const menuPanel = document.getElementById('menuPanel');
-    const mobileLinks = document.querySelectorAll('.mLink');
+    window.addEventListener("scroll", function () {
+      navbar.classList.toggle("scrolled", window.scrollY > 15);
+    });
 
-    function openMenu(){
-      menuPanel.classList.add('open');
-      menuPanel.setAttribute('aria-hidden', 'false');
-      menuBtn.setAttribute('aria-expanded', 'true');
-      menuBtn.textContent = '✕';
-    }
+    menuButton.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("active");
+      menuButton.classList.toggle("active", isOpen);
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+    });
 
-    function closeMenu(){
-      menuPanel.classList.remove('open');
-      menuPanel.setAttribute('aria-hidden', 'true');
-      menuBtn.setAttribute('aria-expanded', 'false');
-      menuBtn.textContent = '☰';
-    }
-
-    if(menuBtn && menuPanel){
-      menuBtn.addEventListener('click', function(e){
-        e.stopPropagation();
-        const isOpen = menuPanel.classList.contains('open');
-        isOpen ? closeMenu() : openMenu();
+    document.querySelectorAll(".nav-links a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("active");
+        menuButton.classList.remove("active");
+        menuButton.setAttribute("aria-expanded", "false");
       });
-    }
-
-    mobileLinks.forEach(function(link){
-      link.addEventListener('click', closeMenu);
     });
 
-    document.addEventListener('keydown', function(e){
-      if(e.key === 'Escape'){
-        closeMenu();
+    document.addEventListener("click", function (event) {
+      if (!navbar.contains(event.target)) {
+        navLinks.classList.remove("active");
+        menuButton.classList.remove("active");
+        menuButton.setAttribute("aria-expanded", "false");
       }
     });
 
-    document.addEventListener('click', function(e){
-      if(!menuPanel || !menuBtn) return;
-      const clickInsideMenu = menuPanel.contains(e.target) || menuBtn.contains(e.target);
-      if(!clickInsideMenu){
-        closeMenu();
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        navLinks.classList.remove("active");
+        menuButton.classList.remove("active");
+        menuButton.setAttribute("aria-expanded", "false");
       }
     });
 
-    // Dropdown click support
-    const dropdowns = document.querySelectorAll('.dropdown');
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 860) {
+        navLinks.classList.remove("active");
+        menuButton.classList.remove("active");
+        menuButton.setAttribute("aria-expanded", "false");
+      }
+    });
 
-    dropdowns.forEach(function(dropdown){
-      const btn = dropdown.querySelector('button');
-      if(!btn) return;
+    const revealEls = document.querySelectorAll(".reveal");
 
-      btn.addEventListener('click', function(e){
-        e.stopPropagation();
-
-        dropdowns.forEach(function(other){
-          if(other !== dropdown){
-            other.classList.remove('open');
-            const otherBtn = other.querySelector('button');
-            if(otherBtn){
-              otherBtn.setAttribute('aria-expanded', 'false');
-            }
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
           }
         });
+      }, { threshold: 0.15 });
 
-        const isOpen = dropdown.classList.toggle('open');
-        btn.setAttribute('aria-expanded', String(isOpen));
+      revealEls.forEach(function (el) {
+        revealObserver.observe(el);
       });
-    });
-
-    document.addEventListener('click', function(){
-      dropdowns.forEach(function(dropdown){
-        dropdown.classList.remove('open');
-        const btn = dropdown.querySelector('button');
-        if(btn){
-          btn.setAttribute('aria-expanded', 'false');
-        }
+    } else {
+      revealEls.forEach(function (el) {
+        el.classList.add("show");
       });
-    });
+    }
 
-    // Scroll reveal animation
-    const revealEls = document.querySelectorAll('.reveal');
+    const applyRoleButtons = document.querySelectorAll(".apply-role");
+    const positionSelect = document.getElementById("position");
 
-    const revealObserver = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if(entry.isIntersecting){
-          entry.target.classList.add('show');
-        }
-      });
-    }, { threshold: 0.15 });
+    applyRoleButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        const selectedRole = button.getAttribute("data-role");
 
-    revealEls.forEach(function(el){
-      revealObserver.observe(el);
-    });
-
-    // Auto-select job role when clicking Apply Now from job cards
-    const applyRoleButtons = document.querySelectorAll('.apply-role');
-    const positionSelect = document.getElementById('position');
-
-    applyRoleButtons.forEach(function(button){
-      button.addEventListener('click', function(){
-        const selectedRole = button.getAttribute('data-role');
-        if(positionSelect && selectedRole){
+        if (positionSelect && selectedRole) {
           positionSelect.value = selectedRole;
         }
       });
     });
 
-    // Application form validation
-    const careerApplicationForm = document.getElementById('careerApplicationForm');
-    const applicationSuccessMessage = document.getElementById('applicationSuccessMessage');
+    const careerApplicationForm = document.getElementById("careerApplicationForm");
+    const applicationSuccessMessage = document.getElementById("applicationSuccessMessage");
 
-    function setFieldError(fieldElement, hasError){
-      const fieldWrapper = fieldElement.closest('.field');
-      if(!fieldWrapper) return;
-
-      if(hasError){
-        fieldWrapper.classList.add('error');
-      }else{
-        fieldWrapper.classList.remove('error');
-      }
+    function setFieldError(fieldElement, hasError) {
+      const fieldWrapper = fieldElement.closest(".field");
+      if (!fieldWrapper) return;
+      fieldWrapper.classList.toggle("error", hasError);
     }
 
-    function isValidEmail(email){
+    function isValidEmail(email) {
       return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     }
 
-    function isValidResume(fileInput){
-      if(!fileInput.files || fileInput.files.length === 0){
-        return false;
-      }
+    function isValidResume(fileInput) {
+      if (!fileInput.files || fileInput.files.length === 0) return false;
 
-      const allowedExtensions = ['pdf', 'doc', 'docx'];
+      const allowedExtensions = ["pdf", "doc", "docx"];
       const fileName = fileInput.files[0].name.toLowerCase();
-      const extension = fileName.split('.').pop();
+      const extension = fileName.split(".").pop();
 
       return allowedExtensions.includes(extension);
     }
 
-    if(careerApplicationForm){
-      careerApplicationForm.addEventListener('submit', function(e){
-        e.preventDefault();
+    if (careerApplicationForm) {
+      careerApplicationForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-        const fullName = document.getElementById('fullName');
-        const emailAddress = document.getElementById('emailAddress');
-        const phoneNumber = document.getElementById('phoneNumber');
-        const position = document.getElementById('position');
-        const resume = document.getElementById('resume');
-        const message = document.getElementById('message');
+        const fullName = document.getElementById("fullName");
+        const emailAddress = document.getElementById("emailAddress");
+        const phoneNumber = document.getElementById("phoneNumber");
+        const position = document.getElementById("position");
+        const resume = document.getElementById("resume");
+        const message = document.getElementById("message");
 
         let isFormValid = true;
 
-        if(!fullName.value.trim()){
+        if (!fullName.value.trim()) {
           setFieldError(fullName, true);
           isFormValid = false;
-        }else{
+        } else {
           setFieldError(fullName, false);
         }
 
-        if(!emailAddress.value.trim() || !isValidEmail(emailAddress.value.trim())){
+        if (!emailAddress.value.trim() || !isValidEmail(emailAddress.value.trim())) {
           setFieldError(emailAddress, true);
           isFormValid = false;
-        }else{
+        } else {
           setFieldError(emailAddress, false);
         }
 
-        if(!phoneNumber.value.trim()){
+        if (!phoneNumber.value.trim()) {
           setFieldError(phoneNumber, true);
           isFormValid = false;
-        }else{
+        } else {
           setFieldError(phoneNumber, false);
         }
 
-        if(!position.value){
+        if (!position.value) {
           setFieldError(position, true);
           isFormValid = false;
-        }else{
+        } else {
           setFieldError(position, false);
         }
 
-        if(!isValidResume(resume)){
+        if (!isValidResume(resume)) {
           setFieldError(resume, true);
           isFormValid = false;
-        }else{
+        } else {
           setFieldError(resume, false);
         }
 
-        if(!message.value.trim()){
+        if (!message.value.trim()) {
           setFieldError(message, true);
           isFormValid = false;
-        }else{
+        } else {
           setFieldError(message, false);
         }
 
-        if(!isFormValid){
-          applicationSuccessMessage.style.display = 'none';
+        if (!isFormValid) {
+          applicationSuccessMessage.style.display = "none";
           return;
         }
 
-        applicationSuccessMessage.style.display = 'block';
+        applicationSuccessMessage.style.display = "block";
         careerApplicationForm.reset();
 
-        setTimeout(function(){
-          applicationSuccessMessage.style.display = 'none';
+        window.setTimeout(function () {
+          applicationSuccessMessage.style.display = "none";
         }, 7000);
       });
 
-      // Remove field error while user corrects input
-      const formFields = careerApplicationForm.querySelectorAll('input, select, textarea');
-
-      formFields.forEach(function(field){
-        field.addEventListener('input', function(){
+      careerApplicationForm.querySelectorAll("input, select, textarea").forEach(function (field) {
+        field.addEventListener("input", function () {
           setFieldError(field, false);
         });
 
-        field.addEventListener('change', function(){
+        field.addEventListener("change", function () {
           setFieldError(field, false);
         });
       });
