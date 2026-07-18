@@ -1,136 +1,104 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Digital Workspace Security | ABA Technologies</title>
-  <meta name="description" content="Strengthen identity, email, collaboration and device security across Microsoft 365 and Google Workspace.">
-  <link rel="stylesheet" href="services-assets/services.css">
-</head>
-<body>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Digital Workspace Security | ABA Technologies</title>
+<meta name="description" content="Strengthen identity, workspace protection and device compliance across Microsoft 365 and Google Workspace.">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="services-assets/services.css">
+</head><body>
 
-<header class="site-header">
-  <div class="container nav">
-    <a class="brand" href="index.html" aria-label="ABA Technologies home">
-      <span class="brand-mark">ABA</span>
-      <span>ABA Technologies</span>
+<nav aria-label="Primary">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html#top" aria-label="ABA Technologies home">
+      <img src="logo.png" alt="ABA Technologies logo">
+      <div class="brand-name">
+        <strong>ABA Technologies</strong>
+        <span>Empowering Digital Workspaces</span>
+      </div>
     </a>
-    <nav class="nav-links" aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+    <div class="nav-links">
+      <a href="index.html#top">Home</a>
+      <a href="about.html">About Us</a>
       <a class="active" href="services.html">Services</a>
-      <a href="careers.html">Careers</a>
+      <a href="career.html">Career</a>
       <a href="contact.html">Contact</a>
-    </nav>
-    <a class="nav-cta" href="contact.html">Book a consultation</a>
-    <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+    <div class="nav-right">
+      <a class="btn primary" href="contact.html">Get a Consultation</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    </div>
   </div>
-</header>
+</nav>
+<div class="menu-panel" id="menuPanel" aria-hidden="true">
+  <div class="container">
+    <a href="index.html#top">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="career.html">Career</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</div>
 
 <main>
-  <section class="detail-hero">
-    <div class="container">
-      <div class="breadcrumb"><a href="services.html">Services</a><span>›</span><span>Digital Workspace Security</span></div>
-      <span class="kicker">ABA Technologies service</span>
-      <h1 class="gradient-text">Digital Workspace Security</h1>
-      <p class="lead">Strengthen identity, email, collaboration and device security across Microsoft 365 and Google Workspace.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="contact.html">Discuss your requirement</a>
-        <a class="btn btn-secondary" href="services.html">View all services</a>
-      </div>
-      <div class="tag-row"><span class="tag">Entra ID and Google identity security</span><span class="tag">MFA, Conditional Access and Zero Trust</span><span class="tag">Intune and endpoint-management baselines</span></div>
-    </div>
-  </section>
-
-  <section class="section" style="padding-top:30px">
-    <div class="container detail-layout">
-      <div>
-        <article class="content-card">
-          <span class="kicker">Overview</span>
-          <h2>Practical consulting built around your environment.</h2>
-          <p>We begin by understanding your users, platforms, business risks and desired outcomes. Instead of recommending technology for its own sake, we design a practical solution that your team can operate, govern and scale.</p>
-          <p>Every engagement can be delivered as an assessment, implementation project, migration, optimisation programme or ongoing advisory service.</p>
-        </article>
-
-        <article class="content-card">
-          <span class="kicker">What we can help with</span>
-          <h2>Scope of service</h2>
-          <div class="two-col">
-            <div class="info-box"><h3>Entra ID and Google identity security</h3><p>Assessment, planning, configuration, documentation and implementation support tailored to your business requirements.</p></div><div class="info-box"><h3>MFA, Conditional Access and Zero Trust</h3><p>Assessment, planning, configuration, documentation and implementation support tailored to your business requirements.</p></div><div class="info-box"><h3>Intune and endpoint-management baselines</h3><p>Assessment, planning, configuration, documentation and implementation support tailored to your business requirements.</p></div><div class="info-box"><h3>Secure collaboration, governance and compliance</h3><p>Assessment, planning, configuration, documentation and implementation support tailored to your business requirements.</p></div>
-          </div>
-        </article>
-
-        <article class="content-card">
-          <span class="kicker">Deliverables</span>
-          <h2>What you can expect</h2>
-          <ul>
-            <li>Identity and access review</li><li>MFA and Conditional Access design</li><li>Endpoint and Intune security baseline</li><li>Collaboration and sharing policy review</li>
-          </ul>
-        </article>
-
-        <article class="content-card">
-          <span class="kicker">Business outcomes</span>
-          <h2>Designed to create measurable value</h2>
-          <ul class="check-list">
-            <li>Stronger identity and sign-in protection</li><li>Reduced email, device and collaboration risk</li><li>Consistent security configuration and governance</li><li>Actionable remediation roadmap</li>
-          </ul>
-        </article>
-
-        <article class="content-card">
-          <span class="kicker">Our approach</span>
-          <h2>A clear four-stage delivery model</h2>
-          <div class="process-grid">
-            <div class="process-card"><div class="process-no">01</div><h3>Discover</h3><p>Review your environment, users, risks and goals.</p></div>
-            <div class="process-card"><div class="process-no">02</div><h3>Design</h3><p>Prepare the architecture, roadmap and controls.</p></div>
-            <div class="process-card"><div class="process-no">03</div><h3>Deliver</h3><p>Configure, migrate, test and document the solution.</p></div>
-            <div class="process-card"><div class="process-no">04</div><h3>Optimise</h3><p>Support adoption and continuous improvement.</p></div>
-          </div>
-        </article>
-      </div>
-
-      <aside class="sidebar">
-        <div class="sidebar-card">
-          <div class="icon">🛡️</div>
-          <h3>Ideal for</h3>
-          <ul class="check-list">
-            <li>Growing small and mid-sized businesses</li>
-            <li>Organisations modernising cloud platforms</li>
-            <li>Teams with security or compliance concerns</li>
-            <li>Businesses needing specialist project support</li>
-          </ul>
-        </div>
-        <div class="sidebar-card">
-          <h3>Talk to ABA Technologies</h3>
-          <p class="small">Share your current platform, number of users and key challenge. We will recommend a sensible next step.</p>
-          <a class="btn btn-primary" style="width:100%" href="contact.html">Contact our team</a>
-          <p class="small" style="margin-top:16px">sales@abatech.co.in<br>+91 7207521183</p>
-        </div>
-      </aside>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container cta">
-      <div>
-        <span class="kicker">Next step</span>
-        <h2>Ready to discuss digital workspace security?</h2>
-        <p>We can begin with a short discovery call and recommend an assessment, implementation or managed engagement based on your priorities.</p>
-      </div>
-      <a class="btn btn-primary" href="contact.html">Book a discovery call</a>
-    </div>
-  </section>
+<section class="detail-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="services.html">Services</a> › Digital Workspace Security</div>
+    <div class="kicker">ABA Technologies Service</div>
+    <h1>Digital Workspace Security</h1>
+    <p class="lead">Strengthen identity, workspace protection and device compliance across Microsoft 365 and Google Workspace.</p>
+    <div class="hero-actions"><a class="btn primary" href="contact.html">Talk to an Expert</a><a class="btn" href="services.html">View All Services</a></div>
+  </div>
+</section>
+<section class="section" style="padding-top:25px">
+<div class="container detail-layout">
+  <div>
+    <article class="content-card"><div class="kicker">Overview</div><h2>Practical consulting aligned with your business.</h2><p>We begin by understanding your current environment, users, risks and desired outcomes. Our recommendations focus on secure design, operational simplicity and measurable business value.</p><p>The engagement can be delivered as an assessment, implementation, migration, optimisation programme or ongoing advisory service.</p></article>
+    <article class="content-card"><div class="kicker">Capabilities</div><h2>What we can help with</h2><div class="two-col"><div class="info-box"><h3>Entra ID and Google Workspace identity security</h3><p>Assessment, architecture, configuration, documentation and implementation support tailored to your environment.</p></div><div class="info-box"><h3>MFA, Conditional Access and Zero Trust</h3><p>Assessment, architecture, configuration, documentation and implementation support tailored to your environment.</p></div><div class="info-box"><h3>Intune and endpoint security baselines</h3><p>Assessment, architecture, configuration, documentation and implementation support tailored to your environment.</p></div><div class="info-box"><h3>Secure collaboration, compliance and governance</h3><p>Assessment, architecture, configuration, documentation and implementation support tailored to your environment.</p></div></div></article>
+    <article class="content-card"><div class="kicker">Deliverables</div><h2>What you can expect</h2><ul><li>Current-state assessment and gap analysis</li><li>Recommended architecture and implementation roadmap</li><li>Secure configuration and deployment support</li><li>Documentation, knowledge transfer and post-delivery guidance</li></ul></article>
+    <article class="content-card"><div class="kicker">Our approach</div><h2>A simple four-stage delivery model</h2><div class="process-grid"><div class="process-card"><div class="process-no">01</div><h3>Discover</h3><p>Understand your environment and goals.</p></div><div class="process-card"><div class="process-no">02</div><h3>Design</h3><p>Create the roadmap and security controls.</p></div><div class="process-card"><div class="process-no">03</div><h3>Deliver</h3><p>Configure, migrate, test and document.</p></div><div class="process-card"><div class="process-no">04</div><h3>Optimise</h3><p>Improve adoption and operational maturity.</p></div></div></article>
+  </div>
+  <aside class="sidebar">
+    <div class="side-card"><div class="icon">🛡️</div><h3>Ideal for</h3><ul class="check-list"><li>Growing small and mid-sized businesses</li><li>Organisations modernising cloud platforms</li><li>Teams with security or compliance concerns</li><li>Businesses needing specialist project support</li></ul></div>
+    <div class="side-card"><h3>Talk to ABA Technologies</h3><p>Share your platform, number of users and key challenge. We will recommend a sensible next step.</p><a class="btn primary" style="width:100%" href="contact.html">Get a Consultation</a></div>
+  </aside>
+</div>
+</section>
+<section class="section"><div class="container cta"><div><div class="kicker">Next step</div><h2>Ready to discuss digital workspace security?</h2><p>We can begin with a short discovery call and recommend an assessment, implementation or managed engagement based on your priorities.</p></div><a class="btn primary" href="contact.html">Book a Discovery Call</a></div></section>
 </main>
 
-<footer>
-  <div class="container footer-row">
-    <div>
-      <strong style="color:white">ABA Technologies</strong><br>
-      <span>Cloud, security, AI and application consulting.</span>
+<section class="premium-footer">
+  <div class="container footer-main">
+    <div class="footer-brand-card">
+      <div class="footer-logo-shell">
+        <img src="logo.png" alt="ABA Technologies" class="footer-logo">
+      </div>
+      <p class="footer-text">ABA Technologies helps businesses simplify cloud, collaboration, security and AI solutions through practical implementation, secure architecture and measurable outcomes.</p>
     </div>
-    <div>© <span data-year></span> ABA Technologies · sales@abatech.co.in · +91 7207521183</div>
+    <div class="footer-column">
+      <h3>Company</h3>
+      <a href="index.html#top">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="career.html">Career</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-column">
+      <h3>Contact</h3>
+      <a href="mailto:abdulla@abatech.co.in">abdulla@abatech.co.in</a>
+      <a href="tel:+917207521183">+91 72075 21183</a>
+      <a href="https://wa.me/917207521183">WhatsApp</a>
+    </div>
   </div>
-</footer>
+  <div class="footer-bottom">
+    <div class="container footer-inner">
+      <span>© <span data-year></span> ABA Technologies. All rights reserved.</span>
+      <span>Microsoft 365 • Google Workspace • Cloud • Security • AI</span>
+    </div>
+  </div>
+</section>
 <script src="services-assets/services.js"></script>
 
-</body>
-</html>
+</body></html>
