@@ -699,6 +699,38 @@
       border-color:rgba(66,133,244,0.25);
     }
 
+    .service-card-link{
+      display:block;
+      color:inherit;
+      cursor:pointer;
+      position:relative;
+    }
+
+    .service-card-link::after{
+      content:"Explore service →";
+      display:inline-flex;
+      margin-top:20px;
+      color:#9cc1ff;
+      font-size:14px;
+      font-weight:800;
+      transition:transform .22s ease, color .22s ease;
+    }
+
+    .service-card-link:hover::after{
+      transform:translateX(5px);
+      color:#ffffff;
+    }
+
+    .services-page-action{
+      display:flex;
+      justify-content:center;
+      margin-top:34px;
+    }
+
+    .services-page-action .btn{
+      min-width:220px;
+    }
+
     .card .icon{
       width:48px;
       height:48px;
@@ -1959,6 +1991,8 @@
           </div>
         </div>
 
+        <a href="services.html">Services</a>
+
         <div class="dropdown">
           <button class="dropbtn" type="button" aria-expanded="false">
             What We Do ▾
@@ -1980,43 +2014,43 @@
 </div>
             <div class="mega-column">
               <h4>Digital Workspace</h4>
-              <a href="#services">Microsoft 365 Consulting</a>
-              <a href="#services">Google Workspace</a>
-              <a href="#services">Email Migration</a>
-              <a href="#services">Collaboration Solutions</a>
+              <a href="digital-workspace-consulting.html">Microsoft 365 Consulting</a>
+              <a href="digital-workspace-consulting.html">Google Workspace</a>
+              <a href="cloud-migration-services.html">Email Migration</a>
+              <a href="digital-workspace-consulting.html">Collaboration Solutions</a>
             </div>
 
             <div class="mega-column">
               <h4>Cloud Migration Services</h4>
-              <a href="#services">Google → M365</a>
-              <a href="#services">Zoho → M365</a>
-              <a href="#services">Tenant Migration</a>
-              <a href="#services">Cutover Planning</a>
+              <a href="cloud-migration-services.html">Google → M365</a>
+              <a href="cloud-migration-services.html">Zoho → M365</a>
+              <a href="cloud-migration-services.html">Tenant Migration</a>
+              <a href="cloud-migration-services.html">Cutover Planning</a>
             </div>
 
             <div class="mega-column">
               <h4>Security & AI Solutions</h4>
-              <a href="#services">Microsoft Security</a>
-              <a href="#services">Google Workspace Security</a>
-              <a href="#services">Cloud Security</a>
-              <a href="#services">Copilot & AI</a>
+              <a href="digital-workspace-security.html">Microsoft Security</a>
+              <a href="digital-workspace-security.html">Google Workspace Security</a>
+              <a href="cloud-security-compliance.html">Cloud Security</a>
+              <a href="copilot-ai-solutions.html">Copilot & AI</a>
             </div>
             
             <div class="mega-column">
 
 <h4>Development & AI</h4>
 
-<a href="#services">Application Development</a>
+<a href="application-development.html">Application Development</a>
 
-<a href="#services">Web Development</a>
+<a href="application-development.html">Web Development</a>
 
-<a href="#services">Power Platform</a>
+<a href="application-development.html">Power Platform</a>
 
-<a href="#services">API Development</a>
+<a href="application-development.html">API Development</a>
 
-<a href="#services">Cloud Applications</a>
+<a href="application-development.html">Cloud Applications</a>
 
-<a href="#services">Copilot Automation</a>
+<a href="copilot-ai-solutions.html">Copilot Automation</a>
 
 </div>
           </div>
@@ -2041,7 +2075,7 @@
     <div class="container">
       <a href="index.html#top" class="mLink">Home</a>
       <a href="about.html" class="mLink">About Us</a>
-      <a href="index.html#services" class="mLink">Services</a>
+      <a href="services.html" class="mLink">Services</a>
       <a href="career.html" class="mLink">Career</a>
       <a href="contact.html" class="mLink">Contact</a>
     </div>
@@ -2069,7 +2103,7 @@
 
             <div class="hero-actions">
               <a class="btn primary" href="contact.html">Talk to an Expert</a>
-              <a class="btn" href="index.html#services">View Our Services</a>
+              <a class="btn" href="services.html">View Our Services</a>
             </div>
 
             <div class="trustbar" aria-label="Key strengths">
@@ -2200,7 +2234,7 @@
         </div>
 
         <div class="grid">
-          <article class="card">
+          <a class="card service-card-link" href="digital-workspace-consulting.html">
             <div class="icon" aria-hidden="true">☁️</div>
             <h3>Digital Workspace Consulting</h3>
             <p>Secure, scalable and productive digital workplace environments across Microsoft 365, Google Workspace and Zoho.</p>
@@ -2210,9 +2244,9 @@
               <li>Governance, security & compliance best practices</li>
               <li>Migration planning, deployment & user adoption</li>
             </ul>
-          </article>
+          </a>
 
-          <article class="card">
+          <a class="card service-card-link" href="cloud-migration-services.html">
             <div class="icon" aria-hidden="true">🔁</div>
             <h3>Cloud Migration Services</h3>
             <p>Structured migration planning and execution — focused on data integrity and user continuity.</p>
@@ -2223,9 +2257,9 @@
               <li>Mailbox, Drive, permissions & cutover planning</li>
             </ul>
             <div class="tagline">Zero data loss. Minimal downtime. Maximum control.</div>
-          </article>
+          </a>
 
-          <article class="card">
+          <a class="card service-card-link" href="copilot-ai-solutions.html">
             <div class="icon" aria-hidden="true">🤖</div>
             <h3>Copilot / AI Solutions</h3>
             <p>Enable Copilot responsibly with adoption playbooks, governance, and secure access controls.</p>
@@ -2235,9 +2269,9 @@
               <li>Automation opportunities with M365 ecosystem</li>
               <li>Change management & user enablement sessions</li>
             </ul>
-          </article>
+          </a>
 
-          <article class="card">
+          <a class="card service-card-link" href="digital-workspace-security.html">
             <div class="icon" aria-hidden="true">🛡️</div>
             <h3>Digital Workspace Security</h3>
             <p>Strengthen identity security, workspace protection and device compliance while reducing operational risk.</p>
@@ -2247,7 +2281,7 @@
               <li>Intune & endpoint management baselines</li>
               <li>Secure collaboration, compliance & governance</li>
             </ul>
-          </article><article class="card">
+          </a><a class="card service-card-link" href="cloud-security-compliance.html">
     <div class="icon" aria-hidden="true">🔒</div>
     <h3>Cloud Security & Compliance</h3>
     <p>Comprehensive security solutions across Microsoft, Google and Cloud platforms.</p>
@@ -2263,8 +2297,8 @@
       <li>Azure Security & Identity Protection</li>
       <li>Google Cloud Platform (GCP) Security</li>
   </ul>
-</article>
-          <article class="card">
+</a>
+          <a class="card service-card-link" href="managed-security-services.html">
     <div class="icon" aria-hidden="true">🔐</div>
 
     <h3>Managed Security Services</h3>
@@ -2284,8 +2318,8 @@
       <li>Identity & Access Reviews</li>
       <li>Security Governance Consulting</li>
     </ul>
-</article>
-          <article class="card">
+</a>
+          <a class="card service-card-link" href="application-development.html">
     <div class="icon" aria-hidden="true">💻</div>
 
     <h3>Application Development</h3>
@@ -2304,7 +2338,11 @@
         <li>Application Modernization</li>
         <li>Application Maintenance & Support</li>
     </ul>
-</article>
+</a>
+        </div>
+
+        <div class="services-page-action">
+          <a class="btn primary" href="services.html">Explore All Services</a>
         </div>
       </div>
     </section>
