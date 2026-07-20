@@ -1,0 +1,856 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Cloud, Security & AI Consulting Services | ABA Technologies</title>
+<meta name="description" content="Explore Microsoft 365, Google Workspace, cloud migration, cybersecurity, Copilot AI, managed security and application development services from ABA Technologies.">
+<meta name="author" content="ABA Technologies">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#071B3A">
+
+<link rel="canonical" href="https://abatech.co.in/services.html">
+
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<meta property="og:locale" content="en_IN">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ABA Technologies">
+<meta property="og:title" content="Cloud, Security & AI Consulting Services | ABA Technologies">
+<meta property="og:description" content="Explore digital workspace, cloud migration, cybersecurity, Copilot AI, managed security and application development services.">
+<meta property="og:url" content="https://abatech.co.in/services.html">
+<meta property="og:image" content="https://abatech.co.in/logo.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="ABA Technologies consulting services">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cloud, Security & AI Consulting Services | ABA Technologies">
+<meta name="twitter:description" content="Microsoft 365, Google Workspace, cloud migration, cybersecurity, Copilot AI and application development services.">
+<meta name="twitter:image" content="https://abatech.co.in/logo.png">
+<meta name="twitter:image:alt" content="ABA Technologies logo">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="services-assets/services.css">
+
+<style>
+    /* =========================================================
+       GLOBAL NAVIGATION — synchronized with index.html
+       Only header, desktop navigation and mobile menu styles
+       ========================================================= */
+    :root{--navH:78px;}
+
+    .premium-nav{
+      position:fixed;
+      top:0;
+      left:0;
+      right:0;
+      z-index:1000;
+      height:var(--navH);
+      min-height:var(--navH);
+      padding:0;
+      display:block;
+      background:rgba(255,255,255,.88);
+      border-bottom:1px solid rgba(15,35,72,.08);
+      box-shadow:0 12px 40px rgba(15,35,72,.07);
+      backdrop-filter:blur(22px) saturate(145%);
+      -webkit-backdrop-filter:blur(22px) saturate(145%);
+    }
+
+    .premium-nav .container{
+      width:100%;
+      max-width:1240px;
+      height:100%;
+      margin:0 auto;
+      padding:0 22px;
+    }
+
+    .premium-nav .nav-inner{
+      height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:22px;
+    }
+
+    .premium-nav .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:310px;
+      text-decoration:none;
+    }
+
+    .premium-nav .brand img{height:58px;width:auto;object-fit:contain;}
+    .premium-nav .brand .name{display:flex;flex-direction:column;line-height:1.08;}
+    .premium-nav .brand .name strong{font-size:15px;color:#071b3a;letter-spacing:.1px;}
+    .premium-nav .brand .name span{margin-top:4px;font-size:11.5px;color:#64748b;font-weight:500;}
+
+    .premium-nav .nav-links{
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      gap:3px;
+      flex:1;
+    }
+
+    .premium-nav .nav-links>a,
+    .premium-nav .dropbtn{
+      display:inline-flex;
+      align-items:center;
+      color:#172033;
+      text-decoration:none;
+      padding:11px 13px;
+      border-radius:13px;
+      border:0;
+      background:transparent;
+      cursor:pointer;
+      font-family:inherit;
+      font-size:13.5px;
+      font-weight:700;
+      line-height:1.4;
+      white-space:nowrap;
+      transition:background .2s ease,color .2s ease,transform .2s ease;
+    }
+
+    .premium-nav .nav-links>a:hover,
+    .premium-nav .dropbtn:hover,
+    .premium-nav .nav-links>a[aria-current="page"],
+    .premium-nav .dropbtn[aria-current="page"]{
+      color:#155eef;
+      background:#edf4ff;
+    }
+
+    .premium-nav .dropbtn span{font-size:12px;margin-left:3px;color:#155eef;}
+    .premium-nav .nav-right{display:flex;align-items:center;gap:10px;}
+    .premium-nav .nav-cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:44px;
+      white-space:nowrap;
+      padding:12px 18px;
+      border:0;
+      border-radius:14px;
+      color:#fff;
+      text-decoration:none;
+      font-size:14px;
+      font-weight:750;
+      background:linear-gradient(135deg,#155eef,#0d47c9);
+      box-shadow:0 14px 30px rgba(21,94,239,.22);
+      transition:transform .22s ease,box-shadow .22s ease;
+    }
+    .premium-nav .nav-cta:hover{transform:translateY(-2px);box-shadow:0 18px 38px rgba(21,94,239,.28);}
+
+    .premium-nav .menu-btn{
+      display:none;
+      width:44px;
+      height:44px;
+      align-items:center;
+      justify-content:center;
+      padding:0;
+      border:1px solid rgba(15,23,42,.10);
+      border-radius:14px;
+      background:#fff;
+      color:#111827;
+      font-size:20px;
+      cursor:pointer;
+    }
+
+    .premium-nav .dropdown{position:relative;}
+    .premium-nav .dropdown-menu{
+      position:absolute;
+      top:calc(100% + 20px);
+      left:0;
+      min-width:240px;
+      padding:10px;
+      border:1px solid rgba(15,23,42,.08);
+      border-radius:18px;
+      background:#fff;
+      box-shadow:0 24px 60px rgba(15,23,42,.14);
+      opacity:0;
+      visibility:hidden;
+      transform:translateY(10px);
+      transition:.22s ease;
+      z-index:1002;
+    }
+    .premium-nav .dropdown-menu::before{content:"";position:absolute;left:0;right:0;top:-22px;height:24px;}
+    .premium-nav .dropdown:hover .dropdown-menu,
+    .premium-nav .dropdown.open .dropdown-menu,
+    .premium-nav .dropdown:focus-within .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0);}
+
+    .premium-nav .compact-menu{width:310px;padding:12px;}
+    .premium-nav .compact-menu a,
+    .premium-nav .premium-mega-menu .mega-column a,
+    .premium-nav .industry-menu-grid a{
+      display:flex!important;
+      flex-direction:column;
+      align-items:flex-start;
+      gap:3px;
+      padding:12px 13px!important;
+      border-radius:13px;
+      color:#172033;
+      text-decoration:none;
+    }
+    .premium-nav .compact-menu b,
+    .premium-nav .premium-mega-menu b,
+    .premium-nav .industry-menu-grid b{font-size:13.5px;color:#172033;}
+    .premium-nav .compact-menu small,
+    .premium-nav .premium-mega-menu small,
+    .premium-nav .industry-menu-grid small{font-size:11.5px;line-height:1.45;color:#64748b;font-weight:500;}
+    .premium-nav .compact-menu a:hover,
+    .premium-nav .premium-mega-menu .mega-column a:hover,
+    .premium-nav .industry-menu-grid a:hover{background:#f3f7ff;}
+
+    .premium-nav .premium-mega-menu{
+      position:fixed;
+      top:var(--navH);
+      left:50%;
+      width:min(1180px,calc(100vw - 40px));
+      display:grid;
+      grid-template-columns:1.05fr 1fr 1.15fr 1fr;
+      gap:16px;
+      padding:18px;
+      border-radius:24px;
+      transform:translate(-50%,12px);
+      border:1px solid rgba(21,94,239,.10);
+      box-shadow:0 30px 80px rgba(15,35,72,.18);
+      overflow:hidden;
+    }
+    .premium-nav .dropdown:hover .premium-mega-menu,
+    .premium-nav .dropdown.open .premium-mega-menu,
+    .premium-nav .dropdown:focus-within .premium-mega-menu{transform:translate(-50%,0);}
+    .premium-nav .mega-intro{
+      padding:24px;
+      border-radius:18px;
+      background:radial-gradient(260px 180px at 0% 0%,rgba(255,255,255,.22),transparent 65%),linear-gradient(145deg,#155eef,#071b3a);
+      color:#fff;
+    }
+    .premium-nav .mega-kicker{font-size:10.5px;font-weight:800;letter-spacing:1.4px;color:#bfdbfe;}
+    .premium-nav .mega-intro h3{font-size:23px;line-height:1.25;margin:12px 0;color:#fff;}
+    .premium-nav .mega-intro p{font-size:12.5px;line-height:1.75;margin:0 0 18px;color:rgba(255,255,255,.76);}
+    .premium-nav .mega-btn{display:inline-flex!important;align-items:center;gap:8px;background:#fff!important;color:#155eef!important;padding:10px 14px!important;border-radius:11px!important;font-size:12.5px!important;text-decoration:none;}
+    .premium-nav .premium-mega-menu .mega-column{padding:13px 7px;}
+    .premium-nav .premium-mega-menu .mega-column h4{font-size:12px;letter-spacing:.6px;text-transform:uppercase;color:#155eef;margin:5px 13px 9px;}
+
+    .premium-nav .industries-menu{
+      position:fixed;
+      top:var(--navH);
+      left:50%;
+      width:min(900px,calc(100vw - 40px));
+      padding:18px;
+      border-radius:24px;
+      transform:translate(-50%,12px);
+      display:grid;
+      grid-template-columns:230px 1fr;
+      gap:18px;
+    }
+    .premium-nav .dropdown:hover .industries-menu,
+    .premium-nav .dropdown.open .industries-menu,
+    .premium-nav .dropdown:focus-within .industries-menu{transform:translate(-50%,0);}
+    .premium-nav .industry-menu-head{padding:22px;border-radius:17px;background:#f3f7ff;display:flex;flex-direction:column;gap:10px;}
+    .premium-nav .industry-menu-head span{font-size:10.5px;letter-spacing:1.3px;font-weight:800;color:#155eef;}
+    .premium-nav .industry-menu-head strong{font-size:20px;line-height:1.3;color:#071b3a;}
+    .premium-nav .industry-menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;}
+
+    body > main{padding-top:var(--navH);}
+
+    .mobile-menu-overlay{
+      position:fixed;
+      inset:0;
+      z-index:1090;
+      background:rgba(3,15,40,.58);
+      opacity:0;
+      visibility:hidden;
+      transition:opacity .28s ease,visibility .28s ease;
+      backdrop-filter:blur(3px);
+      -webkit-backdrop-filter:blur(3px);
+    }
+    .mobile-menu-overlay.open{opacity:1;visibility:visible;}
+    body.mobile-menu-open{overflow:hidden;}
+
+    .menu-panel{display:none;}
+
+    @media(max-width:1250px){
+      .premium-nav .brand{min-width:250px;}
+      .premium-nav .brand .name{display:none;}
+      .premium-nav .nav-links>a,.premium-nav .dropbtn{padding:10px 9px;font-size:12.5px;}
+      .premium-nav .nav-cta{padding:11px 13px;font-size:12.5px;}
+    }
+
+    @media(max-width:1050px){
+      .premium-nav .nav-links{display:none;}
+      .premium-nav .menu-btn{display:inline-flex;}
+      .premium-nav .brand{min-width:auto;}
+      .premium-nav .nav-cta{display:none;}
+    }
+
+    @media(max-width:992px){
+      .menu-panel{
+        display:block;
+        position:fixed;
+        top:0;
+        right:0;
+        bottom:0;
+        left:auto;
+        width:min(90vw,390px);
+        height:100dvh;
+        z-index:1100;
+        overflow-y:auto;
+        background:linear-gradient(155deg,#155eef 0%,#0d47c9 58%,#071b3a 100%);
+        border:0;
+        box-shadow:-28px 0 80px rgba(3,15,40,.38);
+        transform:translateX(105%);
+        transition:transform .32s cubic-bezier(.22,.8,.28,1);
+        -webkit-overflow-scrolling:touch;
+      }
+      .menu-panel.open{transform:translateX(0);}
+      .mobile-drawer-head{
+        position:sticky;top:0;z-index:2;min-height:94px;
+        display:flex;align-items:center;justify-content:space-between;gap:18px;
+        padding:18px 20px;background:rgba(7,27,58,.24);
+        border-bottom:1px solid rgba(255,255,255,.16);
+        backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+      }
+      .mobile-drawer-brand{display:flex;align-items:center;min-width:0;padding:7px 12px;border-radius:14px;background:#fff;box-shadow:0 10px 26px rgba(3,15,40,.20);}
+      .mobile-drawer-brand img{width:170px;max-width:calc(100vw - 165px);height:48px;object-fit:contain;object-position:left center;filter:none;}
+      .mobile-close-btn{width:46px;height:46px;flex:0 0 46px;display:grid;place-items:center;padding:0;border:1px solid rgba(255,255,255,.25);border-radius:14px;background:rgba(255,255,255,.12);color:#fff;font:400 32px/1 Arial,sans-serif;cursor:pointer;}
+      .mobile-nav-list{display:block;position:static;width:auto;height:auto;min-height:0;max-height:none;overflow:visible;padding:16px 20px 34px;margin:0;background:transparent;border:0;box-shadow:none;}
+      .mobile-nav-list a,.mobile-nav-list button{font-family:'Poppins',system-ui,sans-serif;}
+      .mobile-nav-list .mobile-main-link{display:flex;align-items:center;min-height:54px;padding:14px 2px;border-bottom:1px solid rgba(255,255,255,.16);color:#fff;text-decoration:none;font-size:16px;font-weight:750;}
+      .mobile-row{display:grid;grid-template-columns:minmax(0,1fr) 48px;align-items:center;border-bottom:1px solid rgba(255,255,255,.16);}
+      .mobile-row .mobile-main-link{border-bottom:0;}
+      .mobile-toggle{width:42px;height:42px;display:grid;place-items:center;padding:0;border:1px solid rgba(255,255,255,.18);border-radius:12px;background:rgba(255,255,255,.10);color:#fff;font-size:22px;cursor:pointer;transition:transform .22s ease,background .22s ease;}
+      .mobile-toggle:hover,.mobile-toggle:focus-visible{background:rgba(255,255,255,.17);}
+      .mobile-accordion.open .mobile-toggle{transform:rotate(180deg);}
+      .mobile-submenu{display:grid;grid-template-rows:0fr;opacity:0;transition:grid-template-rows .28s ease,opacity .28s ease;}
+      .mobile-submenu>*{overflow:hidden;}
+      .mobile-accordion.open .mobile-submenu{grid-template-rows:1fr;opacity:1;}
+      .mobile-submenu a{display:block;padding:12px 14px;margin-top:5px;border-radius:11px;color:rgba(255,255,255,.82);text-decoration:none;font-size:13px;font-weight:600;background:rgba(255,255,255,.07);}
+      .mobile-submenu a:hover,.mobile-submenu a:focus-visible{color:#fff;background:rgba(255,255,255,.14);}
+      .mobile-consultation-link{display:flex;align-items:center;justify-content:center;min-height:50px;margin-top:20px;padding:13px 18px;border-radius:14px;background:#fff;color:#155eef!important;text-decoration:none;font-size:14px;font-weight:800;box-shadow:0 14px 30px rgba(3,15,40,.22);}
+    }
+
+    @media(min-width:993px){
+      .mobile-menu-overlay,.menu-panel{display:none!important;}
+    }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://abatech.co.in/#organization",
+      "name": "ABA Technologies",
+      "url": "https://abatech.co.in/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://abatech.co.in/#logo",
+        "url": "https://abatech.co.in/logo.png",
+        "contentUrl": "https://abatech.co.in/logo.png",
+        "caption": "ABA Technologies"
+      },
+      "email": "sales@abatech.co.in",
+      "telephone": "+91-7207521183"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://abatech.co.in/#website",
+      "url": "https://abatech.co.in/",
+      "name": "ABA Technologies",
+      "publisher": {
+        "@id": "https://abatech.co.in/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://abatech.co.in/services.html#webpage",
+      "url": "https://abatech.co.in/services.html",
+      "name": "Cloud, Security & AI Consulting Services | ABA Technologies",
+      "description": "Explore Microsoft 365, Google Workspace, cloud migration, cybersecurity, Copilot AI, managed security and application development services from ABA Technologies.",
+      "isPartOf": {
+        "@id": "https://abatech.co.in/#website"
+      },
+      "about": {
+        "@id": "https://abatech.co.in/#organization"
+      },
+      "breadcrumb": {
+        "@id": "https://abatech.co.in/services.html#breadcrumb"
+      },
+      "mainEntity": {
+        "@id": "https://abatech.co.in/services.html#services"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://abatech.co.in/services.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://abatech.co.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://abatech.co.in/services.html"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://abatech.co.in/services.html#services",
+      "name": "ABA Technologies Consulting Services",
+      "numberOfItems": 7,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Digital Workspace Consulting",
+          "url": "https://abatech.co.in/digital-workspace-consulting.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Cloud Migration Services",
+          "url": "https://abatech.co.in/cloud-migration-services.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Copilot and AI Solutions",
+          "url": "https://abatech.co.in/copilot-ai-solutions.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Digital Workspace Security",
+          "url": "https://abatech.co.in/digital-workspace-security.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Cloud Security and Compliance",
+          "url": "https://abatech.co.in/cloud-security-compliance.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Managed Security Services",
+          "url": "https://abatech.co.in/managed-security-services.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Application Development",
+          "url": "https://abatech.co.in/application-development.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xp1qc6cw5f");
+</script>
+<body id="top">
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- PREMIUM NAVIGATION -->
+<nav aria-label="Primary" class="premium-nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html#top" aria-label="ABA Technologies home">
+      <img src="logo.png" alt="ABA Technologies logo" decoding="async" fetchpriority="high" />
+      <div class="name">
+        <strong>ABA Technologies</strong>
+        <span>Empowering Digital Workspaces</span>
+      </div>
+    </a>
+
+    <div class="nav-links" role="navigation" aria-label="Main menu">
+      <a href="index.html#top">Home</a>
+
+      <div class="dropdown nav-dropdown">
+        <a class="dropbtn" href="about.html" aria-haspopup="true">About <span>⌄</span></a>
+        <div class="dropdown-menu compact-menu" role="menu">
+          <a href="about.html#who" role="menuitem"><b>Who We Are</b><small>Learn about ABA Technologies</small></a>
+          <a href="about.html#why" role="menuitem"><b>Why ABA</b><small>Our consulting approach</small></a>
+          <a href="about.html#values" role="menuitem"><b>Core Values</b><small>Principles that guide our work</small></a>
+          <a href="about.html#team" role="menuitem"><b>Leadership</b><small>Meet our core team</small></a>
+        </div>
+      </div>
+
+      <div class="dropdown nav-dropdown services-dropdown">
+        <a class="dropbtn" href="services.html" aria-haspopup="true" aria-current="page">Services <span>⌄</span></a>
+        <div class="dropdown-menu premium-mega-menu" role="menu">
+          <div class="mega-intro">
+            <span class="mega-kicker">ABA TECHNOLOGIES</span>
+            <h3>Solutions for secure digital transformation</h3>
+            <p>From workplace modernization and cloud migration to cybersecurity, AI and custom applications.</p>
+            <a href="services.html" class="mega-btn">View all services <span>→</span></a>
+          </div>
+          <div class="mega-column">
+            <h4>Digital Workplace</h4>
+            <a href="digital-workspace-consulting.html"><b>Digital Workspace Consulting</b><small>Microsoft 365, Google Workspace &amp; Zoho</small></a>
+            <a href="cloud-migration-services.html"><b>Cloud Migration Services</b><small>Email, tenant and data migration</small></a>
+          </div>
+          <div class="mega-column">
+            <h4>Security &amp; Compliance</h4>
+            <a href="digital-workspace-security.html"><b>Digital Workspace Security</b><small>Identity, endpoint and collaboration security</small></a>
+            <a href="cloud-security-compliance.html"><b>Cloud Security &amp; Compliance</b><small>Defender, Purview, DLP and governance</small></a>
+            <a href="managed-security-services.html"><b>Managed Security Services</b><small>Assessment, hardening and ongoing guidance</small></a>
+          </div>
+          <div class="mega-column">
+            <h4>AI &amp; Development</h4>
+            <a href="copilot-ai-solutions.html"><b>Copilot &amp; AI Solutions</b><small>Readiness, governance and automation</small></a>
+            <a href="application-development.html"><b>Application Development</b><small>Web apps, APIs and Power Platform</small></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="dropdown nav-dropdown industries-dropdown">
+        <a class="dropbtn" href="index.html#industries" aria-haspopup="true">Industries <span>⌄</span></a>
+        <div class="dropdown-menu industries-menu" role="menu">
+          <div class="industry-menu-head">
+            <span>INDUSTRY SOLUTIONS</span>
+            <strong>Technology aligned to your business</strong>
+          </div>
+          <div class="industry-menu-grid">
+            <a href="index.html#industries"><b>IT &amp; Technology</b><small>Secure cloud and modern collaboration</small></a>
+            <a href="index.html#industries"><b>Retail &amp; E-Commerce</b><small>Productivity, identity and data protection</small></a>
+            <a href="index.html#industries"><b>Healthcare</b><small>Compliance-focused digital workplaces</small></a>
+            <a href="index.html#industries"><b>Manufacturing</b><small>Connected teams and secure operations</small></a>
+            <a href="index.html#industries"><b>Real Estate</b><small>Mobile productivity and document control</small></a>
+            <a href="index.html#industries"><b>Financial Services</b><small>Identity, governance and risk reduction</small></a>
+          </div>
+        </div>
+      </div>
+
+      <a href="career.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="nav-right">
+      <a class="nav-cta" href="contact.html">Book Consultation</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu-overlay" id="mobileMenuOverlay" aria-hidden="true"></div>
+
+<aside class="menu-panel" id="menuPanel" aria-hidden="true" aria-label="Mobile navigation">
+  <div class="mobile-drawer-head">
+    <a class="mobile-drawer-brand" href="index.html#top" aria-label="ABA Technologies home">
+      <img src="logo.png" alt="ABA Technologies logo">
+    </a>
+    <button class="mobile-close-btn" id="mobileCloseBtn" type="button" aria-label="Close menu">×</button>
+  </div>
+
+  <div class="mobile-nav-list" role="navigation" aria-label="Mobile menu">
+    <a href="index.html#top" class="mLink mobile-main-link">Home</a>
+
+    <div class="mobile-accordion">
+      <div class="mobile-row">
+        <a href="about.html" class="mLink mobile-main-link">About Us</a>
+        <button class="mobile-toggle" type="button" aria-expanded="false" aria-controls="mobileAboutMenu" aria-label="Open About menu">⌄</button>
+      </div>
+      <div class="mobile-submenu" id="mobileAboutMenu">
+        <div>
+          <a href="about.html#who" class="mLink">Who We Are</a>
+          <a href="about.html#why" class="mLink">Why ABA</a>
+          <a href="about.html#values" class="mLink">Core Values</a>
+          <a href="about.html#team" class="mLink">Leadership</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-accordion">
+      <div class="mobile-row">
+        <a href="services.html" class="mLink mobile-main-link">All Services</a>
+        <button class="mobile-toggle" type="button" aria-expanded="false" aria-controls="mobileServicesMenu" aria-label="Open Services menu">⌄</button>
+      </div>
+      <div class="mobile-submenu" id="mobileServicesMenu">
+        <div>
+          <a href="digital-workspace-consulting.html" class="mLink">Digital Workspace Consulting</a>
+          <a href="cloud-migration-services.html" class="mLink">Cloud Migration Services</a>
+          <a href="digital-workspace-security.html" class="mLink">Digital Workspace Security</a>
+          <a href="cloud-security-compliance.html" class="mLink">Cloud Security &amp; Compliance</a>
+          <a href="managed-security-services.html" class="mLink">Managed Security Services</a>
+          <a href="copilot-ai-solutions.html" class="mLink">Copilot &amp; AI Solutions</a>
+          <a href="application-development.html" class="mLink">Application Development</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-accordion">
+      <div class="mobile-row">
+        <a href="index.html#industries" class="mLink mobile-main-link">Industry Solutions</a>
+        <button class="mobile-toggle" type="button" aria-expanded="false" aria-controls="mobileIndustriesMenu" aria-label="Open Industry menu">⌄</button>
+      </div>
+      <div class="mobile-submenu" id="mobileIndustriesMenu">
+        <div>
+          <a href="index.html#industries" class="mLink">IT &amp; Technology</a>
+          <a href="index.html#industries" class="mLink">Retail &amp; E-Commerce</a>
+          <a href="index.html#industries" class="mLink">Healthcare</a>
+          <a href="index.html#industries" class="mLink">Manufacturing</a>
+          <a href="index.html#industries" class="mLink">Real Estate</a>
+          <a href="index.html#industries" class="mLink">Financial Services</a>
+        </div>
+      </div>
+    </div>
+
+    <a href="career.html" class="mLink mobile-main-link">Careers</a>
+    <a href="contact.html" class="mLink mobile-main-link">Contact Us</a>
+    <a href="contact.html" class="mLink mobile-consultation-link">Book Consultation</a>
+  </div>
+</aside>
+
+<main id="main-content">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> Secure digital transformation services</div>
+      <h1>Cloud, security, AI and application services built for business outcomes.</h1>
+      <p class="lead">ABA Technologies helps organisations modernise collaboration, migrate workloads securely, strengthen cloud security and adopt AI with a practical, business-first approach.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#all-services">Explore Services</a>
+        <a class="btn" href="contact.html">Talk to an Expert</a>
+      </div>
+    </div>
+    <aside class="hero-card" aria-label="Service categories">
+      <div class="metric-grid">
+        <div class="metric"><strong>Digital Workspace</strong><span>Microsoft 365, Google Workspace and Zoho consulting.</span></div>
+        <div class="metric"><strong>Cloud Migration</strong><span>Secure planning, migration and cutover execution.</span></div>
+        <div class="metric"><strong>Security & Compliance</strong><span>Identity, endpoint, data and cloud protection.</span></div>
+        <div class="metric"><strong>AI & Applications</strong><span>Copilot adoption, automation and custom applications.</span></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="section" id="all-services">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="kicker">What we do</div>
+        <h2>Explore our consulting and implementation services</h2>
+      </div>
+      <p>Each service opens a dedicated page with detailed capabilities, deliverables, business outcomes and our delivery approach.</p>
+    </div>
+
+    <div class="services-grid">
+      <a class="service-card" href="digital-workspace-consulting.html">
+        <div class="icon" aria-hidden="true">☁️</div>
+        <h3>Digital Workspace Consulting</h3>
+        <p>Secure, scalable and productive digital workplace environments across Microsoft 365, Google Workspace and Zoho.</p>
+        <ul class="service-list"><li>Microsoft 365, Google Workspace & Zoho consulting</li><li>Email, collaboration and cloud productivity architecture</li><li>Governance, security and compliance best practices</li><li>Migration planning, deployment and user adoption</li></ul>
+        <span class="card-link">Explore service →</span>
+      </a>
+
+      <a class="service-card" href="cloud-migration-services.html">
+        <div class="icon" aria-hidden="true">🔁</div>
+        <h3>Cloud Migration Services</h3>
+        <p>Structured migration planning and execution focused on data integrity, user continuity and minimal disruption.</p>
+        <ul class="service-list"><li>Google Workspace to Microsoft 365</li><li>Zoho to Microsoft 365</li><li>Microsoft 365 tenant migrations</li><li>Mailbox, Drive, permissions and cutover planning</li></ul>
+        <span class="card-link">Explore service →</span>
+      </a>
+
+      <a class="service-card" href="copilot-ai-solutions.html">
+        <div class="icon" aria-hidden="true">🤖</div>
+        <h3>Copilot & AI Solutions</h3>
+        <p>Adopt Copilot and practical AI solutions responsibly with governance, secure access and role-based enablement.</p>
+        <ul class="service-list"><li>Readiness assessment and deployment planning</li><li>Prompt libraries and role-based use cases</li><li>Automation opportunities within Microsoft 365</li><li>Change management and user enablement</li></ul>
+        <span class="card-link">Explore service →</span>
+      </a>
+
+      <a class="service-card" href="digital-workspace-security.html">
+        <div class="icon" aria-hidden="true">🛡️</div>
+        <h3>Digital Workspace Security</h3>
+        <p>Strengthen identity, workspace protection and device compliance across Microsoft 365 and Google Workspace.</p>
+        <ul class="service-list"><li>Entra ID and Google Workspace identity security</li><li>MFA, Conditional Access and Zero Trust</li><li>Intune and endpoint security baselines</li><li>Secure collaboration, compliance and governance</li></ul>
+        <span class="card-link">Explore service →</span>
+      </a>
+
+      <a class="service-card" href="cloud-security-compliance.html">
+        <div class="icon" aria-hidden="true">🔒</div>
+        <h3>Cloud Security & Compliance</h3>
+        <p>Comprehensive security and compliance solutions across Microsoft, Google and cloud platforms.</p>
+        <ul class="service-list"><li>Microsoft Defender and Purview</li><li>Data Loss Prevention and sensitivity labels</li><li>Azure security and identity protection</li><li>Google Workspace and GCP security</li></ul>
+        <span class="card-link">Explore service →</span>
+      </a>
+
+      <a class="service-card" href="managed-security-services.html">
+        <div class="icon" aria-hidden="true">🔐</div>
+        <h3>Managed Security Services</h3>
+        <p>Ongoing security reviews, hardening, governance and compliance guidance for cloud and digital workplace environments.</p>
+        <ul class="service-list"><li>Microsoft 365 security assessments</li><li>Security hardening and baseline reviews</li><li>Identity and access reviews</li><li>Compliance and governance consulting</li></ul>
+        <span class="card-link">Explore service →</span>
+      </a>
+
+      <a class="service-card" href="application-development.html">
+        <div class="icon" aria-hidden="true">💻</div>
+        <h3>Application Development</h3>
+        <p>Design and modernise applications that automate processes, improve productivity and support business growth.</p>
+        <ul class="service-list"><li>Custom web and business applications</li><li>Power Platform solutions</li><li>API development and integrations</li><li>Cloud-native and AI-powered applications</li></ul>
+        <span class="card-link">Explore service →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container cta">
+    <div>
+      <div class="kicker">Start a conversation</div>
+      <h2>Not sure which service fits your requirement?</h2>
+      <p>Share your current platform, user count, key challenges and desired outcome. We will recommend the best starting point.</p>
+    </div>
+    <a class="btn primary" href="contact.html">Get a Consultation</a>
+  </div>
+</section>
+</main>
+
+<section class="premium-footer">
+  <div class="container footer-main">
+    <div class="footer-brand-card">
+      <div class="footer-logo-shell">
+        <img src="logo.png" alt="ABA Technologies logo" class="footer-logo" width="250" height="70" loading="lazy" decoding="async">
+      </div>
+      <p class="footer-text">ABA Technologies helps businesses simplify cloud, collaboration, security and AI solutions through practical implementation, secure architecture and measurable outcomes.</p>
+    </div>
+
+    <div class="footer-column">
+      <h3>Company</h3>
+      <a href="index.html#top">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html" aria-current="page">Services</a>
+      <a href="career.html">Career</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-column">
+      <h3>Contact</h3>
+      <a href="mailto:sales@abatech.co.in">sales@abatech.co.in</a>
+      <a href="tel:+917207521183">+91 72075 21183</a>
+      <a href="https://wa.me/917207521183" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-inner">
+      <span>© <span data-year></span> ABA Technologies. All rights reserved.</span>
+      <span>Microsoft 365 • Google Workspace • Cloud • Security • AI</span>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  const yearElements = document.querySelectorAll("[data-year]");
+  yearElements.forEach(function (element) {
+    element.textContent = new Date().getFullYear();
+  });
+
+  const menuBtn = document.getElementById("menuBtn");
+  const menuPanel = document.getElementById("menuPanel");
+  const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
+  const mobileCloseBtn = document.getElementById("mobileCloseBtn");
+  const mobileLinks = document.querySelectorAll(".mLink");
+  const mobileAccordions = document.querySelectorAll(".mobile-accordion");
+
+  function openMenu() {
+    if (!menuPanel || !menuBtn) return;
+
+    menuPanel.classList.add("open");
+    mobileMenuOverlay?.classList.add("open");
+    document.body.classList.add("mobile-menu-open");
+
+    menuPanel.setAttribute("aria-hidden", "false");
+    mobileMenuOverlay?.setAttribute("aria-hidden", "false");
+    menuBtn.setAttribute("aria-expanded", "true");
+
+    mobileCloseBtn?.focus();
+  }
+
+  function closeMenu() {
+    if (!menuPanel || !menuBtn) return;
+
+    menuPanel.classList.remove("open");
+    mobileMenuOverlay?.classList.remove("open");
+    document.body.classList.remove("mobile-menu-open");
+
+    menuPanel.setAttribute("aria-hidden", "true");
+    mobileMenuOverlay?.setAttribute("aria-hidden", "true");
+    menuBtn.setAttribute("aria-expanded", "false");
+
+    mobileAccordions.forEach(function (item) {
+      item.classList.remove("open");
+      item.querySelector(".mobile-toggle")?.setAttribute("aria-expanded", "false");
+    });
+  }
+
+  menuBtn?.addEventListener("click", function (event) {
+    event.stopPropagation();
+
+    if (menuPanel?.classList.contains("open")) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  mobileCloseBtn?.addEventListener("click", closeMenu);
+  mobileMenuOverlay?.addEventListener("click", closeMenu);
+
+  mobileLinks.forEach(function (link) {
+    link.addEventListener("click", closeMenu);
+  });
+
+  mobileAccordions.forEach(function (item) {
+    const toggle = item.querySelector(".mobile-toggle");
+    if (!toggle) return;
+
+    toggle.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      const willOpen = !item.classList.contains("open");
+
+      mobileAccordions.forEach(function (other) {
+        if (other !== item) {
+          other.classList.remove("open");
+          other.querySelector(".mobile-toggle")?.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      item.classList.toggle("open", willOpen);
+      toggle.setAttribute("aria-expanded", String(willOpen));
+    });
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") closeMenu();
+  });
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 992) closeMenu();
+  });
+</script>
+</body>
+</html>
