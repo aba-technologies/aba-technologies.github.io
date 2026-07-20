@@ -6,6 +6,9 @@
   <title>Digital Workspace Security | ABA Technologies</title>
   <meta name="description" content="ABA Technologies helps secure Microsoft 365, Google Workspace, identities, email, devices, data and collaboration environments using a practical Zero Trust approach.">
   <link rel="canonical" href="https://www.abatech.co.in/digital-workspace-security.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
 :root{
   --blue:#155eef;--blue-dark:#0b3fb8;--cyan:#62d0ff;--navy:#06162f;--navy-soft:#0d2b55;
@@ -154,6 +157,102 @@ button{font:inherit}
   .footer-bottom{display:block}.footer-bottom span{display:block;margin:8px 0}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.btn,.card{transition:none}}
+
+/* =====================================================
+   HOMEPAGE PREMIUM NAVIGATION — SHARED GLOBAL SYSTEM
+   ===================================================== */
+:root{--navH:82px}
+
+.premium-nav{
+  position:fixed;top:0;left:0;right:0;height:var(--navH);z-index:1000;
+  background:rgba(255,255,255,.88);border-bottom:1px solid rgba(15,35,72,.08);
+  box-shadow:0 12px 40px rgba(15,35,72,.07);backdrop-filter:blur(22px) saturate(145%);
+  -webkit-backdrop-filter:blur(22px) saturate(145%);transition:background .28s ease,box-shadow .28s ease,border-color .28s ease;
+}
+.premium-nav.nav-scrolled{background:rgba(255,255,255,.96);border-color:rgba(15,23,42,.08);box-shadow:0 12px 38px rgba(15,23,42,.10)}
+.premium-nav .container{width:100%;max-width:1240px;height:100%;margin:0 auto;padding:0 22px}
+.premium-nav .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:22px}
+.premium-nav .brand{display:flex;align-items:center;gap:12px;min-width:310px}
+.premium-nav .brand img{width:auto;height:58px;object-fit:contain}
+.premium-nav .brand .name{display:flex;flex-direction:column;line-height:1.08}
+.premium-nav .brand .name strong{font-size:15px;letter-spacing:.1px;color:#071b3a}
+.premium-nav .brand .name span{margin-top:4px;font-size:11.5px;color:#64748b;font-weight:500}
+.premium-nav .nav-links{display:flex;align-items:center;justify-content:flex-end;gap:3px;flex:1}
+.premium-nav .nav-links a,.premium-nav .nav-links button{font-family:'Poppins',Inter,system-ui,sans-serif;white-space:nowrap}
+.premium-nav .nav-links>a,.premium-nav .dropbtn{padding:11px 13px;border:0;border-radius:13px;background:transparent;color:#172033;font-size:13.5px;font-weight:700;cursor:pointer;transition:background .2s ease,color .2s ease}
+.premium-nav .nav-links>a:hover,.premium-nav .dropbtn:hover,.premium-nav .nav-links>a[aria-current="page"],.premium-nav .dropbtn[aria-current="page"]{color:#155eef;background:#edf4ff}
+.premium-nav .dropbtn span{font-size:12px;margin-left:3px;color:#155eef}
+.premium-nav .nav-right{display:flex;align-items:center;gap:10px}
+.premium-nav .btn.primary{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:12px 18px;border:0;border-radius:14px;white-space:nowrap;background:linear-gradient(135deg,#155eef,#0d47c9);color:#fff;font-size:14px;font-weight:750;box-shadow:0 14px 30px rgba(21,94,239,.22);transition:transform .22s ease,box-shadow .22s ease}
+.premium-nav .btn.primary:hover{transform:translateY(-2px);box-shadow:0 18px 38px rgba(21,94,239,.30)}
+.premium-nav .menu-btn{display:none;width:44px;height:44px;padding:0;border:1px solid rgba(15,23,42,.10);border-radius:14px;background:#fff;color:#111827;font-size:20px;cursor:pointer}
+
+.premium-nav .dropdown{position:relative}
+.premium-nav .dropdown-menu{position:absolute;top:calc(100% + 20px);left:0;min-width:240px;padding:10px;border:1px solid rgba(15,23,42,.08);border-radius:18px;background:#fff;box-shadow:0 24px 60px rgba(15,23,42,.14);opacity:0;visibility:hidden;transform:translateY(10px);transition:.22s ease}
+.premium-nav .dropdown-menu::before{content:"";position:absolute;left:0;right:0;top:-22px;height:24px}
+.premium-nav .dropdown:hover .dropdown-menu,.premium-nav .dropdown.open .dropdown-menu,.premium-nav .dropdown:focus-within .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
+.premium-nav .compact-menu{width:310px;padding:12px}
+.premium-nav .compact-menu a,.premium-nav .premium-mega-menu .mega-column a,.premium-nav .industry-menu-grid a{display:flex!important;flex-direction:column;align-items:flex-start;gap:3px;padding:12px 13px!important;border-radius:13px}
+.premium-nav .compact-menu b,.premium-nav .premium-mega-menu b,.premium-nav .industry-menu-grid b{font-size:13.5px;color:#172033}
+.premium-nav .compact-menu small,.premium-nav .premium-mega-menu small,.premium-nav .industry-menu-grid small{font-size:11.5px;line-height:1.45;color:#64748b;font-weight:500}
+.premium-nav .compact-menu a:hover,.premium-nav .premium-mega-menu .mega-column a:hover,.premium-nav .industry-menu-grid a:hover{background:#f3f7ff}
+
+.premium-nav .premium-mega-menu{position:fixed;top:var(--navH);left:50%;width:min(1180px,calc(100vw - 40px));display:grid;grid-template-columns:1.05fr 1fr 1.15fr 1fr;gap:16px;padding:18px;border:1px solid rgba(21,94,239,.10);border-radius:24px;box-shadow:0 30px 80px rgba(15,35,72,.18);transform:translate(-50%,12px);overflow:hidden}
+.premium-nav .dropdown:hover .premium-mega-menu,.premium-nav .dropdown.open .premium-mega-menu,.premium-nav .dropdown:focus-within .premium-mega-menu{transform:translate(-50%,0)}
+.premium-nav .mega-intro{padding:24px;border-radius:18px;background:radial-gradient(260px 180px at 0 0,rgba(255,255,255,.22),transparent 65%),linear-gradient(145deg,#155eef,#071b3a);color:#fff}
+.premium-nav .mega-kicker{font-size:10.5px;font-weight:800;letter-spacing:1.4px;color:#bfdbfe}
+.premium-nav .mega-intro h3{font-size:23px;line-height:1.25;margin:12px 0;color:#fff}
+.premium-nav .mega-intro p{font-size:12.5px;line-height:1.75;margin:0 0 18px;color:rgba(255,255,255,.76)}
+.premium-nav .mega-btn{display:inline-flex!important;align-items:center;gap:8px;padding:10px 14px!important;border-radius:11px!important;background:#fff!important;color:#155eef!important;font-size:12.5px!important}
+.premium-nav .premium-mega-menu .mega-column{padding:13px 7px}
+.premium-nav .premium-mega-menu .mega-column h4{font-size:12px;letter-spacing:.6px;text-transform:uppercase;color:#155eef;margin:5px 13px 9px}
+
+.premium-nav .industries-menu{position:fixed;top:var(--navH);left:50%;width:min(900px,calc(100vw - 40px));display:grid;grid-template-columns:230px 1fr;gap:18px;padding:18px;border-radius:24px;transform:translate(-50%,12px)}
+.premium-nav .dropdown:hover .industries-menu,.premium-nav .dropdown.open .industries-menu,.premium-nav .dropdown:focus-within .industries-menu{transform:translate(-50%,0)}
+.premium-nav .industry-menu-head{display:flex;flex-direction:column;gap:10px;padding:22px;border-radius:17px;background:#f3f7ff}
+.premium-nav .industry-menu-head span{font-size:10.5px;letter-spacing:1.3px;font-weight:800;color:#155eef}
+.premium-nav .industry-menu-head strong{font-size:20px;line-height:1.3;color:#071b3a}
+.premium-nav .industry-menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+
+body.mobile-menu-open{overflow:hidden}
+.mobile-menu-overlay{position:fixed;inset:0;z-index:1090;background:rgba(3,15,40,.58);opacity:0;visibility:hidden;transition:opacity .28s ease,visibility .28s ease;backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+.mobile-menu-overlay.open{opacity:1;visibility:visible}
+.menu-panel{display:none}
+main{padding-top:var(--navH)}
+
+@media(max-width:1250px){
+  .premium-nav .brand{min-width:250px}.premium-nav .brand .name{display:none}
+  .premium-nav .nav-links>a,.premium-nav .dropbtn{padding:10px 9px;font-size:12.5px}
+  .premium-nav .nav-cta{padding:11px 13px!important;font-size:12.5px!important}
+}
+@media(max-width:1050px){
+  .premium-nav .nav-links{display:none}.premium-nav .menu-btn{display:inline-flex;align-items:center;justify-content:center}.premium-nav .brand{min-width:auto}
+}
+@media(max-width:992px){
+  .menu-panel{display:block;position:fixed;top:0;right:0;bottom:0;left:auto;width:min(90vw,390px);height:100dvh;z-index:1100;overflow-y:auto;background:linear-gradient(155deg,#155eef 0%,#0d47c9 58%,#071b3a 100%);border:0;box-shadow:-28px 0 80px rgba(3,15,40,.38);transform:translateX(105%);transition:transform .32s cubic-bezier(.22,.8,.28,1);-webkit-overflow-scrolling:touch}
+  .menu-panel.open{display:block;transform:translateX(0)}
+  .mobile-drawer-head{position:sticky;top:0;z-index:2;min-height:94px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 20px;background:rgba(7,27,58,.24);border-bottom:1px solid rgba(255,255,255,.16);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+  .mobile-drawer-brand{display:flex;align-items:center;min-width:0;padding:7px 12px;border-radius:14px;background:#fff;box-shadow:0 10px 26px rgba(3,15,40,.20)}
+  .mobile-drawer-brand img{width:170px;max-width:calc(100vw - 165px);height:48px;object-fit:contain;object-position:left center;filter:none}
+  .mobile-close-btn{width:46px;height:46px;flex:0 0 46px;display:grid;place-items:center;padding:0;border:1px solid rgba(255,255,255,.25);border-radius:14px;background:rgba(255,255,255,.12);color:#fff;font:400 32px/1 Arial,sans-serif;cursor:pointer}
+  .mobile-nav-list{display:block;position:static;width:auto;height:auto;max-height:calc(100vh - var(--navH));min-height:0;overflow:auto;padding:16px 20px 34px;margin:0;background:transparent;border:0;box-shadow:none}
+  .mobile-nav-list a,.mobile-nav-list button{font-family:'Poppins',Inter,system-ui,sans-serif}
+  .mobile-nav-list .mobile-main-link{display:flex;align-items:center;min-height:58px;padding:15px 4px;border-bottom:1px solid rgba(255,255,255,.18);color:#fff;font-size:18px;font-weight:700;letter-spacing:-.1px}
+  .mobile-nav-list .mobile-main-link[aria-current="page"]{color:#fff;background:rgba(255,255,255,.10);padding-left:12px;border-radius:10px}
+  .mobile-row{display:grid;grid-template-columns:minmax(0,1fr) 48px;align-items:center;border-bottom:1px solid rgba(255,255,255,.18)}
+  .mobile-row .mobile-main-link{border-bottom:0}
+  .mobile-toggle{width:44px;height:44px;display:grid;place-items:center;border:0;border-radius:12px;background:transparent;color:#fff;font-size:24px;cursor:pointer;transition:transform .25s ease,background .25s ease}
+  .mobile-toggle:hover,.mobile-toggle:focus-visible{background:rgba(255,255,255,.12)}
+  .mobile-accordion.open .mobile-toggle{transform:rotate(180deg)}
+  .mobile-submenu{max-height:0;overflow:hidden;opacity:.5;padding:0 0 0 18px;border-bottom:0 solid rgba(255,255,255,.12);transition:max-height .34s ease,opacity .25s ease,padding .25s ease}
+  .mobile-accordion.open .mobile-submenu{max-height:720px;opacity:1;padding-top:7px;padding-bottom:10px;border-bottom-width:1px}
+  .mobile-submenu a{display:block;padding:12px;border-left:2px solid rgba(255,255,255,.34);color:rgba(255,255,255,.86);font-size:14px;font-weight:600;line-height:1.45}
+  .mobile-submenu a:hover,.mobile-submenu a:focus-visible{color:#fff;background:rgba(255,255,255,.10);border-left-color:#fff;border-radius:0 10px 10px 0}
+  .mobile-consultation-link{display:flex;justify-content:center;align-items:center;min-height:52px;margin-top:24px;padding:14px 18px;border-radius:14px;background:#fff;color:#155eef!important;font-size:15px;font-weight:800;box-shadow:0 15px 34px rgba(3,15,40,.24)}
+}
+@media(min-width:993px){.menu-panel,.mobile-menu-overlay{display:none!important}}
+@media(prefers-reduced-motion:reduce){.premium-nav *,.menu-panel,.mobile-menu-overlay{transition:none!important}}
+
   </style>
   <script type="application/ld+json">
   {
@@ -164,31 +263,162 @@ button{font:inherit}
     "serviceType":["Microsoft 365 Security","Google Workspace Security","Identity Security","Email Security","Endpoint Security","Data Protection"]
   }
   </script>
-</head>
-  <script type="text/javascript">
+<script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "xp1qc6cw5f");
 </script>
+</head>
 <body data-page-version="phase2-digital-workspace-security-standalone-v1">
-  <nav class="site-nav">
+  <!-- PREMIUM NAVIGATION -->
+  <nav aria-label="Primary" class="premium-nav">
     <div class="container nav-inner">
-      <a class="brand" href="index.html">
-        <img src="logo.png" alt="ABA Technologies logo">
-        <div class="brand-text"><strong>ABA Technologies</strong><span>Empowering Digital Workspaces</span></div>
+      <a class="brand" href="index.html#top" aria-label="ABA Technologies home">
+        <img src="logo.png" alt="ABA Technologies logo" decoding="async" fetchpriority="high" />
+        <div class="name">
+          <strong>ABA Technologies</strong>
+          <span>Empowering Digital Workspaces</span>
+        </div>
       </a>
-      <button class="menu-btn" type="button" aria-expanded="false"><span></span><span></span><span></span><span class="sr-only">Open menu</span></button>
-      <div class="desktop-nav">
-        <a href="index.html">Home</a><a href="about.html">About Us</a><a class="active" href="services.html">Services</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a>
+
+      <div class="nav-links" role="navigation" aria-label="Main menu">
+        <a href="index.html#top">Home</a>
+
+        <div class="dropdown nav-dropdown">
+          <a class="dropbtn" href="about.html" aria-haspopup="true">About <span>⌄</span></a>
+          <div class="dropdown-menu compact-menu" role="menu">
+            <a href="about.html#who" role="menuitem"><b>Who We Are</b><small>Learn about ABA Technologies</small></a>
+            <a href="about.html#why" role="menuitem"><b>Why ABA</b><small>Our consulting approach</small></a>
+            <a href="about.html#values" role="menuitem"><b>Core Values</b><small>Principles that guide our work</small></a>
+            <a href="about.html#team" role="menuitem"><b>Leadership</b><small>Meet our core team</small></a>
+          </div>
+        </div>
+
+        <div class="dropdown nav-dropdown services-dropdown">
+          <a class="dropbtn" href="services.html" aria-haspopup="true" aria-current="page">Services <span>⌄</span></a>
+          <div class="dropdown-menu premium-mega-menu" role="menu">
+            <div class="mega-intro">
+              <span class="mega-kicker">ABA TECHNOLOGIES</span>
+              <h3>Solutions for secure digital transformation</h3>
+              <p>From workplace modernization and cloud migration to cybersecurity, AI and custom applications.</p>
+              <a href="services.html" class="mega-btn">View all services <span>→</span></a>
+            </div>
+
+            <div class="mega-column">
+              <h4>Digital Workplace</h4>
+              <a href="digital-workspace-consulting.html"><b>Digital Workspace Consulting</b><small>Microsoft 365, Google Workspace & Zoho</small></a>
+              <a href="cloud-migration-services.html"><b>Cloud Migration Services</b><small>Email, tenant and data migration</small></a>
+            </div>
+
+            <div class="mega-column">
+              <h4>Security & Compliance</h4>
+              <a href="digital-workspace-security.html"><b>Digital Workspace Security</b><small>Identity, endpoint and collaboration security</small></a>
+              <a href="cloud-security-compliance.html"><b>Cloud Security & Compliance</b><small>Defender, Purview, DLP and governance</small></a>
+              <a href="managed-security-services.html"><b>Managed Security Services</b><small>Assessment, hardening and ongoing guidance</small></a>
+            </div>
+
+            <div class="mega-column">
+              <h4>AI & Development</h4>
+              <a href="copilot-ai-solutions.html"><b>Copilot & AI Solutions</b><small>Readiness, governance and automation</small></a>
+              <a href="application-development.html"><b>Application Development</b><small>Web apps, APIs and Power Platform</small></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="dropdown nav-dropdown industries-dropdown">
+          <a class="dropbtn" href="index.html#industries" aria-haspopup="true">Industries <span>⌄</span></a>
+          <div class="dropdown-menu industries-menu" role="menu">
+            <div class="industry-menu-head">
+              <span>INDUSTRY SOLUTIONS</span>
+              <strong>Technology aligned to your business</strong>
+            </div>
+            <div class="industry-menu-grid">
+              <a href="index.html#industries"><b>IT & Technology</b><small>Secure cloud and modern collaboration</small></a>
+              <a href="index.html#industries"><b>Retail & E-Commerce</b><small>Productivity, identity and data protection</small></a>
+              <a href="index.html#industries"><b>Healthcare</b><small>Compliance-focused digital workplaces</small></a>
+              <a href="index.html#industries"><b>Manufacturing</b><small>Connected teams and secure operations</small></a>
+              <a href="index.html#industries"><b>Real Estate</b><small>Mobile productivity and document control</small></a>
+              <a href="index.html#industries"><b>Financial Services</b><small>Identity, governance and risk reduction</small></a>
+            </div>
+          </div>
+        </div>
+
+        <a href="career.html">Careers</a>
+        <a href="contact.html">Contact</a>
       </div>
-      <a class="btn btn-primary nav-cta" href="contact.html">Book Consultation</a>
-    </div>
-    <div class="mobile-menu">
-      <a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a>
+
+      <div class="nav-right">
+        <a class="btn primary nav-cta" href="contact.html">Book Consultation</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      </div>
     </div>
   </nav>
+
+  <!-- Premium mobile navigation drawer -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay" aria-hidden="true"></div>
+
+  <aside class="menu-panel" id="menuPanel" aria-hidden="true" aria-label="Mobile navigation">
+    <div class="mobile-drawer-head">
+      <a class="mobile-drawer-brand" href="index.html#top" aria-label="ABA Technologies home">
+        <img src="logo.png" alt="ABA Technologies logo">
+      </a>
+      <button class="mobile-close-btn" id="mobileCloseBtn" type="button" aria-label="Close menu">×</button>
+    </div>
+
+    <div class="mobile-nav-list" role="navigation" aria-label="Mobile menu">
+      <a href="index.html#top" class="mLink mobile-main-link">Home</a>
+
+      <div class="mobile-accordion">
+        <div class="mobile-row">
+          <a href="about.html" class="mLink mobile-main-link">About Us</a>
+          <button class="mobile-toggle" type="button" aria-expanded="false" aria-controls="mobileAboutMenu" aria-label="Open About menu">⌄</button>
+        </div>
+        <div class="mobile-submenu" id="mobileAboutMenu">
+          <a href="about.html#who" class="mLink">Who We Are</a>
+          <a href="about.html#why" class="mLink">Why ABA</a>
+          <a href="about.html#values" class="mLink">Core Values</a>
+          <a href="about.html#team" class="mLink">Leadership</a>
+        </div>
+      </div>
+
+      <div class="mobile-accordion">
+        <div class="mobile-row">
+          <a href="services.html" class="mLink mobile-main-link" aria-current="page">All Services</a>
+          <button class="mobile-toggle" type="button" aria-expanded="false" aria-controls="mobileServicesMenu" aria-label="Open Services menu">⌄</button>
+        </div>
+        <div class="mobile-submenu" id="mobileServicesMenu">
+          <a href="digital-workspace-consulting.html" class="mLink">Digital Workspace Consulting</a>
+          <a href="cloud-migration-services.html" class="mLink">Cloud Migration Services</a>
+          <a href="digital-workspace-security.html" class="mLink">Digital Workspace Security</a>
+          <a href="cloud-security-compliance.html" class="mLink">Cloud Security &amp; Compliance</a>
+          <a href="managed-security-services.html" class="mLink">Managed Security Services</a>
+          <a href="copilot-ai-solutions.html" class="mLink">Copilot &amp; AI Solutions</a>
+          <a href="application-development.html" class="mLink">Application Development</a>
+        </div>
+      </div>
+
+      <div class="mobile-accordion">
+        <div class="mobile-row">
+          <a href="index.html#industries" class="mLink mobile-main-link">Industry Solutions</a>
+          <button class="mobile-toggle" type="button" aria-expanded="false" aria-controls="mobileIndustriesMenu" aria-label="Open Industry menu">⌄</button>
+        </div>
+        <div class="mobile-submenu" id="mobileIndustriesMenu">
+          <a href="index.html#industries" class="mLink">IT &amp; Technology</a>
+          <a href="index.html#industries" class="mLink">Retail &amp; E-Commerce</a>
+          <a href="index.html#industries" class="mLink">Healthcare</a>
+          <a href="index.html#industries" class="mLink">Manufacturing</a>
+          <a href="index.html#industries" class="mLink">Real Estate</a>
+          <a href="index.html#industries" class="mLink">Financial Services</a>
+        </div>
+      </div>
+
+      <a href="career.html" class="mLink mobile-main-link">Careers</a>
+      <a href="contact.html" class="mLink mobile-main-link">Contact Us</a>
+      <a href="contact.html" class="mLink mobile-consultation-link">Book Consultation</a>
+    </div>
+  </aside>
 
   <main>
     <header class="hero blue-section">
@@ -370,18 +600,68 @@ button{font:inherit}
 
   <script>
 document.addEventListener("DOMContentLoaded",()=>{
-  const b=document.querySelector(".menu-btn"),m=document.querySelector(".mobile-menu");
-  if(b&&m)b.addEventListener("click",()=>{const o=m.classList.toggle("open");b.setAttribute("aria-expanded",String(o))});
-  document.querySelectorAll(".faq-question").forEach(q=>q.addEventListener("click",()=>{
-    const i=q.closest(".faq-item"),w=i.classList.contains("open");
-    document.querySelectorAll(".faq-item.open").forEach(x=>x.classList.remove("open"));
-    if(!w)i.classList.add("open");
+  const menuBtn=document.getElementById('menuBtn');
+  const menuPanel=document.getElementById('menuPanel');
+  const mobileMenuOverlay=document.getElementById('mobileMenuOverlay');
+  const mobileCloseBtn=document.getElementById('mobileCloseBtn');
+  const mobileLinks=document.querySelectorAll('.mLink');
+  const mobileAccordions=document.querySelectorAll('.mobile-accordion');
+
+  function openMenu(){
+    if(!menuPanel||!menuBtn)return;
+    menuPanel.classList.add('open');
+    mobileMenuOverlay?.classList.add('open');
+    document.body.classList.add('mobile-menu-open');
+    menuPanel.setAttribute('aria-hidden','false');
+    mobileMenuOverlay?.setAttribute('aria-hidden','false');
+    menuBtn.setAttribute('aria-expanded','true');
+    mobileCloseBtn?.focus();
+  }
+  function closeMenu(){
+    if(!menuPanel||!menuBtn)return;
+    menuPanel.classList.remove('open');
+    mobileMenuOverlay?.classList.remove('open');
+    document.body.classList.remove('mobile-menu-open');
+    menuPanel.setAttribute('aria-hidden','true');
+    mobileMenuOverlay?.setAttribute('aria-hidden','true');
+    menuBtn.setAttribute('aria-expanded','false');
+    mobileAccordions.forEach(item=>{item.classList.remove('open');item.querySelector('.mobile-toggle')?.setAttribute('aria-expanded','false')});
+  }
+
+  menuBtn?.addEventListener('click',event=>{event.stopPropagation();menuPanel?.classList.contains('open')?closeMenu():openMenu()});
+  mobileCloseBtn?.addEventListener('click',closeMenu);
+  mobileMenuOverlay?.addEventListener('click',closeMenu);
+  mobileLinks.forEach(link=>link.addEventListener('click',closeMenu));
+  mobileAccordions.forEach(item=>{
+    const toggle=item.querySelector('.mobile-toggle');
+    toggle?.addEventListener('click',event=>{
+      event.preventDefault();event.stopPropagation();
+      const willOpen=!item.classList.contains('open');
+      mobileAccordions.forEach(other=>{if(other!==item){other.classList.remove('open');other.querySelector('.mobile-toggle')?.setAttribute('aria-expanded','false')}});
+      item.classList.toggle('open',willOpen);toggle.setAttribute('aria-expanded',String(willOpen));
+    });
+  });
+  document.addEventListener('keydown',event=>{if(event.key==='Escape')closeMenu()});
+  window.addEventListener('resize',()=>{if(window.innerWidth>992)closeMenu()});
+
+  document.querySelectorAll('.faq-question').forEach(question=>question.addEventListener('click',()=>{
+    const item=question.closest('.faq-item'),wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(openItem=>{
+      openItem.classList.remove('open');
+      openItem.querySelector('.faq-question')?.setAttribute('aria-expanded','false');
+    });
+    if(!wasOpen){item.classList.add('open');question.setAttribute('aria-expanded','true')}
   }));
-  const r=document.querySelectorAll(".reveal");
-  if("IntersectionObserver"in window){
-    const o=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add("visible");o.unobserve(x.target)}}),{threshold:.12});
-    r.forEach(x=>o.observe(x));
-  }else r.forEach(x=>x.classList.add("visible"));
+
+  const revealItems=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
+    revealItems.forEach(item=>observer.observe(item));
+  }else revealItems.forEach(item=>item.classList.add('visible'));
+
+  const primaryNav=document.querySelector('.premium-nav');
+  const updateNavState=()=>primaryNav?.classList.toggle('nav-scrolled',window.scrollY>18);
+  updateNavState();window.addEventListener('scroll',updateNavState,{passive:true});
 });
   </script>
 </body>
